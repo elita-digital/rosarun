@@ -676,6 +676,7 @@ section {
 	background-position: 50% 50%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow: hidden;
 
 	@include media1200 {
 		padding: 70px 0;
@@ -687,7 +688,7 @@ section {
 }
 
 main {
-	overflow: hidden;
+	// overflow-x: hidden;
 }
 
 .center {

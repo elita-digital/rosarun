@@ -317,4 +317,21 @@ $(function () {
 		$('.header__mobile').slideToggle(240);
 	});
 
+	let sectionHeight = $('.info__cards').height();
+	const date = ['01.05.2021', '02.05.2021', '03.05.2021', '04.05.2021'],
+		name = ['ROSA	PEAK', 'ROSA QUEST', 'ROSA CARNIVAL ', 'ROSA GREEN TRAIL', 'ROSA RED TRAIL ', 'ROSA KIDS'];
+
+	$(window).on('scroll', function () {
+		if (takeSlide() !== undefined) {
+			$('.js-change-date').text(date[takeSlide()]);
+			$('.js-change-name').text(name[takeSlide()]);
+		}
+	});
+
+	function takeSlide() {
+		if (document.querySelector('.info__cards').getBoundingClientRect().top <= 0 && document.querySelector('.info__cards').getBoundingClientRect().top >= -sectionHeight) {
+			return Math.round((($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)) + -0.5)
+		}
+	}
+
 });

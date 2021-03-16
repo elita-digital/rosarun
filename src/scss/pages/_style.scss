@@ -987,6 +987,7 @@ main {
 ////info
 .info {
 	padding: 84px 0;
+	overflow: initial;
 
 	&__wrapper {
 		display: flex;
@@ -1006,20 +1007,32 @@ main {
 
 		svg {
 			max-width: 80%;
-			margin: 0 auto;
+			margin: 150px auto 0;
 			display: block;
 		}
 	}
 
-	&__mountain {
+	&__mountain-wrapper {
 		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 1px;
+	}
+
+	&__mountain {
+		position: sticky;
 		top: 120px;
-		left: 50%;
-		transform: translateX(-50%);
 		width: 340px;
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
+
+		svg {
+			max-width: unset;
+			margin: 0 auto;
+			display: block;
+		}
 	}
 
 	&__about-text.about-text {

@@ -60,19 +60,22 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="info pattern-bg" id="info">
 			<div class="info__wrapper">
 				<div class="info__path">
 					@@include('svg/include/mount-path.svg')
-          <div class="info__mountain">
-            <p class="info__about-text about-text --uppercase">
-              <strong>01.05.2021</strong>
-            </p>
-            <p class="info__about-text about-text --uppercase">
-              <strong>rosa peak</strong>
-            </p>
-            @@include('svg/include/mountain.svg')
-          </div>
+					<div class="info__mountain-wrapper">
+						<div class="info__mountain">
+							<p class="info__about-text about-text --uppercase">
+								<strong class="js-change-date">01.05.2021</strong>
+							</p>
+							<p class="info__about-text about-text --uppercase">
+								<strong class="js-change-name">rosa peak</strong>
+							</p>
+							@@include('svg/include/mountain.svg')
+						</div>
+					</div>
 				</div>
 				<div class="info__cards">
 					@@loop('components/bem-blocks/_info-card.html', 'components/bem-blocks/info-cards.json')
