@@ -318,10 +318,10 @@ $(function () {
 	});
 
 	let sectionHeight = $('.info__cards').height();
-	const date = ['01.05.2021', '02.05.2021', '03.05.2021', '04.05.2021'],
+	const date = ['01.05.2021', '02.05.2021', '03.05.2021', '04.05.2021', '04.05.2021', '04.05.2021'],
 		name = ['ROSA	PEAK', 'ROSA QUEST', 'ROSA CARNIVAL ', 'ROSA GREEN TRAIL', 'ROSA RED TRAIL ', 'ROSA KIDS'];
 
-	$(window).on('scroll', function () {
+	$(window).on('load scroll', function () {
 		if (takeSlide() !== undefined) {
 			$('.js-change-date').text(date[takeSlide()]);
 			$('.js-change-name').text(name[takeSlide()]);
