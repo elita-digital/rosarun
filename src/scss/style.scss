@@ -1,0 +1,28 @@
+@import 'global/*.scss';
+@import '../components/bem-blocks/**/*.scss';
+
+/* NOTE - import here your style modules */
+
+@import 'variables';
+
+
+@import '../plugins/bootstrap.min'
+, '../plugins/fancybox'
+, '../plugins/slick'
+, '../plugins/slick-theme'
+, '../plugins/datepicker'
+, '../plugins/intltelinput'
+, '../plugins/chosen'
+;
+
+@import 'base/base'
+, 'base/typography'
+, 'base/article'
+;
+
+@import 'pages/style'
+, 'pages/lk'
+, 'pages/single'
+;
+
+@import 'media';

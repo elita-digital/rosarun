@@ -1,0 +1,615 @@
+main .lk:not(.iti-flag){
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+
+
+	@include media1200{
+		min-height: 1px;
+	}
+
+	.button{
+		width: 100%;
+	}
+
+	&:after,
+	&:before{
+		content: '';
+		position: fixed;
+		width: 100%;
+		background: $yellow;
+		top: 0;
+		right: 0;
+		bottom: 0;
+
+		@include media1200{
+			width: 500px;
+			right: auto;
+			left: 800px;
+		}
+		@include media900{
+			left: 700px;
+		}
+	}
+
+	&:before{
+		z-index: 0;
+		background: $yellow;
+	}
+	&:after{
+		opacity: .4;
+		z-index: 1;
+		background:  url('../img/pattern.svg') 50% 50% repeat-y;
+		background-size: 100% auto;
+	}
+
+
+	h5{
+		text-transform: none;
+		font-weight: 500;
+		max-width: 340px;
+		line-height: 1.1;
+	}
+	p{
+		margin: 10px 0 0 0;
+	}
+
+	.button:not(:last-of-type){
+		margin-right: 20px;
+	}
+	@include media900{
+		.button{
+			min-width: 150px;
+		}
+	}
+	@include media600{
+		h4, .h4{
+			font-size: 16px;
+		}
+	}
+	@include media480{
+		.button{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media(max-width: 800px){
+	main .lk:after, main .lk:before {
+		left: 580px;
+	}
+}
+@media(max-width: 600px){
+	main .lk:after, main .lk:before {
+		left: 500px;
+	}
+}
+
+.lk-main{
+	position: relative;
+	max-width: 700px;
+
+	@include media-container{
+		max-width: 600px;
+	}
+	@include media900{
+		max-width: 400px;
+	}
+
+	& > *{
+		position: relative;
+		z-index: 10;
+	}
+
+	&:before,
+	&:after{
+		content: '';
+		background: $white;
+		top: -100px;
+		bottom: -100px;
+		z-index: 0;
+		min-height: 120vh;
+
+		@include media1200{
+			display: none;
+		}
+	}
+	&:before{
+		right: -60px;
+		left: -60px;
+		position: absolute;
+	}
+	&:after{
+		left: 0;
+		width: 50%;
+		position: fixed;
+	}
+}
+
+.lk-menu{
+	margin-bottom: 0;
+	position: fixed;
+	top: 90px;
+	right: 50%;
+	margin-right: -625px;
+	z-index: 10;
+
+	&:after{
+		position: fixed;
+		left: 60px;
+		right: 0;
+		height: 67px;
+		bottom: 0;
+		background: url('../img/mountains.svg') 0 100% repeat-x;
+		background-size: contain;
+		content: "";
+
+		@include media1200{
+			left: auto;
+			height: auto;
+			width: 67px;
+			top: 0;
+			background: url('../img/mountains-right.svg') 0 100% repeat-y;
+			background-size: contain;
+		}
+		@include media600{
+			width: 40px;
+		}
+		@include media480{
+			display: none;
+		}
+	}
+
+	@include media-container{
+		margin: 0;
+		right: auto;
+		left: 855px;
+	}
+
+	@include media1200{
+		left: 0;
+		top: 0;
+		max-width: 700px;
+		position: relative;
+		margin-bottom: 60px;
+	}
+	@include media900{
+		max-width: 520px;
+	}
+	@include media600{
+		max-width: 420px;
+		margin-bottom: 40px;
+	}
+
+
+
+	li{
+		&:not(:first-of-type){
+			margin-top: 30px;
+		}
+
+		@include media1200{
+			display: inline-block;
+			margin-bottom: 20px;
+
+			&:not(:last-of-type){
+				margin-right: 40px;
+			}
+			&:not(:first-of-type){
+				margin-top: 0;
+			}
+		}
+		@include media900{
+			margin-bottom: 10px;
+
+			&:not(:last-of-type){
+				margin-right: 20px;
+			}
+		}
+	}
+
+	a{
+		margin: 0;
+
+		@include media600{
+			font-size: 16px;
+		}
+	}
+
+
+}
+@media(min-width: 1201px){
+	.no-touchevents .lk-menu a:hover,
+	.lk-menu a:focus,
+	.lk-menu a:active,
+	.lk-menu a.active{
+		span{
+			color: $white;
+		}
+		&:after{
+			background: $white;
+		}
+	}
+}
+
+
+.form-block + .form-block{
+	margin-top: 40px;
+
+	@include media900{
+		margin-top: 20px;
+	}
+	@include media600{
+		margin-top: 10px;
+	}
+}
+
+.form-block{
+	position: relative;
+	z-index: 10;
+}
+
+@media(min-width: 1361px){
+	.lk-main{
+		.row{
+			margin-right: -40px;
+			margin-left: -40px;
+
+			& > div{
+				padding: 0 40px;
+			}
+		}
+	}
+}
+
+@media(max-width: 1360px) and (min-width: 901px){
+	.lk-main{
+		.row{
+			margin-right: -20px;
+			margin-left: -20px;
+
+			& > div{
+				padding: 0 20px;
+			}
+		}
+	}
+}
+
+.fileInput{
+	position: relative;
+
+	& > label{
+		position: relative;
+		top: 0;
+		left: 0;
+		padding: 0;
+	}
+
+	.button{
+		width: auto;
+		margin-top: 21px;
+		min-width: 180px;
+
+		@include media900{
+			margin-top: 15px;
+			min-width: 150px;
+		}
+		@include media480{
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+	}
+}
+section .avatar-file{
+	width: 178px;
+	height: 178px;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	padding: 0;
+	overflow: hidden;
+	display: block;
+
+
+	@include media900{
+		width: 150px;
+		height: 150px;
+	}
+
+	.image{
+		overflow: hidden;
+		width: 100%;
+		height: 178px;
+		border: 1px solid #c5c4c4;
+
+		line-height: 178px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%,0);
+
+
+		@include media900{
+			height: 148px;
+			line-height: 148px;
+		}
+	}
+	img{
+		display: inline-block;
+		height: 180px;
+		width: auto;
+		max-width: 300%;
+
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+		top: 0;
+		transition: opacity .3s $trans;
+
+		@include media900{
+			height: 150px;
+		}
+	}
+
+	input{
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -2;
+	}
+}
+
+.no-touchevents .avatar-file:hover img{
+	opacity: .7;
+}
+
+
+.info-message{
+	background: $yellow;
+	color: $black;
+	padding: 20px 50px 20px 70px;
+	position: relative;
+	font-weight: 500;
+
+	@include media600{
+		padding: 20px 40px 20px 50px;
+		margin-right: -40px;
+		margin-left: -20px;
+		margin-top: 20px;
+	}
+
+	&:before,
+	&:after{
+		position: absolute;
+		left: 30px;
+		top: 20px;
+
+		@include media600{
+			left: 20px;
+		}
+	}
+	&:before{
+		background: $black;
+		content: '';
+		border-radius: 50%;
+		width: 18px;
+		height: 18px;
+		z-index: 10;
+	}
+	&:after{
+		content: '!';
+		width: 18px;
+		text-align: center;
+		color: $white;
+		font: 900 12px/18px $mainFont;
+		z-index: 11;
+	}
+
+	
+	a{
+		color: $black;
+		border-bottom: 2px solid $white;
+
+		@include media600{
+			border-width: 1px;
+		}
+	}
+}
+.no-touchevents .info-message a:hover,
+.info-message a:focus,
+.info-message a:active{
+	color: $white;
+}
+
+.change-pass{
+	@include media900{
+		.row > div+div{
+			margin-top: 40px;
+		}
+	}
+	@include media600{
+		.form-block+.form-block {
+			margin-top: 20px;
+		}
+	}
+	@include media480{
+		.row > div+div{
+			margin-top: 20px;
+		}
+	}
+}
+.form-link{
+	color: $black;
+	text-decoration: underline;
+}
+
+//card
+.race-card{
+	position: relative;
+	padding: 30px;
+	min-height: 260px;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
+
+	& + .race-card{
+		margin-top: 30px;
+
+
+		@include media600{
+			margin-top: 20px;
+		}
+	}
+
+
+	@include media900{
+		min-height: 1px;
+		padding: 20px;
+	}
+
+	.h4{
+		text-transform: none;
+		font-weight: 500;
+	}
+	h5, .h5{
+		max-width: 100%;
+	}
+}
+.race-info{
+	margin-right: 210px;
+	min-height: 280px;
+	padding-bottom: 66px;
+	position: relative;
+
+	.date{
+		margin-bottom: -5px;
+	}
+
+	@include media900{
+		margin: 0 ;
+		min-height: 1px;
+		padding-bottom: 0;
+	}
+
+	@include media600{
+		.date{
+			margin-bottom: 0;
+		}
+	}
+
+	.start-number{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		white-space: nowrap;
+
+
+		@include media900{
+			position: relative;
+			white-space: normal;
+		}
+	}
+}
+.race-buttons{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 180px;
+
+	.button{
+		display: block;
+		margin: 0 0 8px 0;
+	}
+
+
+	@include media900{
+		position: relative;
+		top: 0;
+		right: 0;
+		margin-top: 40px;
+		width: auto;
+		margin-left: -5px;
+		margin-right: -5px;
+		font-size: 0;
+
+		.col{
+			font-size: 11px;
+			vertical-align: top;
+			width: 50%;
+			padding: 0 5px;
+			display: inline-block;
+		}
+
+		.button{
+			display: inline-block;
+			margin: 0 10px 10px 0;
+		}
+
+		p{
+			margin: 0;
+		}
+		.button + p{
+			margin-top: -4px!important;
+		}
+	}
+	@include media600{
+		margin-top: 30px;
+	}
+	@include media480{
+		.col{
+			width: 100%;
+		}
+	}
+}
+.race-price{
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+
+
+	@include media900{
+		position: relative;
+		right: 0;
+		bottom: 0;
+	}
+}
+.member-info{
+	margin: 30px 0;
+	display: block;
+
+
+	@include media900{
+		margin: 20px 0;
+	}
+
+	p{
+		font-weight: 700;
+		margin-top: 0;
+	}
+
+	h5:first-of-type{
+		margin: 0 0 5px;
+	}
+}
+.start-number{
+	margin-top: 30px;
+
+	span{
+		color: $yellow;
+	}
+
+	@include media900{
+		margin-top: 20px;
+	}
+}
+
+
+
+.lk-reg{
+	.lk-menu,
+	.section-header{
+		display: none;
+	}
+}

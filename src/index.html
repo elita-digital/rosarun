@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html>
+
+@@include('components/page/_1_head.html')
+
+<body>
+
+	@@include('components/page/_2_header.html')
+	<main>
+
+		<section class="first-screen" id="fs" style="background-image: url('img/top-bg.jpg')">
+			<div class="container large-container">
+				<div class="about">
+
+					<div class="about__wrapper">
+
+						<article class="about-main-block pattern-bg">
+							<div class="mountains"></div>
+							<div class="about__title">
+								<h1 class="about__title-text">Rosarun 2021</h1>
+								<time class="about__title-date" datetime="2021-05-01T4D">01-04 мая 2021</time>
+							</div>
+							<p class="about-text --uppercase">4-дневный международный фестиваль бега на горном курорте “Роза Хутор”.</p>
+							<p class="about-text">В программе: “вертикальный километр”, командный квест, карнавал, детский забег и уникальный трейл по горнолыжным трассам. А еще вечеринки каждый день!</p>
+							<p class="about-text --uppercase"><strong>Добро пожаловать на праздник бега!</strong></p>
+							<div class="about__button-wrap">
+								<a href="modal-register.html" class="fancybox button">Принять участие</a>
+							</div>
+						</article>
+
+						<article class="about-extra">
+							<div class="about-extra__row">
+								<h4 class="accentFont">Каждому участнику</h4>
+								<div class="plus-block">
+									<div>
+										<i class="icon-tshirt" aria-hidden="true"></i>
+										футболка
+									</div>
+									<div class="plus-block__plus">+</div>
+									<div>
+										<i class="icon-medal1" aria-hidden="true"></i>
+										медаль
+									</div>
+								</div>
+							</div>
+							<div class="about-extra__row">
+								<h4 class="accentFont">Каждый день новая медаль</h4>
+								<div class="medals-block">
+									<div>
+										<i class="icon-medal2" aria-hidden="true"></i>
+										<i class="icon-medal3" aria-hidden="true"></i>
+										<i class="icon-medal4" aria-hidden="true"></i>
+										<i class="icon-medal5" aria-hidden="true"></i>
+									</div>
+									один забег&nbsp;&mdash; одна медаль
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="info pattern-bg" id="info">
+			<div class="info__wrapper">
+				<div class="info__path">
+					@@include('svg/include/mount-path.svg')
+          <div class="info__mountain">
+            <p class="info__about-text about-text --uppercase">
+              <strong>01.05.2021</strong>
+            </p>
+            <p class="info__about-text about-text --uppercase">
+              <strong>rosa peak</strong>
+            </p>
+            @@include('svg/include/mountain.svg')
+          </div>
+				</div>
+				<div class="info__cards">
+					@@loop('components/bem-blocks/_info-card.html', 'components/bem-blocks/info-cards.json')
+				</div>
+			</div>
+		</section>
+		<section class="gray-bg gallery" id="gallery">
+			<div class="container">
+				<div class="gallery-header links-header">
+					<div class="gallery-hashtag">
+						<a href="#" data-filter=".rosarun2017" class=" "><span>#rosarun 2017</span></a>
+						<a href="#" data-filter=".rosarun2016"><span>#rosarun 2016</span></a>
+						<a href="#" data-filter=".rosarun2015"><span>#rosarun 2015</span></a>
+						<div class="text">#rosapeak</div>
+						<div class="text">#rosaquest</div>
+					</div>
+					<div class="gallery-more">
+						<span>больше фото:</span>
+
+						<div class="rounded-links">
+							<a href="#" class="" target="_blank"><i class="icon-insta"></i></a>
+							<a href="#" class="" target="_blank"><i class="icon-vk"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reg-slider gallery-slider">
+				<div class="slide rosarun2017 rosaquest" style="background-image: url('img/gallery1.jpg')"></div>
+				<div class="slide rosarun2016 rosapeak" style="background-image: url('img/fs.jpg')"></div>
+				<div class="slide rosarun2015 rosaquest" style="background-image: url('img/infrastructure.jpg')"></div>
+				<div class="slide rosapeak" style="background-image: url('img/members.jpg')"></div>
+				<div class="slide rosaquest" style="background-image: url('img/track.jpg')"></div>
+			</div>
+		</section>
+		<section class="track" id="track">
+			<div class="bg" style="background-image: url('img/track.jpg')"></div>
+			<div class="container">
+				<div class="track-header links-header">
+					<a data-filter=".Rosapeak" href="#" class=""><span>Rosa peak</span></a>
+					<a data-filter=".Rosaquest" href="#"><span>Rosa quest</span></a>
+					<a data-filter=".Rosacarnival" href="#"><span>Rosa carnival</span></a>
+					<a data-filter=".Rosa7" href="#"><span>Rosa 7/777</span></a>
+				</div>
+
+				<div class="reg-slider track-slider">
+					<div class="Rosapeak track-slider-wrap">
+						<div class="track-block">
+							<div class="bg" style="background-image: url('img/track2.jpg')"></div>
+							<div class="track-info">
+								<div class="track-header section-header">
+									<div class="date">
+										<span>День 1</span>
+										<span>03.05.2018</span>
+									</div>
+									<div class="h2">Rosa peak</div>
+									<p class="date">Эстафета</p>
+								</div>
+								<div class="track-tech-info road-row accentFont">
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/mount.svg" alt="" /></div>
+											высота&nbsp;&mdash; 1150&nbsp;м
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/running.svg" alt="" /></div>
+											лимит&nbsp;&mdash; 250&nbsp;человек
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/length.svg" alt="" /></div>
+											длина 1 5,5&nbsp;км
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/flag.svg" alt="" /></div>
+											Старт в&nbsp;15:00
+										</div>
+									</div>
+								</div>
+								<div class="track-text">
+									<p>забег на&nbsp;вершину горы Роза Пик по&nbsp;экстремальной трассе из&nbsp;земли, камней и&nbsp;снега. максимальный набор высоты&nbsp;&mdash; более 1150&nbsp;м. Собери волю в&nbsp;кулак и&nbsp;попробуй покорить вершину!</p>
+								</div>
+								<div class="track-price">
+									1400 ₽
+								</div>
+								<div class="track-footer">
+									<a href="modal-register.html" class="fancybox button">Принять участие</a>
+									<div>
+										<a href="#program" class="scrollTo">
+											<i class="icon-picker"></i>
+											Карта забега
+										</a>
+										<a href="#" class="">
+											<i class="icon-download"></i>
+											Правила <span>(pdf, 1.3Mb)</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="Rosaquest Rosa7 track-slider-wrap">
+						<div class="track-block">
+							<div class="bg" style="background-image: url('img/track2.jpg')"></div>
+							<div class="track-info">
+								<div class="track-header section-header">
+									<div class="date">
+										<span>День 1</span>
+										<span>03.05.2018</span>
+									</div>
+									<div class="h2">Rosa peak</div>
+								</div>
+								<div class="track-tech-info road-row accentFont">
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/mount.svg" alt="" /></div>
+											высота&nbsp;&mdash; 1150&nbsp;м
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/running.svg" alt="" /></div>
+											лимит&nbsp;&mdash; 250&nbsp;человек
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/length.svg" alt="" /></div>
+											длина 1 5,5&nbsp;км
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/flag.svg" alt="" /></div>
+											Старт в&nbsp;15:00
+										</div>
+									</div>
+								</div>
+								<div class="track-text">
+									<p>забег на&nbsp;вершину горы Роза Пик по&nbsp;экстремальной трассе из&nbsp;земли, камней и&nbsp;снега. максимальный набор высоты&nbsp;&mdash; более 1150&nbsp;м. Собери волю в&nbsp;кулак и&nbsp;попробуй покорить вершину!</p>
+								</div>
+								<div class="track-price">
+									1400 ₽
+								</div>
+								<div class="track-footer">
+									<a href="modal-register.html" class="fancybox button">Принять участие</a>
+									<div>
+										<a href="#program" class="scrollTo">
+											<i class="icon-picker"></i>
+											Карта забега
+										</a>
+										<a href="#" class="">
+											<i class="icon-download"></i>
+											Правила <span>(pdf, 1.3Mb)</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="Rosa7 track-slider-wrap">
+						<div class="track-block">
+							<div class="bg" style="background-image: url('img/track2.jpg')"></div>
+							<div class="track-info">
+								<div class="track-header section-header">
+									<div class="date">
+										<span>День 1</span>
+										<span>03.05.2018</span>
+									</div>
+									<div class="h2">Rosa peak</div>
+								</div>
+								<div class="track-tech-info road-row accentFont">
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/mount.svg" alt="" /></div>
+											высота&nbsp;&mdash; 1150&nbsp;м
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/running.svg" alt="" /></div>
+											лимит&nbsp;&mdash; 250&nbsp;человек
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/length.svg" alt="" /></div>
+											длина 1 5,5&nbsp;км
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<div class="image"><img src="img/icons/flag.svg" alt="" /></div>
+											Старт в&nbsp;15:00
+										</div>
+									</div>
+								</div>
+								<div class="track-text">
+									<p>забег на&nbsp;вершину горы Роза Пик по&nbsp;экстремальной трассе из&nbsp;земли, камней и&nbsp;снега. максимальный набор высоты&nbsp;&mdash; более 1150&nbsp;м. Собери волю в&nbsp;кулак и&nbsp;попробуй покорить вершину!</p>
+								</div>
+								<div class="track-price">
+									1400 ₽
+								</div>
+								<div class="track-footer">
+									<a href="modal-register.html" class="fancybox button">Принять участие</a>
+									<div>
+										<a href="#program" class="scrollTo">
+											<i class="icon-picker"></i>
+											Карта забега
+										</a>
+										<a href="#" class="">
+											<i class="icon-download"></i>
+											Правила <span>(pdf, 1.3Mb)</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="Rosacarnival track-slider-wrap">
+						<div class="track-block">
+							<div class="bg" style="background-image: url('img/track2.jpg')"></div>
+							<div class="track-info">
+								<div class="track-header section-header">
+									<div class="date">
+										<span>День 1</span>
+										<span>03.05.2018</span>
+									</div>
+									<div class="h2">Rosa peak</div>
+								</div>
+								<div class="track-tech-info road-row accentFont">
+									<div>
+										<div class="text">
+											<i class="icon-mount" aria-hidden="true"></i>
+											высота&nbsp;&mdash; 1150&nbsp;м
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<i class="icon-running" aria-hidden="true"></i>
+											лимит&nbsp;&mdash; 250 человек
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<i class="icon-length" aria-hidden="true"></i>
+											длина 1 5,5&nbsp;км
+										</div>
+									</div>
+									<div>
+										<div class="text">
+											<i class="icon-flag" aria-hidden="true"></i>
+											Старт в&nbsp;15:00
+										</div>
+									</div>
+								</div>
+								<div class="track-text">
+									<p>забег на&nbsp;вершину горы Роза Пик по&nbsp;экстремальной трассе из&nbsp;земли, камней и&nbsp;снега. максимальный набор высоты&nbsp;&mdash; более 1150&nbsp;м. Собери волю в&nbsp;кулак и&nbsp;попробуй покорить вершину!</p>
+								</div>
+								<div class="track-price">
+									1400 ₽
+								</div>
+								<div class="track-footer">
+									<a href="modal-register.html" class="fancybox button">Принять участие</a>
+									<div>
+										<a href="#program" class="scrollTo">
+											<i class="icon-picker"></i>
+											Карта забега
+										</a>
+										<a href="#" class="">
+											<i class="icon-download"></i>
+											Правила <span>(pdf, 1.3Mb)</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="yellow-bg accent-block">
+			<div class="container">
+				<div class="wrap">
+					<div class="accent-block-title">4&nbsp;дня фестиваля</div>
+					<div class="accent-block-price accentFont">
+						за 4200 ₽
+					</div>
+					<div class="button-block">
+						<a href="modal-register.html" class="fancybox button white-button">
+							Принять участие
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="program pattern-bg" id="program">
+			<div class="container">
+				<div class="program-header links-header">
+					<a href="#" class="active"><span>Спортивная программа</span></a>
+					<a href="#"><span>Развлекательная программа</span></a>
+				</div>
+			</div>
+			<div class="map-wrap">
+				<!--<div class="map_mask"></div>-->
+				<div class="map" id="program-map"></div>
+			</div>
+			<div class="container">
+				<div class="program-slider">
+					<div>
+						<div class="program-block">
+							<div class="program-block-header">
+								<div class="date">
+									<span>День 1</span>
+									<span>03.05.2018</span>
+								</div>
+								<h4>Rosa 7/777</h4>
+							</div>
+							<div class="program-schedule">
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class=" program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class=" program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="program-block">
+							<div class="program-block-header">
+								<div class="date">
+									<span>День 1</span>
+									<span>03.05.2018</span>
+								</div>
+								<h4>Rosa 7/777</h4>
+							</div>
+							<div class="program-schedule">
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="accentRow program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="accentRow program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="program-block">
+							<div class="program-block-header">
+								<div class="date">
+									<span>День 1</span>
+									<span>03.05.2018</span>
+								</div>
+								<h4>Rosa 7/777</h4>
+							</div>
+							<div class="program-schedule">
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="program-block">
+							<div class="program-block-header">
+								<div class="date">
+									<span>День 1</span>
+									<span>03.05.2018</span>
+								</div>
+								<h4>Rosa 7/777</h4>
+							</div>
+							<div class="program-schedule">
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">7:00&nbsp;&mdash; 18:00</div>
+									<div class="name">Выдача стартовых пакетов</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+								<div class="program-event">
+									<div class="time">10:00</div>
+									<div class="name">Перерыв</div>
+									<a href="" class="anchor-link map-link">на карте</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about-rosa gray-bg">
+			<div class="bg" style="background-image: url('img/infrastructure-gray.jpg')"></div>
+			<div class="container">
+				<div class="section-header">
+					<h2>О курорте</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-7 col-sm-7 col-xs-8 col-xxs-12">
+						<article>
+							<p>&laquo;Роза хутор&raquo;&nbsp;&mdash; это круглогодичный горный курорт, расположенный в&nbsp;60&nbsp;минутах езды от&nbsp;аэропорта в&nbsp;Сочи. Вне зависимости от&nbsp;сезона здесь остаются неизменными и&nbsp;высококласнный сервис и&nbsp;разнообразные возможности для проживания и&nbsp;развлечений.</p>
+							<p>&laquo;Роза хутор&raquo;&nbsp;&mdash; это круглогодичный горный курорт, расположенный в&nbsp;60&nbsp;минутах езды от&nbsp;аэропорта в&nbsp;Сочи. Вне зависимости от&nbsp;сезона здесь остаются неизменными и&nbsp;высококласнный сервис и&nbsp;разнообразные возможности для проживания и&nbsp;развлечений.</p>
+						</article>
+					</div>
+					<div class="col-md-5 col-sm-5 col-xs-4 col-xxs-12">
+						<div class="about-rosa-numbers">
+							<div class="row top">
+								<div class="col-sm-6 col-xs-12 col-xxs-6">
+									<div class="rosa-number">77</div>
+									километров <br />лыжных трасс
+								</div>
+								<div class="col-sm-6 col-xs-12 col-xxs-6">
+									<div class="rosa-number">11</div>
+									отелей различной категории звездности
+								</div>
+								<div class="col-sm-6 col-xs-12 col-xxs-6">
+									<div class="rosa-number">30</div>
+									километров <br />лыжных трасс
+								</div>
+								<div class="col-sm-6 col-xs-12 col-xxs-6">
+									<div class="rosa-number">2320</div>
+									отелей различной категории звездности
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="road pattern-bg" id="road">
+			<div class="container">
+				<div class="road-header links-header">
+					<a href="#" class="active"><span>Как добраться</span></a>
+					<a href="#"><span>Где жить</span></a>
+				</div>
+			</div>
+
+			<div class="road-map">
+				<div class="map-wrap">
+					<!--<div class="map_mask"></div>-->
+					<div class="map" id="road-map"></div>
+				</div>
+				<div class="road-info">
+					<div class="road-hotels-wrap">
+						<div class="road-hotels">
+							<div class="road-hotels-image" style="background-image: url('../img/infrastructure.jpg')"></div>
+							<article>
+								<h6>Отель Rosa Ski Inn</h6>
+								<p>Отель &laquo;Роза Ски Инн&raquo; находится на&nbsp;круглогодичном курорте &laquo;Роза Хутор&raquo;, на&nbsp;высоте 1170 метров над уровнем моря, где располагалась Горная Олимпийская деревня&nbsp;&mdash; один из&nbsp;знаковых объектов Зимних Олимпийских Игр 2014 года в&nbsp;Сочи.</p>
+								<p><b>Промокод: ROSARUN2018</b></p>
+								<a href="#" class="button small-button">Забронировать</a>
+							</article>
+						</div>
+						<div class="road-hotels">
+							<div class="road-hotels-image" style="background-image: url('../img/infrastructure.jpg')"></div>
+							<article>
+								<h6>Отель Rosa Ski Inn</h6>
+								<p>Отель &laquo;Роза Ски Инн&raquo; находится на&nbsp;круглогодичном курорте &laquo;Роза Хутор&raquo;, на&nbsp;высоте 1170 метров над уровнем моря, где располагалась Горная Олимпийская деревня&nbsp;&mdash; один из&nbsp;знаковых объектов Зимних Олимпийских Игр 2014 года в&nbsp;Сочи.</p>
+								<p><b>Промокод: ROSARUN2018</b></p>
+								<a href="#" class="button small-button">Забронировать</a>
+							</article>
+						</div>
+						<div class="road-hotels">
+							<div class="road-hotels-image" style="background-image: url('../img/infrastructure.jpg')"></div>
+							<article>
+								<h6>Отель Rosa Ski Inn</h6>
+								<p>Отель &laquo;Роза Ски Инн&raquo; находится на&nbsp;круглогодичном курорте &laquo;Роза Хутор&raquo;, на&nbsp;высоте 1170 метров над уровнем моря, где располагалась Горная Олимпийская деревня&nbsp;&mdash; один из&nbsp;знаковых объектов Зимних Олимпийских Игр 2014 года в&nbsp;Сочи.</p>
+								<p><b>Промокод: ROSARUN2018</b></p>
+								<a href="#" class="button small-button">Забронировать</a>
+							</article>
+						</div>
+					</div>
+				</div>
+				<!--
+
+								<div class="road-info">
+									<div class="road-types">
+										<div class="road-row ">
+											<div>
+												<a href="#" class="active">
+													<i class="icon-car1"></i>
+													На автомобиле
+												</a>
+											</div>
+											<div>
+												<a href="#">
+													<i class="icon-car2"></i>
+													Трансфер
+												</a>
+											</div>
+											<div>
+												<a href="#">
+													<i class="icon-car2"></i>
+													На автобусе
+												</a>
+											</div>
+											<div>
+												<a href="#">
+													<i class="icon-car3"></i>
+													Такси
+												</a>
+											</div>
+											<div>
+												<a href="#">
+													<i class="icon-car4"></i>
+													На поезде
+												</a>
+											</div>
+										</div>
+									</div>
+									<article class="road-type-description">
+										<h6>Время в пути: 40 минут</h6>
+										<p>40&nbsp;км от&nbsp;Адлера по&nbsp;Новому Краснополянскому шоссе (трассе А-148) до&nbsp;Горного курорта &laquo;Роза Хутор&raquo;. Дорога берет свое начало в&nbsp;центре Адлерского района Сочи на&nbsp;круговом перекрестке с&nbsp;федеральной трассой М-27.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<p>На&nbsp;территории нижней базы курорта, в&nbsp;Роза Долине, расположено пять крытых парковок, общей вместимостью более 10&nbsp;000&nbsp;машиномест.</p>
+										<br/>
+										<a href="#" class="anchor-link more-info">Тарифы на&nbsp;парковку на&nbsp;территории курорта</a>
+									</article>
+								</div>
+								-->
+			</div>
+		</section>
+		<section id="hotel" class="hotel" style="background-image: url('img/infrastructure.jpg')">
+			<div class="container">
+				<div class="section-header">
+					<h2>Инфра&shy;структура курорта</h2>
+				</div>
+				<div class="row top">
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Парк чудес</h5>
+							<p>Семейный развлекательно-познавательный центр, в&nbsp;котором соединились самые современные формы развлечений мирового уровня.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Крытый каток</h5>
+							<p>Каток на&nbsp;Роза Хутор&nbsp;&mdash; это идеальный лед, просторная арена для фигурного катания или игры в&nbsp;хоккей и&nbsp;просто веселое времяпрепровождение с&nbsp;друзьями.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Деловой центр</h5>
+							<p>Идеальное место для тех, кому необходимо поработать. К&nbsp;вашим услугам&nbsp;&mdash; офисное пространство, переговорная, секретарь, высокоскоростной интернет, кофе-поинт.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Автодром радиуправляемых машинок</h5>
+							<p>На&nbsp;автодроме доступно три трека&nbsp;&mdash; учебный, для кольцевых автогонок и&nbsp;триал-версия.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Йога центр</h5>
+							<p>Йога&nbsp;&mdash; прекрасный способ восстановиться и&nbsp;расслабиться. Занятия проводит Александра Мигова&nbsp;&mdash; член Федерации йоги России и&nbsp;инструктор тренировочной системы Yoga&nbsp;23.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Рисовальная студия &laquo;Цветочные горы&raquo;</h5>
+							<p>Семейный развлекательно-познавательный центр, в&nbsp;котором соединились самые современные формы развлечений мирового уровня.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Арбалетно-лучный центр</h5>
+							<p>Семейный развлекательно-познавательный центр, в&nbsp;котором соединились самые современные формы развлечений мирового уровня.</p>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<article class="hotel-info">
+							<h5>Детский клуб</h5>
+							<p>Детский клуб курорта &laquo;Роза Хутор&raquo; открыт для своих маленьких гостей весь день с&nbsp;09:00 до&nbsp;23:00.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="food pattern-bg" id="food">
+			<div class="container">
+				<article class="section-header ">
+					<h2>welcome rosarun</h2>
+					<p>В&nbsp;свободное время вы&nbsp;сможете насладиться красотами горного курорта &laquo;Роза Хутор&raquo;, посетить Горную Олимпийскую деревню, Кавказский Государственный заповедник, погулять по&nbsp;Олимпийскому парку, покататься на&nbsp;аттракционах крупнейшего в&nbsp;России парка развлечений, посмотреть на&nbsp;дельфинов в&nbsp;дельфинарии и&nbsp;съездить в&nbsp;Абхазию.</p>
+				</article>
+
+				<div class="links-header food-header">
+					<a href="#" data-filter=".fooood" class=""><span>Кафе и&nbsp;рестораны</span></a>
+					<a href="#" data-filter=".service"><span>Услуги</span></a>
+				</div>
+				<div class="food-slider">
+					<div class="fooood">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">Гастро-бар СТАНЦИЯ</div>
+									<a href="#" target="_blank" class="food-link">vk.com/daynightstation</a>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина, набережная Полянка, 3
+									</div>
+									<div>
+										<i class="icon-phone"></i>
+										<a href="tel:+89996510129">8 (999) 651-01-29</a>
+									</div>
+									<div>
+										<i class="icon-time"></i>
+										с&nbsp;12:00 до&nbsp;5:00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fooood service">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">HOT SPOT</div>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина
+									</div>
+									<div>
+										<i class="icon-phone"></i>
+										<a href="tel:+89996510129">8 (999) 651-01-29</a>
+									</div>
+									<div>
+										<i class="icon-time"></i>
+										с&nbsp;12:00 до&nbsp;5:00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">ЕШЬ ХОРОШО</div>
+									<a href="#" target="_blank" class="food-link">vk.com/eshhoroshoeshhoroshoeshhoroshoeshhoroshoeshhoroshoeshhorosho</a>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина, набережная Полянка, 3
+									</div>
+									<div>
+										<i class="icon-phone"></i>
+										<a href="tel:+89996510129">8 (999) 651-01-29</a>
+									</div>
+									<div>
+										<i class="icon-time"></i>
+										с&nbsp;12:00 до&nbsp;5:00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">ЕШЬ ХОРОШО </div>
+									<a href="#" target="_blank" class="food-link">vk.com/eshhoro</a>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина, набережная Полянка, 3
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fooood">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">Гастро-бар СТАНЦИЯ</div>
+									<a href="#" target="_blank" class="food-link">vk.com/daynightstation</a>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина, набережная Полянка, 3
+									</div>
+									<div>
+										<i class="icon-phone"></i>
+										<a href="tel:+89996510129">8 (999) 651-01-29</a>
+									</div>
+									<div>
+										<i class="icon-time"></i>
+										с&nbsp;12:00 до&nbsp;5:00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fooood">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">HOT SPOT</div>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина
+									</div>
+									<div>
+										<i class="icon-phone"></i>
+										<a href="tel:+89996510129">8 (999) 651-01-29</a>
+									</div>
+									<div>
+										<i class="icon-time"></i>
+										с&nbsp;12:00 до&nbsp;5:00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fooood">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">ЕШЬ ХОРОШО</div>
+									<a href="#" target="_blank" class="food-link">vk.com/eshhoroshoeshhoroshoeshhoroshoeshhoroshoeshhoroshoeshhorosho</a>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина, набережная Полянка, 3
+									</div>
+									<div>
+										<i class="icon-phone"></i>
+										<a href="tel:+89996510129">8 (999) 651-01-29</a>
+									</div>
+									<div>
+										<i class="icon-time"></i>
+										с&nbsp;12:00 до&nbsp;5:00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fooood">
+						<div class="food-small-block">
+							<div class="image-wrap">
+								<div class="image" style="background-image: url('img/hotel1.jpg')"></div>
+								<div class="discount-banner">Скидка 15%</div>
+							</div>
+							<div class="text-wrap">
+								<div class="title-wrap">
+									<div class="title">ЕШЬ ХОРОШО </div>
+									<a href="#" target="_blank" class="food-link">vk.com/eshhoro</a>
+								</div>
+								<div class="food-info">
+									<div>
+										<i class="icon-picker"></i>
+										Роза Долина, набережная Полянка, 3
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="members gray-bg" id="members" style="background-image: url('img/members.jpg')">
+			<div class="container">
+				<div class="mount-wrap"></div>
+				<div class="section-header">
+					<h2>Участники</h2>
+				</div>
+				<div class="links-header">
+					<a href="#" class=""><span>Rosa peak</span></a>
+					<a href="#"><span>Rosa quest</span></a>
+					<a href="#"><span>ROSA CARNIVAL</span></a>
+					<a href="#"><span>ROSA 777</span></a>
+					<a href="#"><span>ROSA 7</span></a>
+				</div>
+
+				<div class="all-members">1000 участников</div>
+				<div class="table-wrap">
+					<table class="fixTable">
+						<thead>
+							<tr>
+								<td>Номер</td>
+								<td>Фио</td>
+								<td>Клуб</td>
+								<td>Город</td>
+								<td>
+									<a href="#" class="select-gender">
+										Пол
+										<span class="active">
+											<span class="active">М</span>
+											<span>Ж</span>
+										</span>
+									</a>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1234</td>
+								<td>
+									Андрей Семашка<br />
+									Василий Кличко<br />
+									Игорь Астафьев
+								</td>
+								<td>World Class Almaty</td>
+								<td>Астана</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>2345</td>
+								<td>
+									Константинопольский Константинчик
+								</td>
+								<td>ILR</td>
+								<td>Санкт-Петербург</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>7893</td>
+								<td>
+									Ян Айр
+								</td>
+								<td>Длинное название клуба название клуба название клуба название клуба название клуба название клуба</td>
+								<td>Омск</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>1234</td>
+								<td>
+									Андрей Семашка<br />
+									Василий Кличко<br />
+									Игорь Астафьев
+								</td>
+								<td>World Class Almaty</td>
+								<td>Астана</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>2345</td>
+								<td>
+									Константинопольский Константинчик
+								</td>
+								<td>ILR</td>
+								<td>Санкт-Петербург</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>7893</td>
+								<td>
+									Роман Сухоцкий
+								</td>
+								<td>Электрофорез</td>
+								<td>Константинополь</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>1234</td>
+								<td>
+									Андрей Семашка<br />
+									Василий Кличко<br />
+									Игорь Астафьев
+								</td>
+								<td>World Class Almaty</td>
+								<td>Астана</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>2345</td>
+								<td>
+									Константинопольский Константинчик
+								</td>
+								<td>ILR</td>
+								<td>Санкт-Петербург</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>7893</td>
+								<td>
+									Ян Айр
+								</td>
+								<td>Длинное название клуба название клуба название клуба название клуба название клуба название клуба</td>
+								<td>Омск</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>1234</td>
+								<td>
+									Андрей Семашка<br />
+									Василий Кличко<br />
+									Игорь Астафьев
+								</td>
+								<td>World Class Almaty</td>
+								<td>Астана</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>2345</td>
+								<td>
+									Константинопольский Константинчик
+								</td>
+								<td>ILR</td>
+								<td>Санкт-Петербург</td>
+								<td>М</td>
+							</tr>
+							<tr>
+								<td>7893</td>
+								<td>
+									Ян Айр
+								</td>
+								<td>Длинное название клуба название клуба название клуба название клуба название клуба название клуба</td>
+								<td>Омск</td>
+								<td>М</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<section class="contact" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-7 col-xs-12">
+						<div class="section-header">
+							<h2>Контакты</h2>
+						</div>
+						<div class="contact-form">
+							<!-- disabled и error классы для инпутов -->
+							<form>
+								<div class="form-row">
+									<div>
+										<div class="form-group">
+											<label for="name">Имя</label>
+											<input type="text" id="name">
+										</div>
+										<div class="form-group">
+											<label for="mail">E-mail</label>
+											<input type="email" id="mail">
+										</div>
+										<div class="form-group">
+											<label>Тип вопроса</label>
+											<div class="select-wrap">
+												<select data-placeholder=" " class="chosen-select-no-single" tabindex="9">
+													<option value=""></option>
+													<option value="about">О курорте</option>
+													<option value="road">Как доехать</option>
+													<option value="party">О призах и вечеринках</option>
+													<option value="members">О требованиях к участникам</option>
+												</select>
+												<span class="down-icon"></span>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="form-group">
+											<label for="message">Текст сообщения</label>
+											<textarea id="message"></textarea>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="checkbox">
+										<input type="checkbox">
+										<span class="check"></span>
+										Нажимая &laquo;Написать&raquo;, вы&nbsp;даете свое согласие на&nbsp;обработку Ваших персональных данных
+									</label>
+									<label class="checkbox">
+										<input type="checkbox">
+										<span class="check"></span>
+										Подписаться на&nbsp;рассылку новостей
+									</label>
+								</div>
+
+								<button class="button ">Написать</button>
+
+
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-5 col-xs-12">
+						<div class="faq-block">
+							<div class="faq-header">
+								<h5>F.A.Q.</h5>
+								<a href="modal-question.html" class="fancybox button ">Написать</a>
+							</div>
+							<div class="faq-wrap">
+								<div class="faq-panel">
+									<a href="#faq_1" class="collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												Что за&nbsp;соревнования?
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_1" aria-expanded="false">
+										<div class="faq-panel-content article">
+											Что за&nbsp;соревнования?
+										</div>
+									</div>
+								</div>
+								<div class="faq-panel">
+									<a href="#faq_2" class=" collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												Что мне за&nbsp;это будет?
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_2" aria-expanded="false">
+										<div class="faq-panel-content article">
+											lol
+										</div>
+									</div>
+								</div>
+								<div class="faq-panel">
+									<a href="#faq_3" class=" collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												Кто может учавствовать в&nbsp;соревнованиях?
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_3" aria-expanded="false">
+										<div class="faq-panel-content article">
+											<p>Кто может учавствовать в&nbsp;соревнованиях?
+												<a href="#">Кто может учавствовать в&nbsp;соревнованиях?</a>
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+											</p>
+											<p>Кто может учавствовать в&nbsp;соревнованиях?
+												<a href="#">Кто может учавствовать в&nbsp;соревнованиях?</a>
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+											</p>
+											<p>Кто может учавствовать в&nbsp;соревнованиях?
+												<a href="#">Кто может учавствовать в&nbsp;соревнованиях?</a>
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+											</p>
+											<p>Кто может учавствовать в&nbsp;соревнованиях?
+												<a href="#">Кто может учавствовать в&nbsp;соревнованиях?</a>
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+												Кто может учавствовать в&nbsp;соревнованиях?
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="faq-panel">
+									<a href="#faq_4" class=" collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												Можно&nbsp;ли посетить все 4&nbsp;дня мероприятия или нужно выбрать только один день?
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_4" aria-expanded="false">
+										<div class="faq-panel-content article">
+											<ul>
+												<li>Можно&nbsp;ли посетить все 4&nbsp;дня мероприятия или нужно выбрать только один день</li>
+												<li>Можно&nbsp;ли посетить все 4&nbsp;дня мероприятия или нужно выбрать только один день</li>
+												<li>Можно&nbsp;ли посетить все 4&nbsp;дня мероприятия или нужно выбрать только один день</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="faq-panel">
+									<a href="#faq_5" class=" collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												Если я&nbsp;выйграю, я&nbsp;смогу учавствовать в&nbsp;олимпийских играх?
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_5" aria-expanded="false">
+										<div class="faq-panel-content article">
+											<ol>
+												<li>Если я&nbsp;выйграю, я&nbsp;смогу учавствовать в&nbsp;олимпийских играх?</li>
+												<li>Если я&nbsp;выйграю, я&nbsp;смогу учавствовать в&nbsp;олимпийских играх?</li>
+												<li>Если я&nbsp;выйграю, я&nbsp;смогу учавствовать в&nbsp;олимпийских играх?</li>
+												<li>Если я&nbsp;выйграю, я&nbsp;смогу учавствовать в&nbsp;олимпийских играх?</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="faq-panel">
+									<a href="#faq_6" class=" collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												Как добраться до&nbsp;Роза Хутор?
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_6" aria-expanded="false">
+										<div class="faq-panel-content article">
+											<div class="table-wrap">
+												<table>
+													<tr>
+														<td>Автомобиль</td>
+														<td>Трансфер</td>
+														<td>Маршрутка &laquo;У&nbsp;Кармэна&raquo;</td>
+													</tr>
+													<tr>
+														<td>8&nbsp;000 рублей за&nbsp;бензин</td>
+														<td>2&nbsp;000 в&nbsp;одну сторону</td>
+														<td>Бесценно</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-panel">
+									<a href="#faq_7" class=" collapsed" data-toggle="collapse" aria-expanded="false">
+										<div class="faq-panel-toggle">
+											<div class="faq-panel-toggle-title">
+												ROSA PEAK это
+											</div>
+										</div>
+									</a>
+									<div class="collapse" id="faq_7" aria-expanded="false">
+										<div class="faq-panel-content article">
+											<q>ROSA PEAK это ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это
+												ROSA PEAK это</q>
+											<br />
+											<br />
+											<img src="img/woman.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="yellow-bg socials">
+			<div class="container">
+				<h5>
+					Мы&nbsp;в&nbsp;соц. сетях
+				</h5>
+				<div class="socials-list">
+					<a href="#" class="social-link">
+						<span>
+							<i class="icon-fb"></i>
+							facebook.com/rosarunfest
+						</span>
+					</a>
+					<a href="#" class="social-link">
+						<span>
+							<i class="icon-vk"></i>
+							vk.com/rosarunfest
+						</span>
+					</a>
+					<a href="#" class="social-link">
+						<span>
+							<i class="icon-insta"></i>
+							instagram.com/rosa.run
+						</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="container">
+				<div class="section-header">
+					<h2>При поддержке</h2>
+				</div>
+				<div class="block">
+					<h5>Генеральный партнер</h5>
+					<div class="general-partner">
+						<a href="#" class="">
+							<img src="img/rh.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="block">
+					<h5>Официальные партнеры</h5>
+					<div class="row middle">
+						<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+							<a href="#">
+								<img src="img/rh.jpg" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+							<a href="#">
+								<img src="img/vl.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+							<a href="#">
+								<img src="img/ilr.png" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<h5>Информационные партнеры</h5>
+					<div class="row middle">
+						<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+							<a href="#">
+								<img src="img/rh.jpg" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+							<a href="#">
+								<img src="img/is.svg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+	</main>
+	@@include('components/page/_4_scripts.html')
+</body>
+
+</html>

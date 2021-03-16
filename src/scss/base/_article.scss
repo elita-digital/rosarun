@@ -1,0 +1,172 @@
+article,
+.article{
+
+	p{
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	p+p{
+		margin-top: 10px;
+	}
+	br{
+		content:"";
+		display: block;
+		height: 10px;
+	}
+
+	q{
+		font-weight: 500;
+		position: relative;
+		display: block;
+		z-index: 10;
+		line-height: 1;
+		padding: 3px 33px;
+
+		&:after,
+		&:before{
+			font-weight: 900;
+			font-size: 36px;
+			color: #ececec;
+			z-index: -1;
+			position: absolute;
+			line-height: 1;
+		}
+		&:before{
+			content: '«';
+			left: 0;
+			top: -13px;
+		}
+		&:after{
+			content: '»';
+			right: 0;
+			bottom: -8px;
+		}
+
+
+	}
+
+
+	ol, ul{
+		li{
+			position: relative;
+
+			& + li{
+				margin-top: 10px;
+			}
+
+		}
+		br{
+			height: 0;
+		}
+	}
+
+	ul li{
+		padding-left: 20px;
+
+
+
+		&:before{
+			position: absolute;
+			left: 0;
+			content: '';
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			line-height: 1;
+			background: $yellow;
+			top: 7px;
+		}
+	}
+
+	ol li{
+		padding-left: 25px;
+		counter-increment: myCounter;
+
+		&:before{
+			position: absolute;
+			left: 0;
+			content: counter(myCounter) ".";
+			color: $yellow;
+			top: 2px;
+			font: 900 1rem/1 $mainFont;
+		}
+	}
+	a{
+		color: $black;
+		text-decoration: underline;
+
+		&:active,
+		&:hover,
+		&:focus{
+			color: $yellow;
+		}
+	}
+
+	h1,h2,h3,
+	.h1,.h2,.h3{
+		margin-top: 0;
+		margin-bottom: 22px;
+	}
+	h4,h5,h6,
+	.h4,.h5,.h6{
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.anchor-link{
+		background: transparent;
+		text-decoration: none;
+
+		&:active,
+		&:hover,
+		&:focus{
+			color: $black!important;
+		}
+	}
+
+
+	tr:first-of-type {
+		border: none;
+		td{
+			background: $yellow;
+			font-weight: 700;
+		}
+	}
+	td{
+		padding: 15px!important;
+	}
+	tr:not(:first-of-type){
+		border-bottom: 2px solid #ececec;
+	}
+
+	.table-wrap{
+		width: 100%;
+		overflow: auto;
+		height: auto;
+
+		&::-webkit-scrollbar {
+			height: 4px;
+			background-color: #f5f5f5;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: #c5c4c4;
+		}
+	}
+
+	.gallery-hashtag{
+		font-size: 1.5rem;
+		margin: 1.2rem 0;
+
+		@include media900{
+			font-size: 1.3rem;
+		}
+		@include media600{
+			font-size: 1.1rem;
+		}
+	}
+}
+.no-touchevents .info a:not(.button):hover,
+.info a:not(.button):focus,
+.info a:not(.button):active {
+	color: $white;
+}

@@ -1,0 +1,382 @@
+//icomoon
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon/icomoon.eot?jfgipp');
+	src: url('../fonts/icomoon/icomoon.eot?jfgipp#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.ttf?jfgipp') format('truetype'),
+		url('../fonts/icomoon/icomoon.woff?jfgipp') format('woff'),
+		url('../fonts/icomoon/icomoon.svg?jfgipp#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+	content: "\e900";
+}
+
+.icon-car1:before {
+	content: "\e901";
+}
+
+.icon-car2:before {
+	content: "\e902";
+}
+
+.icon-car3:before {
+	content: "\e903";
+}
+
+.icon-car4:before {
+	content: "\e904";
+}
+
+.icon-download:before {
+	content: "\e905";
+}
+
+.icon-flag:before {
+	content: "\e906";
+}
+
+.icon-food:before {
+	content: "\e907";
+}
+
+.icon-gallery:before {
+	content: "\e908";
+}
+
+.icon-hotel:before {
+	content: "\e909";
+}
+
+.icon-info:before {
+	content: "\e90a";
+}
+
+.icon-length:before {
+	content: "\e90b";
+}
+
+.icon-man:before {
+	content: "\e90c";
+}
+
+.icon-map:before {
+	content: "\e90d";
+}
+
+.icon-medal1:before {
+	content: "\e90e";
+}
+
+.icon-medal2:before {
+	content: "\e90f";
+}
+
+.icon-medal3:before {
+	content: "\e910";
+}
+
+.icon-medal4:before {
+	content: "\e911";
+}
+
+.icon-medal5:before {
+	content: "\e912";
+}
+
+.icon-mount:before {
+	content: "\e913";
+}
+
+.icon-next:before {
+	content: "\e914";
+}
+
+.icon-phone:before {
+	content: "\e915";
+}
+
+.icon-picker:before {
+	content: "\e916";
+}
+
+.icon-prev:before {
+	content: "\e917";
+}
+
+.icon-question:before {
+	content: "\e923";
+}
+
+.icon-road:before {
+	content: "\e918";
+}
+
+.icon-running:before {
+	content: "\e919";
+}
+
+.icon-time:before {
+	content: "\e91a";
+}
+
+.icon-timeline:before {
+	content: "\e91b";
+}
+
+.icon-tshirt:before {
+	content: "\e91c";
+}
+
+.icon-fb:before {
+	content: "\e91e";
+}
+
+.icon-insta:before {
+	content: "\e91f";
+}
+
+.icon-tg:before {
+	content: "\e920";
+}
+
+.icon-vk:before {
+	content: "\e91d";
+}
+
+.icon-bird:before {
+	content: "\e921";
+}
+
+.icon-running-2:before {
+	content: "\e922";
+}
+
+
+
+//GothamPro
+@font-face {
+	font-family: 'GothamPro';
+	src: local('Gotham Pro'),
+		url('../fonts/GothamPro/GothamPro.woff2') format('woff2'),
+		url('../fonts/GothamPro/GothamPro.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+		url('../fonts/GothamPro/GothamPro-Medium.woff2') format('woff2'),
+		url('../fonts/GothamPro/GothamPro-Medium.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GothamPro/GothamPro-Bold.woff2') format('woff2'),
+		url('../fonts/GothamPro/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local('Gotham Pro Black'), local('GothamPro-Black'),
+		url('../fonts/GothamPro/GothamPro-Black.woff2') format('woff2'),
+		url('../fonts/GothamPro/GothamPro-Black.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+
+//LeagueGothic
+@font-face {
+	font-family: 'LeagueGothic';
+	src: local('League Gothic'), local('LeagueGothic'),
+		url('../fonts/LeagueGothic/LeagueGothic.woff2') format('woff2'),
+		url('../fonts/LeagueGothic/LeagueGothic.woff') format('woff'),
+		url('../fonts/LeagueGothic/LeagueGothic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@include font-face("Futura", "FuturaFuturisC", 400);
+@include font-face("Futura", "FuturaFuturisBlackC", 900);
+
+.accentFont {
+	font-family: $accentFont;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+h1,
+.h1 {
+	font-weight: 900;
+	line-height: 1;
+	font-size: 60px;
+	text-transform: uppercase;
+	color: $black;
+
+	/*	background-image: url('../img/fs.jpg');
+	background-size: 100vw auto;
+	background-position: 0 0;
+	background-attachment: fixed;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	filter: brightness(.6);
+*/
+	@include media-container {
+		font-size: 50px;
+	}
+
+	@include media1200 {
+		font-size: 44px;
+	}
+
+	@include media600 {
+		background: none;
+		-webkit-text-fill-color: $black;
+	}
+
+	@include media480 {
+		font-size: 30px;
+
+	}
+}
+
+.no-cssfilters {
+
+	h1,
+	.h1 {
+		background: transparent;
+		filter: initial;
+		color: $black;
+	}
+}
+
+h2,
+.h2 {
+	font-size: 48px;
+	line-height: 1.1;
+
+
+	@include media1200 {
+		font-size: 42px;
+	}
+
+	@include media900 {
+		font-size: 36px;
+	}
+
+	@include media600 {
+		font-size: 26px;
+	}
+
+	@include media480 {
+		font-size: 22px;
+	}
+}
+
+h3,
+.h3 {
+	line-height: 1.1;
+	font-size: 36px;
+
+	span {
+		font-weight: 500;
+	}
+
+	@include media1200 {
+		font-size: 30px;
+	}
+
+	@include media900 {
+		font-size: 24px;
+	}
+
+	@include media600 {
+		font-size: 22px;
+	}
+
+	@include media480 {
+		font-size: 20px;
+	}
+}
+
+.h4,
+h4 {
+	font-size: 24px;
+
+	@include media1200 {
+		font-size: 22px;
+	}
+
+	@include media900 {
+		font-size: 20px;
+	}
+
+	@include media600 {
+		font-size: 18px;
+	}
+}
+
+.h5,
+h5 {
+	font-size: 20px;
+
+	@include media1200 {
+		font-size: 18px;
+	}
+
+	@include media900 {
+		font-size: 16px;
+	}
+
+	@include media600 {
+		font-size: 14px;
+	}
+}
+
+.h6,
+h6 {
+	font-size: 1rem;
+	text-transform: none;
+}
