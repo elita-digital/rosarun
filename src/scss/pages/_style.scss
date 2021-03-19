@@ -107,10 +107,6 @@
 			@include media900 {
 				height: 2px;
 			}
-
-			@include media480 {
-				display: none;
-			}
 		}
 
 		&:after {

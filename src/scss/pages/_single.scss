@@ -426,6 +426,7 @@
 
   &__tabs-link {
     font-size: 20px;
+    position: relative;
   }
 
   &__run-links {
@@ -628,6 +629,12 @@
       background-image: url(../img/icons/map-download.svg);
     }
   }
+  &__card.card {
+    padding: 0;
+    .card__date {
+      margin-left: 0;
+    }
+  }
 }
 
 .participants {
@@ -641,14 +648,11 @@
   }
 
   @media screen and (max-width: 767px) {
-    max-width: 450px;
-  }
-
-  @media screen and (max-width: 469px) {
-    max-width: 280px;
+    max-width: unset;
   }
 
   &__filter {
+    padding-top: 10px;
     @media screen and (max-width: 767px) {
       flex-direction: column;
     }
@@ -667,8 +671,8 @@
 
   &__search-block,
   &__select-block {
-    @media screen and (max-width: 639px) {
-      max-width: 242px;
+    @media screen and (max-width: 767px) {
+      max-width: unset;
     }
 
   }
@@ -788,13 +792,9 @@
     margin-top: 0;
   }
 
-  @media screen and (max-width: 1359px) {
-    max-width: unset;
-  }
-
   &__top {
     padding: 29px 29px 0;
-    min-height: 160px;
+    min-height: 166px;
 
     @media screen and (max-width: 639px) {
       min-height: 83px;
@@ -935,6 +935,11 @@
     margin-left: auto;
 
     @media screen and (max-width: 1359px) {
+      margin-right: auto;
+      margin-left: unset;
+    }
+
+    @media screen and (max-width: 767px) {
       max-width: unset;
     }
   }
@@ -954,6 +959,12 @@
     height: 158px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+
+    @media screen and (max-width: 767px) {
+      max-width: unset;
+    }
+    
   }
 
   &__links {
@@ -1026,10 +1037,12 @@
   .card {
     width: 100%;
     background: $gray;
+    padding: 0;
 
     @media screen and (max-width: 1359px) {
       background: transparent;
       box-shadow: none;
+      max-width: unset;
     }
 
     &__title,
@@ -1080,6 +1093,7 @@
     &__date {
       color: $yellow;
       font-size: 13px;
+      margin: 0;
 
       @media screen and (max-width: 1359px) {
         display: none;
@@ -1128,7 +1142,7 @@
     &__social-list {
       list-style-type: none;
       margin-top: 20.5px;
-      margin-bottom: 32px;
+      margin-bottom: 26px;
       padding-left: 0;
     }
 
@@ -1152,6 +1166,16 @@
       font-family: 'GothamPro';
       text-decoration: underline;
 
+    }
+    &__icon.icon-running::before {
+      font-size: 24px;
+      padding-right: 4px;
+    }
+    &__icon.icon-length::before {
+      font-size: 12px;
+    }
+    &__icon.icon-mount::before {
+      font-size: 12px;
     }
   }
 }
