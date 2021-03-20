@@ -124,7 +124,7 @@
   &__social {
     margin-left: auto;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1023px) {
       display: none;
       margin: 0 auto;
 
@@ -357,6 +357,12 @@
       max-width: 1331px;
       padding: 0 60px;
     }
+    @media screen and (max-width: 1359px) {
+      padding: 0 25px;
+    }
+    @media screen and (max-width: 1023px) {
+      padding: 0 60px;
+    }
 
     @media screen and (max-width: 469px) {
       padding: 0 20px;
@@ -366,7 +372,7 @@
   &__wrapper {
     padding: 40px 0 110px 0;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1023px) {
       flex-direction: column;
     }
   }
@@ -374,7 +380,11 @@
   &__content {
     flex-basis: 60%;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1172px) {
+      max-width: 690px;
+    }
+
+    @media screen and (max-width: 1023px) {
       flex-basis: 100%;
       order: 2;
       margin-top: 64px;
@@ -389,7 +399,11 @@
     flex-basis: 40%;
     position: relative;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1237px) {
+      flex-basis: 26%;
+    }
+
+    @media screen and (max-width: 1023px) {
       flex-basis: 100%;
       order: 1;
     }
@@ -411,7 +425,7 @@
   &__pagetitle {
     margin-bottom: 30px;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1023px) {
       display: none;
     }
   }
@@ -440,6 +454,7 @@
     font-size: 13px;
     font-weight: 500;
     text-decoration: underline;
+    
 
     &+& {
       margin-top: 12px;
@@ -448,6 +463,10 @@
 
   &__info {
     margin-top: 30px;
+    @media screen and (max-width: 1023px) {
+      padding-top: 120px;
+      margin-top: -92px;
+    }
   }
 
   &__subtitle {
@@ -488,7 +507,7 @@
     width: 100%;
     margin-top: 40px;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1023px) {
       max-width: 650px;
     }
 
@@ -522,7 +541,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1215px) {
       grid-template-columns: repeat(2, 380px);
     }
 
@@ -572,13 +591,15 @@
     width: 100%;
     height: 419px;
 
+    @media screen and (max-width: 1023px) {
+      max-width: unset;
+    }
+
     @media screen and (max-width: 767px) {
-      max-width: 450px;
       height: 250px;
     }
 
     @media screen and (max-width: 469px) {
-      max-width: 280px;
       height: 160px;
     }
   }
@@ -643,11 +664,11 @@
   max-width: 780px;
   width: 100%;
 
-  @media screen and (max-width: 1359px) {
+  @media screen and (max-width: 1172px) {
     max-width: 650px;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     max-width: unset;
   }
 
@@ -671,7 +692,7 @@
 
   &__search-block,
   &__select-block {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1023px) {
       max-width: unset;
     }
 
@@ -934,12 +955,7 @@
     max-width: 380px;
     margin-left: auto;
 
-    @media screen and (max-width: 1359px) {
-      margin-right: auto;
-      margin-left: unset;
-    }
-
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1023px) {
       max-width: unset;
     }
   }
@@ -961,7 +977,7 @@
     background-size: cover;
     background-position: center center;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1023px) {
       max-width: unset;
     }
     
@@ -973,7 +989,7 @@
     margin-top: 10px;
     align-items: stretch;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1023px) {
       display: none;
     }
   }
@@ -1039,7 +1055,7 @@
     background: $gray;
     padding: 0;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1023px) {
       background: transparent;
       box-shadow: none;
       max-width: unset;
@@ -1050,14 +1066,17 @@
     &__price {
       color: #fff;
 
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1023px) {
         color: $black;
       }
     }
 
     &__price {
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1023px) {
         color: #fff;
+      }
+      @media screen and (max-width: 1237px) {
+        font-size: 24px;
       }
     }
 
@@ -1066,7 +1085,7 @@
       color: $yellow;
       margin-top: 0;
 
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1023px) {
         display: none;
       }
     }
@@ -1074,13 +1093,19 @@
     &__price-wrapper {
       margin-bottom: 8px;
 
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1023px) {
         justify-content: center;
       }
     }
 
     &__price.--percent {
       margin-left: 35px;
+      @media screen and (max-width: 1237px) {
+        margin-left: 20px;
+      }
+      @media screen and (max-width: 1180px) {
+        margin-left: 5px;
+      }
     }
 
     &__price.--discount {
@@ -1088,6 +1113,12 @@
       line-height: 19px;
       max-width: 170px;
       text-transform: uppercase;
+      @media screen and (max-width: 1237px) {
+        font-size: 10px;
+      }
+      @media screen and (max-width: 1130px) {
+        font-size: 8px;
+      }
     }
 
     &__date {
@@ -1095,7 +1126,7 @@
       font-size: 13px;
       margin: 0;
 
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1023px) {
         display: none;
       }
     }
@@ -1104,7 +1135,7 @@
       font-size: 24px;
       margin-bottom: 13.5px;
 
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1023px) {
         font-size: 26px;
       }
     }
@@ -1122,7 +1153,11 @@
     &__bottom {
       margin-top: 20px;
 
-      @media screen and (max-width: 1359px) {
+      @media screen and (max-width: 1237px) {
+        padding: 0 19px 28px;
+      }
+
+      @media screen and (max-width: 1023px) {
         background: $gray;
         padding-top: 10px;
       }
@@ -1185,7 +1220,7 @@
   width: 100%;
   margin: 39px 0;
 
-  @media screen and (max-width: 1359px) {
+  @media screen and (max-width: 1172px) {
     max-width: 650px;
   }
 
@@ -1214,7 +1249,7 @@
     height: 98px;
     cursor: pointer;
 
-    @media screen and (max-width: 1359px) {
+    @media screen and (max-width: 1172px) {
       max-width: 122px;
     }
 
