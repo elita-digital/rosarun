@@ -653,7 +653,7 @@ main {
 	justify-content: flex-start;
 	align-items: flex-end;
 
-	@media screen and (max-width: 425px) {
+	@media screen and (max-width: 600px) {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -662,6 +662,14 @@ main {
 .about__title-text {
 	line-height: 1.15;
 	margin-bottom: 0;
+
+	@media screen and (max-width: 1420px) {
+		font-size: 45px;
+	}
+
+	@media screen and (max-width: 1299px) {
+		font-size: 37px;
+	}
 
 	@include media1200 {
 		font-size: 30px;
@@ -681,12 +689,15 @@ main {
 	font-size: 24px;
 	line-height: 1.65;
 
-	@include media1200 {
+	@media screen and (max-width: 1420px) {
 		font-size: 20px;
+		margin-left: 16px;
 	}
 
 	@include media600 {
 		font-size: 14px;
+		margin-left: 0;
+		display: block;
 	}
 
 }
@@ -696,30 +707,38 @@ main {
 	line-height: 1.15;
 	margin: 20px 0;
 	font-weight: 500;
+	letter-spacing: 0.05em;
+	font-family: Futura, Arial, Helvetica, sans-serif;
+	margin: 0.25em 0;
 
 	@include media600 {
-		font-size: 11px;
+		font-size: 14px;
 	}
 
 	&.--uppercase {
 		text-transform: uppercase;
 		margin-top: 32px;
 		letter-spacing: 0.1em;
+
+		@media screen and (max-width: 1023px) {
+			font-size: 11px;
+		}
 	}
 
-	// @include media1200 {
-	// 	font-size: 15px;
-	// 	margin: 30px 0;
-	// }
-
-	// @include media600 {
-	// 	margin: 20px 0;
-	// 	line-height: 1.4;
-	// }
+	&.--wellcome {
+		@media screen and (max-width: 1023px) {
+			font-size: 14px;
+			margin-top: 16px;
+		}
+	}
 }
 
 .about__button-wrap {
 	margin-top: 28px;
+
+	@media screen and (max-width: 1023px) {
+		margin-top: 12px;
+	}
 }
 
 .about-extra {
@@ -732,6 +751,8 @@ main {
 		padding: 25px 35px;
 		margin-left: 0;
 		margin-top: 25px;
+		height: auto;
+		flex: 0 0 auto;
 	}
 
 	@include media600 {
@@ -908,48 +929,6 @@ main {
 			font-size: 14px;
 		}
 	}
-
-	/*
-	&:after{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -20px;
-		right: -60px;
-		bottom: 0;
-		background: linear-gradient(to right, rgba(255,207,3,1) 0%,rgba(255,207,3,1) 65%,rgba(255,207,3,0) 100%);
-		z-index: -1;
-		opacity: 0;
-		transition: all .3s $trans;
-
-		@include media900{
-			right: -40px;
-		}
-
-		@include media600{
-			right: -6px;
-			left: -6px;
-		}
-	}
-
-
-
-	&:hover{
-		border-color: transparent;
-
-		@include media900{
-			&:before{
-				display: none;
-			}
-		}
-
-		&:after{
-			opacity: 1;
-		}
-		.date{
-			color: $black;
-		}
-	}*/
 }
 
 .date {
@@ -991,6 +970,12 @@ main {
 		align-items: stretch;
 		position: relative;
 		z-index: 1;
+
+		@media screen and (max-width: 1023px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 
 	&__path {
@@ -1054,6 +1039,7 @@ main {
 		.slick-track {
 			padding: 16px 0;
 		}
+
 	}
 
 	&__card.card {
@@ -1072,6 +1058,16 @@ main {
 				margin-top: 0;
 			}
 		}
+
+		.card__descr-day .card__date {
+			color: $yellow;
+		}
+
+		.card__title {
+			@media screen and (max-width: 639px) {
+				font-size: 22px;
+			}
+		}
 	}
 
 	.slick-dots {
@@ -1079,6 +1075,22 @@ main {
 		bottom: -35px;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+
+	&__event-links {
+		display: none;
+		margin-bottom: 0;
+		padding: 0 16px;
+		font-weight: bold;
+		font-size: 11px;
+
+		@media screen and (max-width: 1023px) {
+			display: block;
+		}
+	}
+
+	&__fake-nav {
+		display: none;
 	}
 }
 
@@ -1092,7 +1104,7 @@ main {
 		box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 
 		@media screen and (max-width: 1023px) {
-			min-height: 800px;
+			min-height: 657px;
 		}
 	}
 
@@ -1113,7 +1125,7 @@ main {
 			flex: 100%;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-start;
 		}
 
 	}
@@ -1121,6 +1133,12 @@ main {
 	&__descr-day {
 		color: $yellow;
 		font-size: 18px;
+		font-family: Futura, Arial, Helvetica, sans-serif;
+		font-weight: 700;
+
+		@media screen and (max-width: 1023px) {
+			font-size: 11px;
+		}
 	}
 
 	&__day-num {}
@@ -1140,6 +1158,20 @@ main {
 		margin-top: 16px;
 	}
 
+	&__title-desktop {
+		@media screen and (max-width: 1023px) {
+			display: none;
+		}
+	}
+
+	&__title-mobile {
+		display: none;
+
+		@media screen and (max-width: 1023px) {
+			display: inline;
+		}
+	}
+
 	&__icons {
 		columns: 2;
 		margin-top: 40px;
@@ -1147,12 +1179,20 @@ main {
 		@media screen and (max-width: 1156px) {
 			columns: 1;
 		}
+
+		@media screen and (max-width: 1023px) {
+			margin-top: 16px;
+		}
 	}
 
 	&__icon {
 		&::before {
 			font-size: 24px;
 			display: inline-block;
+
+			@media screen and (max-width: 1023px) {
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -1170,6 +1210,7 @@ main {
 
 		@media screen and (max-width: 1023px) {
 			font-size: 20px;
+			line-height: 32px;
 		}
 	}
 
@@ -1177,12 +1218,20 @@ main {
 		margin-top: 20px;
 		font-size: 16px;
 		line-height: 1.2;
+
+		@media screen and (max-width: 1023px) {
+			margin-top: auto;
+		}
 	}
 
 	&__price {
 		display: block;
 		font-size: 40px;
 		margin-top: 32px;
+
+		@media screen and (max-width: 1023px) {
+			margin-top: auto;
+		}
 	}
 
 	&__buttons-wrapper {
@@ -1190,8 +1239,20 @@ main {
 		display: flex;
 		justify-content: space-between;
 
+		a+a {
+			margin-left: 6px;
+		}
+
 		@media screen and (max-width: 1192px) {
 			flex-direction: column;
+
+			a+a {
+				margin-left: 0;
+			}
+		}
+
+		@media screen and (max-width: 1023px) {
+			margin-top: auto;
 		}
 	}
 
