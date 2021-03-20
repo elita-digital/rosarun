@@ -22,7 +22,7 @@
 							</div>
 							<p class="about-text --uppercase">4-дневный международный фестиваль бега на горном курорте “Роза Хутор”.</p>
 							<p class="about-text">В программе: “вертикальный километр”, командный квест, карнавал, детский забег и уникальный трейл по горнолыжным трассам. А еще вечеринки каждый день!</p>
-							<p class="about-text --uppercase"><strong>Добро пожаловать на праздник бега!</strong></p>
+							<p class="about-text --uppercase --wellcome"><strong>Добро пожаловать на праздник бега!</strong></p>
 							<div class="about__button-wrap">
 								<a href="modal-register.html" class="fancybox button">Принять участие</a>
 							</div>
@@ -76,6 +76,22 @@
 							@@include('svg/include/mountain.svg')
 						</div>
 					</div>
+				</div>
+				<div class="info__event-links links-header">
+					<a href="#" class="info__event-link" data-slide="0">rosa peak</a>
+					<a href="#" class="info__event-link" data-slide="1">rosa quest</a>
+					<a href="#" class="info__event-link" data-slide="2">rosa carnival</a>
+					<a href="#" class="info__event-link" data-slide="3">rosa green trail</a>
+					<a href="#" class="info__event-link" data-slide="4">rosa red trail</a>
+					<a href="#" class="info__event-link" data-slide="5">rosa kids</a>
+				</div>
+				<div class="info__fake-nav">
+					<div class="info__fake-slide"></div>
+					<div class="info__fake-slide"></div>
+					<div class="info__fake-slide"></div>
+					<div class="info__fake-slide"></div>
+					<div class="info__fake-slide"></div>
+					<div class="info__fake-slide"></div>
 				</div>
 				<div class="info__cards">
 					@@loop('components/bem-blocks/_info-card.html', 'components/bem-blocks/info-cards.json')

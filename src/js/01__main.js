@@ -305,8 +305,15 @@ $(function () {
 				slidesToShow: 1,
 				dots: true,
 				arrows: false,
-				centerMode: true,
-				centerPadding: '0'
+				infinite: false,
+				asNavFor: '.info__fake-nav'
+			});
+			$('.info__fake-nav').slick({
+				slidesToShow: 6,
+				dots: false,
+				arrows: false,
+				infinite: false,
+				asNavFor: '.info__cards'
 			});
 		} else {
 			$('.info__cards').slick('unslick');
@@ -329,9 +336,16 @@ $(function () {
 	});
 
 	function takeSlide() {
-		if (document.querySelector('.info__cards').getBoundingClientRect().top <= 0 && document.querySelector('.info__cards').getBoundingClientRect().top >= -sectionHeight) {
-			return Math.round((($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)) + -0.5)
+		if (
+			document.querySelector('.info__cards').getBoundingClientRect().top <= 0 && document.querySelector('.info__cards').getBoundingClientRect().top >= -sectionHeight
+		) {
+			return Math.round((($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)) + -0.325)
 		}
-	}
+	};
+
+	$('a[data-slide]').click(function (e) {
+		e.preventDefault();
+		$('.info__cards').slick('slickGoTo', $(this).data('slide'));
+	});
 
 });
