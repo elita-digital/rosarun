@@ -40,7 +40,7 @@
 	"scripts": {
 		"html": "gulp",
 		"php": "gulp dev-php",
-		"build": "gulp style && gulp html && gulp php && gulp js && gulp build_js && gulp json && gulp images && gulp fonts"
+		"build": "gulp style && gulp html && gulp php && gulp js && gulp build_js && gulp json && gulp images && gulp fonts && gulp makeDocs"
 	},
 	"repository": "https://github.com/budfy/Easy-webdev-startpack.git",
 	"author": "Roman Serdyuk",

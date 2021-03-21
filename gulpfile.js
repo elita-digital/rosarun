@@ -334,6 +334,15 @@ gulp.task('fonts', gulp.series(
 	'fontsgen'
 ));
 
+gulp.task(
+	"makeDocs",
+	function () {
+		return gulp
+			.src("build/**/*.*")
+			.pipe(gulp.dest("docs"))
+	}
+)
+
 gulp.task('server_html', () => {
 	bs.init({
 		server: {
