@@ -431,6 +431,12 @@
       flex-basis: 100%;
       order: 1;
     }
+
+    .card__top {
+      @media screen and (max-width: 1023px) {
+        padding-left: 0;
+      }
+    }
   }
 
   &__backlink {
@@ -570,7 +576,7 @@
       grid-template-columns: repeat(2, 380px);
     }
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 899px) {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -678,6 +684,21 @@
 
   &__card.card {
     padding: 0;
+
+    @media screen and (max-width: 899px) {
+      max-width: unset;
+
+      .card__img-wrapper {
+        width: 100%;
+        max-width: unset;
+
+        img {
+          object-position: center top;
+          object-fit: cover;
+        }
+      }
+    }
+
 
     .card__date {
       margin-left: 0;

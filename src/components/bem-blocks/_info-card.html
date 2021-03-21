@@ -5,20 +5,24 @@
 				<span class="card__day-num">ДЕНЬ @@day.num</span>
 				<time datetime="@@day.datetime" class="card__date">@@day.date</time>
 			</div>
-			<h2 class="card__title"><span class="card__title-desktop">@@title</span><span class="card__title-desctop">@@title_mob</span></h2>
+			<h2 class="card__title"><span class="card__title-desktop">@@title</span><span class="card__title-mobile">@@title_mob</span></h2>
 			<div class="card__icons">
-				<div class="card__icon icon-@@icons.icon_1.name">
-					<p class="card__icon-text">@@icons.icon_1.text</p>
-				</div>
-				<div class="card__icon icon-@@icons.icon_2.name">
-					<p class="card__icon-text">@@icons.icon_2.text</p>
-				</div>
-				<div class="card__icon icon-@@icons.icon_3.name">
-					<p class="card__icon-text">@@icons.icon_3.text</p>
-				</div>
-				<div class="card__icon icon-@@icons.icon_4.name">
-					<p class="card__icon-text">@@icons.icon_4.text</p>
-				</div>
+				<p class="card__icon">
+					<i class="card__icon-pic --svg__@@icons.icon_1.name"></i>
+					<span class="card__icon-text">@@icons.icon_1.text</span>
+				</p>
+				<p class="card__icon">
+					<i class="card__icon-pic --svg__@@icons.icon_2.name"></i>
+					<span class="card__icon-text">@@icons.icon_2.text</span>
+				</p>
+				<p class="card__icon">
+					<i class="card__icon-pic --svg__@@icons.icon_3.name"></i>
+					<span class="card__icon-text">@@icons.icon_3.text</span>
+				</p>
+				<p class="card__icon">
+					<i class="card__icon-pic --svg__@@icons.icon_4.name"></i>
+					<span class="card__icon-text">@@icons.icon_4.text</span>
+				</p>
 			</div>
 			<p class="card__text">@@text</p>
 			<span class="card__price accentFont">@@price ₽</span>

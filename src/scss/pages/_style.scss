@@ -719,15 +719,10 @@ main {
 		text-transform: uppercase;
 		margin-top: 32px;
 		letter-spacing: 0.1em;
-
-		@media screen and (max-width: 1023px) {
-			font-size: 11px;
-		}
 	}
 
 	&.--wellcome {
-		@media screen and (max-width: 1023px) {
-			font-size: 14px;
+		@media screen and (max-width: 767px) {
 			margin-top: 16px;
 		}
 	}
@@ -798,7 +793,7 @@ main {
 
 	h4,
 	.h4 {
-		font-size: 32px;
+		font-size: 29px;
 		line-height: 1.15;
 		margin-bottom: 24px;
 		letter-spacing: 0.04em;
@@ -833,8 +828,11 @@ main {
 }
 
 .medals-block {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 2;
+
 	&>div {
-		max-width: 170px;
 		font-size: 0;
 
 
@@ -847,12 +845,7 @@ main {
 		vertical-align: top;
 		display: inline-block;
 		width: 25%;
-		font-size: 24px;
-
-
-		@include media1200 {
-			font-size: 22px;
-		}
+		font-size: 32px;
 	}
 }
 
@@ -1059,6 +1052,15 @@ main {
 			}
 		}
 
+		.card__descr-day,
+		.card__date {
+			font-size: 18px;
+
+			@media screen and (max-width: 639px) {
+				font-size: 11px;
+			}
+		}
+
 		.card__descr-day .card__date {
 			color: $yellow;
 		}
@@ -1087,7 +1089,14 @@ main {
 		@media screen and (max-width: 1023px) {
 			display: block;
 		}
+
+		a:not(.button):active,
+		a:not(.button):focus {
+			color: $yellow;
+		}
 	}
+
+	&__event-link {}
 
 	&__fake-nav {
 		display: none;
@@ -1186,21 +1195,28 @@ main {
 	}
 
 	&__icon {
-		&::before {
-			font-size: 24px;
-			display: inline-block;
-
-			@media screen and (max-width: 1023px) {
-				font-size: 16px;
-			}
-		}
-	}
-
-	&__icon-text {
 		display: inline-block;
 		font: 700 24px/50px LeagueGothic,
 			"Roboto Condensed",
 			sans-serif;
+		margin-top: 0;
+
+		@media screen and (max-width: 1156px) {
+			display: block;
+		}
+	}
+
+	&__icon-pic {
+		display: inline-block;
+		height: 1em;
+		width: 24px;
+		background-position: left center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__icon-text {
+		display: inline-block;
 		margin-left: 24px;
 		text-transform: uppercase;
 
