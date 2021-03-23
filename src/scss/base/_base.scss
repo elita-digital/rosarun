@@ -82,8 +82,7 @@ body {
 }
 
 .bg-map {
-	background: url(../img/pattern.svg) 100% 100% repeat;
-	background-color: rgba(255, 255, 255, 0.3);
+	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)), repeat fixed url(../img/pattern.png);
 	background-attachment: fixed;
 }
 

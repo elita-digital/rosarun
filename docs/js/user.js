@@ -196,11 +196,13 @@ $(function () {
       i = ["ROSA\tPEAK", "ROSA QUEST", "ROSA CARNIVAL ", "ROSA GREEN TRAIL", "ROSA RED TRAIL ", "ROSA KIDS"];
 
   function n() {
-    if (document.querySelector(".info__cards").getBoundingClientRect().top <= 0 && document.querySelector(".info__cards").getBoundingClientRect().top >= -e) return Math.round(($(".info__mountain").offset().top - $(".info__cards").offset().top) / (e / 6) - .325);
+    if (document.querySelector(".info__cards").getBoundingClientRect().top <= 0 && document.querySelector(".info__cards").getBoundingClientRect().top >= -e) return Math.round(($(".info__mountain").offset().top - $(".info__cards").offset().top) / (e / 6) - .5);
   }
 
   $(window).on("load scroll", function () {
-    void 0 !== n() && ($(".js-change-date").text(t[n()]), $(".js-change-name").text(i[n()]));
+    void 0 !== n() && $(".js-change-name").text() !== i[n()] && ($(".js-change-date").text(t[n()]), $(".js-change-name").text(i[n()]), $(".js-change-name").parents(".info__mountain").addClass("--changed"), setTimeout(function () {
+      $(".js-change-name").parents(".info__mountain").removeClass("--changed");
+    }, 240));
   }), $("a[data-slide]").click(function (e) {
     e.preventDefault(), $(".info__cards").slick("slickGoTo", $(this).data("slide"));
   });

@@ -330,8 +330,14 @@ $(function () {
 
 	$(window).on('load scroll', function () {
 		if (takeSlide() !== undefined) {
-			$('.js-change-date').text(date[takeSlide()]);
-			$('.js-change-name').text(name[takeSlide()]);
+			if ($('.js-change-name').text() !== name[takeSlide()]) {
+				$('.js-change-date').text(date[takeSlide()]);
+				$('.js-change-name').text(name[takeSlide()]);
+				$('.js-change-name').parents('.info__mountain').addClass('--changed');
+				setTimeout(() => {
+					$('.js-change-name').parents('.info__mountain').removeClass('--changed');
+				}, 240);
+			}
 		}
 	});
 
@@ -339,7 +345,10 @@ $(function () {
 		if (
 			document.querySelector('.info__cards').getBoundingClientRect().top <= 0 && document.querySelector('.info__cards').getBoundingClientRect().top >= -sectionHeight
 		) {
-			return Math.round((($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)) + -0.325)
+			return Math.round(
+				(
+					($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)
+				) - 0.5)
 		}
 	};
 
@@ -347,5 +356,4 @@ $(function () {
 		e.preventDefault();
 		$('.info__cards').slick('slickGoTo', $(this).data('slide'));
 	});
-
 });
