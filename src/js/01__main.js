@@ -335,7 +335,8 @@ $(function () {
 		$(links[activeSlide]).addClass('--active');
 	})
 
-	let sectionHeight = $('.info__cards').height();
+	let slideHeight = $('.info__card.card').height(),
+		sectionHeight = $('.info__wrapper').height();
 	const date = ['01.05.2021', '02.05.2021', '03.05.2021', '04.05.2021', '04.05.2021', '04.05.2021'],
 		name = ['ROSA	PEAK', 'ROSA QUEST', 'ROSA CARNIVAL ', 'ROSA GREEN TRAIL', 'ROSA RED TRAIL ', 'ROSA KIDS'];
 
@@ -354,14 +355,14 @@ $(function () {
 
 	function takeSlide() {
 		if (
-			document.querySelector('.info__cards').getBoundingClientRect().top <= 0 && document.querySelector('.info__cards').getBoundingClientRect().top >= -sectionHeight
+			document.querySelector('.info__cards').getBoundingClientRect().top <= 0 &&
+			document.querySelector('.info__cards').getBoundingClientRect().top >= -sectionHeight
 		) {
 			return Math.round(
 				(
 					($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)
 				) - 0.5)
 		}
-
 	};
 
 	$('a[data-slide]').click(function (e) {

@@ -195,7 +195,8 @@ $(function () {
         s = $(t.$slides.get(i)).data("slick-index");
     console.log(o), console.log(s), console.log(o[s]), o.removeClass("--active"), $(o[s]).addClass("--active");
   });
-  var e = $(".info__cards").height();
+  $(".info__card.card").height();
+  var e = $(".info__wrapper").height();
   var t = ["01.05.2021", "02.05.2021", "03.05.2021", "04.05.2021", "04.05.2021", "04.05.2021"],
       i = ["ROSA\tPEAK", "ROSA QUEST", "ROSA CARNIVAL ", "ROSA GREEN TRAIL", "ROSA RED TRAIL ", "ROSA KIDS"];
 
