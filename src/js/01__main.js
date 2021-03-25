@@ -322,7 +322,18 @@ $(function () {
 
 	$('.header__burger').on('click', function () {
 		$('.header__mobile').slideToggle(240);
+		$(this).toggleClass('--close');
 	});
+
+	$('.info__cards').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+		let links = $('.info__event-link'),
+			activeSlide = $(slick.$slides.get(currentSlide)).data('slick-index');
+		console.log(links);
+		console.log(activeSlide);
+		console.log(links[activeSlide]);
+		links.removeClass('--active');
+		$(links[activeSlide]).addClass('--active');
+	})
 
 	let sectionHeight = $('.info__cards').height();
 	const date = ['01.05.2021', '02.05.2021', '03.05.2021', '04.05.2021', '04.05.2021', '04.05.2021'],
@@ -350,10 +361,15 @@ $(function () {
 					($('.info__mountain').offset().top - $('.info__cards').offset().top) / (sectionHeight / 6)
 				) - 0.5)
 		}
+
 	};
 
 	$('a[data-slide]').click(function (e) {
 		e.preventDefault();
+		let top = $('.info__cards').offset().top;
 		$('.info__cards').slick('slickGoTo', $(this).data('slide'));
+		$('body,html').animate({
+			scrollTop: top - $('.header').height()
+		}, 500, );
 	});
 });
