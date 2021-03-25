@@ -399,6 +399,10 @@
 
 .main {
   overflow: visible;
+  @media screen and (max-width: 1023px) {
+    padding-top: 148px;
+    margin-top: -92px;
+  }
 
   .container {
     max-width: 1445px;
@@ -428,6 +432,7 @@
 
     @media screen and (max-width: 1023px) {
       flex-direction: column;
+      padding: 0 0 110px 0;
     }
   }
 
@@ -477,10 +482,20 @@
   &__backlink-back {
     color: $black;
     font-weight: 500;
-  }
-
-  &__backlink-span {
-    text-decoration: underline;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 80%;
+      background-color: $black;
+    }
+    &:hover::before{
+      background-color: $yellow;
+      transition: .3s cubic-bezier(.36,.73,.73,.46);
+    }
   }
 
   &__pagetitle {
@@ -514,7 +529,20 @@
     color: $black;
     font-size: 13px;
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: none;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      height: 1px;
+      width: 100%;
+      background-color: $black;
+    }
+    &:hover::before{
+      background-color: $yellow;
+      transition: .3s cubic-bezier(.36,.73,.73,.46);
+    }
 
 
     &+& {
@@ -620,6 +648,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    @media screen and (max-width: 899px) {
+      height: 39rem;
+      max-width: unset;
+    }
   }
 
   &__attention {
@@ -776,7 +808,18 @@
     @media screen and (max-width: 1023px) {
       max-width: unset;
     }
-
+  }
+  &__select-wrap {
+    position: relative;
+    select {
+      z-index: 2;
+    }
+  }
+  &__down-icon {
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      z-index: 1;
   }
 
   table {
@@ -895,12 +938,12 @@
   }
 
   &__top {
-    padding: 29px 29px 0;
-    min-height: 166px;
+    padding: 29px 29px 15px;
+    min-height: 181px;
 
     @media screen and (max-width: 639px) {
       min-height: 83px;
-      padding: 20px 14px 0;
+      padding: 20px 14px 10px;
     }
   }
 
@@ -916,6 +959,14 @@
 
     @media screen and (max-width: 639px) {
       font-size: 11px;
+    }
+  }
+
+  &__title-link {
+    text-decoration: none;
+    color: $yellow-2;
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -1044,7 +1095,7 @@
   &__content {
     width: 100%;
     position: sticky;
-    top: 32px;
+    top: 0;
     left: 0;
   }
 
@@ -1108,6 +1159,7 @@
   &__icon {
     color: $yellow-2;
     font-size: 22px;
+    
   }
 
   &__icon.icon-next {
@@ -1221,6 +1273,7 @@
     &__title {
       font-size: 24px;
       margin-bottom: 13.5px;
+      margin-top: 0;
 
       @media screen and (max-width: 1023px) {
         font-size: 26px;
@@ -1247,6 +1300,7 @@
       @media screen and (max-width: 1023px) {
         background: $gray;
         padding-top: 10px;
+        margin-top: 6px;
       }
     }
 
@@ -1287,7 +1341,10 @@
       margin: 0 auto;
       font-family: 'GothamPro';
       text-decoration: underline;
+    }
 
+    &__icon {
+      font: 700 16px/18px LeagueGothic,"Roboto Condensed",sans-serif;
     }
 
     &__icon.icon-running::before {
@@ -1338,6 +1395,10 @@
     width: 100%;
     height: 98px;
     cursor: pointer;
+    transition: transform 0.24s;
+    &:hover {
+      opacity: 0.9;
+    }
 
     @media screen and (max-width: 1172px) {
       max-width: 122px;
@@ -1369,18 +1430,26 @@
     background-color: transparent;
     font-size: 36px;
     color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.24s;
 
     @media screen and (max-width: 469px) {
       font-size: 13px;
     }
+
   }
 
   &__slick-btn.--slick-prev {
     left: 24px;
+    &:hover {
+      transform: translateX(-4px) translateY(-50%);
+    }
   }
 
   &__slick-btn.--slick-next {
     right: 24px;
+    &:hover {
+      transform: translateX(4px) translateY(-50%);
+    }
   }
 
   .slick-next::before,
