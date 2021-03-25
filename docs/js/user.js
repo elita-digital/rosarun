@@ -189,7 +189,11 @@ $(function () {
       asNavFor: ".info__cards"
     })) : $(".info__cards").slick("unslick");
   }), $(".header__burger").on("click", function () {
-    $(".header__mobile").slideToggle(240);
+    $(".header__mobile").slideToggle(240), $(this).toggleClass("--close");
+  }), $(".info__cards").on("afterChange", function (e, t, i, n) {
+    var o = $(".info__event-link"),
+        s = $(t.$slides.get(i)).data("slick-index");
+    console.log(o), console.log(s), console.log(o[s]), o.removeClass("--active"), $(o[s]).addClass("--active");
   });
   var e = $(".info__cards").height();
   var t = ["01.05.2021", "02.05.2021", "03.05.2021", "04.05.2021", "04.05.2021", "04.05.2021"],
@@ -204,7 +208,11 @@ $(function () {
       $(".js-change-name").parents(".info__mountain").removeClass("--changed");
     }, 240));
   }), $("a[data-slide]").click(function (e) {
-    e.preventDefault(), $(".info__cards").slick("slickGoTo", $(this).data("slide"));
+    e.preventDefault();
+    var t = $(".info__cards").offset().top;
+    $(".info__cards").slick("slickGoTo", $(this).data("slide")), $("body,html").animate({
+      scrollTop: t - $(".header").height()
+    }, 500);
   });
 });
 //# sourceMappingURL=../sourcemaps/user.js.map
