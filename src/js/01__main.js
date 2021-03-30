@@ -328,9 +328,6 @@ $(function () {
 	$('.info__cards').on('afterChange', function (event, slick, currentSlide, nextSlide) {
 		let links = $('.info__event-link'),
 			activeSlide = $(slick.$slides.get(currentSlide)).data('slick-index');
-		console.log(links);
-		console.log(activeSlide);
-		console.log(links[activeSlide]);
 		links.removeClass('--active');
 		$(links[activeSlide]).addClass('--active');
 	})
@@ -350,6 +347,13 @@ $(function () {
 					$('.js-change-name').parents('.info__mountain').removeClass('--changed');
 				}, 240);
 			}
+		}
+		if (window.matchMedia('(min-width: 1024px)').matches) {
+			document.querySelectorAll('.info__card').forEach(el => {
+				if ((-el.getBoundingClientRect().bottom + $(window).height() * 1.25) > 0) {
+					$(el).removeClass('--right');
+				}
+			});
 		}
 	});
 
@@ -373,4 +377,5 @@ $(function () {
 			scrollTop: top - $('.header').height()
 		}, 500, );
 	});
+
 });

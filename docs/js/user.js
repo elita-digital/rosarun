@@ -192,8 +192,8 @@ $(function () {
     $(".header__mobile").slideToggle(240), $(this).toggleClass("--close");
   }), $(".info__cards").on("afterChange", function (e, t, i, n) {
     var o = $(".info__event-link"),
-        s = $(t.$slides.get(i)).data("slick-index");
-    console.log(o), console.log(s), console.log(o[s]), o.removeClass("--active"), $(o[s]).addClass("--active");
+        a = $(t.$slides.get(i)).data("slick-index");
+    o.removeClass("--active"), $(o[a]).addClass("--active");
   });
   $(".info__card.card").height();
   var e = $(".info__wrapper").height();
@@ -207,7 +207,9 @@ $(function () {
   $(window).on("load scroll", function () {
     void 0 !== n() && $(".js-change-name").text() !== i[n()] && ($(".js-change-date").text(t[n()]), $(".js-change-name").text(i[n()]), $(".js-change-name").parents(".info__mountain").addClass("--changed"), setTimeout(function () {
       $(".js-change-name").parents(".info__mountain").removeClass("--changed");
-    }, 240));
+    }, 240)), window.matchMedia("(min-width: 1024px)").matches && document.querySelectorAll(".info__card").forEach(function (e) {
+      -e.getBoundingClientRect().bottom + 1.25 * $(window).height() > 0 && $(e).removeClass("--right");
+    });
   }), $("a[data-slide]").click(function (e) {
     e.preventDefault();
     var t = $(".info__cards").offset().top;

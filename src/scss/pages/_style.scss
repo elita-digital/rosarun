@@ -1025,6 +1025,11 @@ main {
 		flex: 0 1 100%;
 		scroll-margin-top: 60px;
 
+
+		@media screen and (min-width: 1024px) {
+			overflow-x: hidden;
+		}
+
 		@media screen and (max-width: 1300px) {
 			padding: 0 40px 0 40px;
 		}
@@ -1046,6 +1051,21 @@ main {
 		box-shadow: none;
 		background-color: transparent;
 		height: 720px;
+		transition: all cubic-bezier(.08, 1.2, .59, 1) 0.72s;
+
+		.card__wrapper {
+			height: 100%;
+		}
+
+		&.--right {
+			@media screen and (min-width: 1024px) {
+				transform: translateX(150%);
+			}
+		}
+
+		@media screen and (max-width: 1440px) {
+			height: 680px;
+		}
 
 		@media screen and (max-width: 1300px) {
 			height: auto;
@@ -1053,14 +1073,6 @@ main {
 
 		@media screen and (max-width: 1023px) {
 			width: 100%;
-		}
-
-		&+& {
-			margin-top: 24px;
-
-			@media screen and (max-width: 1023px) {
-				margin-top: 0;
-			}
 		}
 
 		.card__descr-day,

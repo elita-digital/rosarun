@@ -32,7 +32,7 @@ const {
 } = require('assert');
 
 const js_plugins = [
-	'src/plugins/**/*.js',
+	'src/plugins/**/*.js'
 ];
 const css_plugins = [
 	'src/plugins/**/*.scss'
