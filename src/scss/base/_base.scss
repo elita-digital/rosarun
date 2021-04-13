@@ -124,12 +124,24 @@ body {
 		background: $white;
 	}
 
+	&.black-button {
+		background-color: $black;
+		color: $yellow;
+		border: 2px solid $black;
+	}
+
+	&.transparent-button {
+		background-color: transparent;
+		color: $yellow;
+		border: solid 2px $yellow;
+	}
+
 	&.white-button-border {
 		border: solid 2px #c8c8c8;
 		line-height: 46px;
 	}
 
-	&.white-button.--border {
+	&.--border {
 		border: solid 2px $yellow;
 		line-height: 46px;
 
@@ -173,6 +185,17 @@ body {
 	&.white-button-border {
 		border-color: $black;
 	}
+
+	&.black-button,
+	&.transparent-button {
+		background-color: $yellow;
+		color: $black;
+	}
+
+	&.black-button {
+		border: 2px solid $black;
+	}
+
 }
 
 .popup,
@@ -670,7 +693,7 @@ section {
 
 footer,
 section {
-	padding: 90px 0;
+	padding: 60px 0;
 	background-color: #ffffff;
 	background-position: 50% 50%;
 	background-size: cover;

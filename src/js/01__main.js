@@ -137,8 +137,8 @@ $(document).ready(function () {
 		infinite: false,
 		autoplay: false,
 		speed: 400,
-		slidesToShow: 2,
-		slidesToScroll: 2,
+		slidesToShow: 4,
+		slidesToScroll: 1,
 		responsive: [{
 			breakpoint: 900,
 			settings: {
@@ -180,7 +180,31 @@ $(document).ready(function () {
 				dots: true,
 			}
 		}]
-	})
+	});
+
+	$('.activities__slider').slick({
+		dots: true,
+		arrows: true,
+		infinite: true,
+		autoplay: true,
+		speed: 240,
+		autoplaySpeed: 2400,
+		fade: true,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+
+	$('.partners__slider').slick({
+		dots: false,
+		arrows: true,
+		infinite: true,
+		autoplay: true,
+		speed: 2400,
+		autoplaySpeed: 2400,
+		slidesToShow: 4,
+		slidesToScroll: 1
+	});
 
 	offsetNextBlock();
 
