@@ -140,17 +140,25 @@ $(document).ready(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		responsive: [{
-			breakpoint: 900,
+			breakpoint: 1600,
 			settings: {
-				slidesToShow: 1,
+				slidesToShow: 3,
 				slidesToScroll: 1
 			}
 		}, {
-			breakpoint: 600,
+			breakpoint: 1024,
 			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
 				arrows: false,
+				dots: true,
+			}
+		}, {
+			breakpoint: 639,
+			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
+				arrows: false,
 				dots: true,
 			}
 		}]
@@ -192,7 +200,14 @@ $(document).ready(function () {
 		fade: true,
 		cssEase: 'linear',
 		slidesToShow: 1,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [{
+			breakpoint: 1023,
+			settings: {
+				arrows: false,
+				dots: true,
+			}
+		}]
 	});
 
 	$('.partners__slider').slick({
@@ -203,8 +218,36 @@ $(document).ready(function () {
 		speed: 2400,
 		autoplaySpeed: 2400,
 		slidesToShow: 4,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 2,
+					arrows: false
+				}
+			},
+			// {
+			// 	breakpoint: 640,
+			// 	settings: {
+			// 		slidesToShow: 1,
+			// 		arrows: false
+			// 	}
+			// },
+		]
 	});
+
+	$('.js-show-all-program').on('click', function () {
+		$(this).text() == 'свернуть' ? $(this).text('смотреть полностью') : $(this).text('свернуть');
+		$(this).toggleClass('black-button');
+		$('.program-block').toggleClass('--active');
+		$('.program-schedule').css()
+	})
 
 	offsetNextBlock();
 
