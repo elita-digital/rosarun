@@ -573,8 +573,11 @@ main {
 	padding: 80px 0;
 
 	@include media1200 {
-		max-width: 540px;
 		margin: 0 auto;
+	}
+
+	@media screen and (max-width: 1023px) {
+		max-width: 540px;
 	}
 
 	@include media900 {
@@ -592,12 +595,12 @@ main {
 		justify-content: space-between;
 		align-items: stretch;
 
-		@include media1200 {
-			flex-direction: column;
-			text-align: center;
-		}
+		// @include media1200 {
+		// }
 
 		@media screen and (max-width: 1023px) {
+			flex-direction: column;
+			text-align: center;
 			margin-top: 90px;
 		}
 	}
@@ -611,7 +614,7 @@ main {
 	flex: 1 1 auto;
 
 	@include media1200 {
-		padding: 40px 35px;
+		padding: 28px 44px;
 	}
 
 	@include media600 {
@@ -690,7 +693,7 @@ main {
 	line-height: 1.65;
 
 	@media screen and (max-width: 1420px) {
-		font-size: 20px;
+		font-size: 18px;
 		margin-left: 16px;
 	}
 
@@ -711,27 +714,33 @@ main {
 	font-family: Futura, Arial, Helvetica, sans-serif;
 	margin: 0.25em 0;
 
-	@include media600 {
-		font-size: 14px;
-	}
-
 	&.--uppercase {
 		text-transform: uppercase;
 		margin-top: 32px;
 		letter-spacing: 0.1em;
+
+		@media screen and (max-width: 1199px) {
+			font-size: 14px;
+			margin-top: 12px;
+		}
 	}
 
 	&.--wellcome {
-		@media screen and (max-width: 767px) {
-			margin-top: 16px;
+		@media screen and (max-width: 1199px) {
+			margin-top: 12px;
 		}
+	}
+
+	@media screen and (max-width: 1199px) {
+		font-size: 14px;
+		margin-top: 12px;
 	}
 }
 
 .about__button-wrap {
 	margin-top: 28px;
 
-	@media screen and (max-width: 1023px) {
+	@media screen and (max-width: 1199px) {
 		margin-top: 12px;
 	}
 }
@@ -742,7 +751,13 @@ main {
 	flex: 0 0 396px;
 	margin-left: 48px;
 
-	@include media1200 {
+	@media screen and (max-width: 1199px) {
+		padding: 40px 28px;
+		flex: 0 0 212px;
+		margin-left: 28px;
+	}
+
+	@media screen and (max-width: 1023px) {
 		padding: 25px 35px;
 		margin-left: 0;
 		margin-top: 25px;
@@ -798,6 +813,10 @@ main {
 		margin-bottom: 24px;
 		letter-spacing: 0.04em;
 
+		@media screen and (max-width: 1199px) {
+			font-size: 16px;
+		}
+
 		@include media600 {
 			margin-bottom: 10px;
 		}
@@ -846,6 +865,10 @@ main {
 		display: inline-block;
 		width: 25%;
 		font-size: 32px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		font-size: 10px;
 	}
 }
 
@@ -1142,6 +1165,7 @@ main {
 }
 
 //!STYLES-SECTION: info
+
 //STYLES-SECTION: card
 .card {
 	padding: 20px;
@@ -1359,10 +1383,10 @@ main {
 		object-fit: cover;
 		object-position: center top;
 	}
-
 }
 
 //!STYLES-SECTION: card
+
 //STYLES-SECTION: fullday
 .fulldays,
 .hostels {
@@ -1394,6 +1418,10 @@ main {
 		width: 100%;
 		height: 560px;
 		object-fit: cover;
+
+		@media screen and (max-width: 1199px) {
+			height: 212px;
+		}
 	}
 
 	&__list {
@@ -1456,11 +1484,13 @@ main {
 		line-height: 1.1;
 		margin-top: 50px;
 
+		@media screen and (max-width: 1199px) {
+			font-size: 24px;
+		}
+
 		@media screen and (max-width: 991px) {
 			text-align: center;
-			font-size: 24px;
 			margin-top: 12px;
-
 		}
 	}
 
@@ -1484,10 +1514,16 @@ main {
 		height: auto;
 		width: 50%;
 		padding: 8px 16px;
+		min-width: unset;
+
+		@media screen and (max-width: 1199px) {
+			font-size: 16px;
+			width: fit-content;
+			padding: 8px 32px;
+		}
 
 		@media screen and (max-width: 991px) {
 			display: block;
-			width: fit-content;
 			margin: 12px auto 0;
 		}
 	}
@@ -1504,6 +1540,11 @@ main {
 	min-height: 732px;
 	background-blend-mode: multiply;
 
+	@media screen and (max-width: 1199px) {
+		min-height: 390px;
+		padding: 40px 0;
+	}
+
 	@media screen and (max-width: 1023px) {
 		text-align: center;
 	}
@@ -1514,14 +1555,20 @@ main {
 		font-size: 64px;
 		margin-top: 80px;
 
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 1199px) {
+			margin-top: 0;
 			font-size: 32px;
+			max-width: 260px;
 		}
 	}
 
 	&__text-wrapper {
 		margin-top: 64px;
 		max-width: 750px;
+
+		@media screen and (max-width: 1199px) {
+			margin-top: 40px;
+		}
 	}
 
 	&__text {
@@ -1530,6 +1577,10 @@ main {
 		line-height: 1.1;
 		font-family: Futura, Arial, Helvetica, sans-serif;
 		font-weight: 400;
+
+		@media screen and (max-width: 1199px) {
+			font-size: 16px;
+		}
 	}
 
 	&__link {
@@ -2291,6 +2342,8 @@ a:not(.button):active {
 	}
 }
 
+// !STYLES-SECTION: sliders-buttons
+
 .program-block {
 	border-top: 5px solid $black;
 	max-width: 420px;
@@ -2512,6 +2565,10 @@ a:not(.button):active {
 	&__slider {
 		margin-top: 50px;
 
+		@media screen and (max-width: 1199px) {
+			margin-top: 28px;
+		}
+
 		.slick-next,
 		.slick-prev {
 			z-index: 1;
@@ -2534,6 +2591,10 @@ a:not(.button):active {
 		position: relative;
 		height: 770px;
 		max-height: 100vh;
+
+		@media screen and (max-width: 1199px) {
+			height: 400px;
+		}
 
 		&::before {
 			content: '';
@@ -2564,11 +2625,13 @@ a:not(.button):active {
 		font-size: 30px;
 
 		@media screen and (max-width: 1199px) {
-			left: 36px;
+			left: 80px;
 			right: 36px;
+			font-size: 16px;
 		}
 
 		@media screen and (max-width: 991px) {
+			left: 36px;
 			font-size: 10px;
 		}
 	}
@@ -3578,30 +3641,36 @@ section thead {
 }
 
 .socials-list {
-	font-size: 0;
-	text-align: justify;
-	margin: 0 -7px -14px;
+	display: flex;
+	justify-content: space-between;
+	// font-size: 0;
+	// text-align: justify;
+	// margin: 0 -7px -14px;
 
-	&>div {
-		padding: 0 7px;
-		display: inline-block;
-		vertical-align: top;
+	// &>div {
+	// 	padding: 0 7px;
+	// 	display: inline-block;
+	// 	vertical-align: top;
 
-		@include media1200 {
-			width: 50%;
-		}
+	// 	@include media1200 {
+	// 		width: 50%;
+	// 	}
 
-		@include media600 {
-			width: 100%;
-		}
-	}
+	// 	@include media600 {
+	// 		width: 100%;
+	// 	}
+	// }
 
-	&:after {
-		content: "1";
-		margin-left: 100%;
-		height: 1px;
-		overflow: hidden;
-		display: inline-block;
+	// &:after {
+	// 	content: "1";
+	// 	margin-left: 100%;
+	// 	height: 1px;
+	// 	overflow: hidden;
+	// 	display: inline-block;
+	// }
+
+	@media screen and (max-width: 991px) {
+		flex-direction: column;
 	}
 
 	@include media900 {
@@ -3615,30 +3684,32 @@ section thead {
 
 .social-link {
 	font-weight: 500;
-	display: inline-block;
-	height: 60px;
-	line-height: 62px;
-	width: auto;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	display: block;
 	color: $black;
 	background: $white;
 	position: relative;
-	padding: 0 20px;
+	padding: 16px 20px;
 	font-size: 1rem;
 	text-align: center;
 	transition-timing-function: linear;
-	margin-bottom: 14px;
+
+	// margin-bottom: 14px;
+	&+& {
+		margin-left: 16px;
+
+		@media screen and (max-width: 991px) {
+			margin-left: 0;
+			margin-top: 16px;
+		}
+	}
 
 	@include media1200 {
-		height: 50px;
-		line-height: 52px;
 		width: 100%;
 	}
 
+
 	@include media480 {
-		padding: 0 15px;
+		padding: 12px 15px;
 	}
 
 
@@ -4251,16 +4322,17 @@ footer a:active {
 		line-height: 1.1;
 		font-family: 'Futura', Arial, Helvetica, sans-serif;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 1199px) {
 			font-size: 12px;
+			margin-top: 16px;
 		}
 
 		strong {
 			font-weight: 700;
 			font-size: 24px;
 
-			@media screen and (max-width: 767px) {
-				font-size: 14px;
+			@media screen and (max-width: 1199px) {
+				font-size: 12px;
 			}
 		}
 	}
@@ -4274,7 +4346,7 @@ footer a:active {
 			"Roboto Condensed",
 			sans-serif;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 1199px) {
 			font-size: 24px;
 		}
 	}
@@ -4282,8 +4354,9 @@ footer a:active {
 	&__btn {
 		margin-top: 36px;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 1199px) {
 			margin-top: 20px;
+			font-size: 16px;
 		}
 	}
 }
@@ -4319,6 +4392,13 @@ footer a:active {
 			margin: 40px 0;
 		}
 
+		@media screen and (max-width: 639px) {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+
 		.slick-next,
 		.slick-prev {
 
@@ -4339,6 +4419,14 @@ footer a:active {
 	&__slide {
 		height: 120px;
 		padding: 0 30px;
+
+		@media screen and (max-width: 639px) {
+			padding: 0;
+			height: auto;
+			max-height: 120px;
+			flex: 0 0 45%;
+			margin-top: 32px;
+		}
 	}
 
 	&__logo {
@@ -4358,8 +4446,14 @@ footer a:active {
 		font-size: 20px;
 		line-height: 1.2;
 
+		@media screen and (max-width: 1199px) {
+			padding: 32px 0;
+			font-size: 16px;
+		}
+
 		@media screen and (max-width: 767px) {
 			font-size: 12px;
+			padding: 60px 0;
 		}
 	}
 

@@ -146,7 +146,7 @@ $(document).ready(function () {
 				slidesToScroll: 1
 			}
 		}, {
-			breakpoint: 1024,
+			breakpoint: 1200,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 1,
@@ -232,13 +232,10 @@ $(document).ready(function () {
 					arrows: false
 				}
 			},
-			// {
-			// 	breakpoint: 640,
-			// 	settings: {
-			// 		slidesToShow: 1,
-			// 		arrows: false
-			// 	}
-			// },
+			{
+				breakpoint: 640,
+				settings: 'unslick'
+			},
 		]
 	});
 
