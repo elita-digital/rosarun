@@ -2226,7 +2226,20 @@ a:not(.button):active {
 	.program-slider {
 		margin: 40px -20px 0;
 
+		@media screen and (max-width: 1800px) {
+			padding: 0 80px;
+		}
+
+		@media screen and (max-width: 1200px) {
+			padding: 0 48px;
+		}
+
 		@media screen and (max-width: 1023px) {
+			margin: 40px -20px 0;
+			padding: 0;
+		}
+
+		@media screen and (max-width: 639px) {
 			margin: 40px 0 0;
 		}
 	}
