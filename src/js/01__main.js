@@ -248,6 +248,13 @@ $(document).ready(function () {
 	});
 
 	$('.js-show-all-program').on('click', function () {
+		if (!$(this).hasClass('black-button')) {
+			$('html, body').animate({
+				scrollTop: $('.program').offset().top
+			}, {
+				duration: 240
+			})
+		}
 		$(this).text() == 'свернуть' ? $(this).text('смотреть полностью') : $(this).text('свернуть');
 		$(this).toggleClass('black-button');
 		$('.program-block').toggleClass('--active');

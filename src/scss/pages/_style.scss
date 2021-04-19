@@ -2420,6 +2420,11 @@ a:not(.button):active {
 	height: auto;
 	max-height: unset;
 
+	&::after {
+		bottom: -50px;
+		opacity: 0;
+	}
+
 	.program-schedule {
 		max-height: unset;
 	}
