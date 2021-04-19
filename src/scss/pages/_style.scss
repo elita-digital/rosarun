@@ -2390,21 +2390,21 @@ a:not(.button):active {
 	}
 }
 
-.touchevents .program-block:active:after,
-.touchevents .program-block:focus:after,
-.no-touchevents .program-block:hover:after,
-.touchevents .program-block.--active:after,
-.no-touchevents .program-block.--active:after {
-	bottom: -50px;
-	opacity: 0;
-}
+// .touchevents .program-block:active:after,
+// .touchevents .program-block:focus:after,
+// .no-touchevents .program-block:hover:after,
+// .touchevents .program-block.--active:after,
+// .no-touchevents .program-block.--active:after {
+// 	bottom: -50px;
+// 	opacity: 0;
+// }
 
 
 .program-schedule {
 	max-height: 330px;
 	padding-right: 5px;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow: hidden;
+	// overflow-y: auto;
 
 	&::-webkit-scrollbar {
 		width: 4px;
