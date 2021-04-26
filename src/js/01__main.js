@@ -210,7 +210,7 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		responsive: [{
-			breakpoint: 1023,
+			breakpoint: 640,
 			settings: {
 				arrows: false,
 				dots: true,
@@ -228,15 +228,9 @@ $(document).ready(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		responsive: [{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 3
-				}
-			},
-			{
 				breakpoint: 991,
 				settings: {
-					slidesToShow: 2,
+					// slidesToShow: 2,
 					arrows: false
 				}
 			},
@@ -379,7 +373,7 @@ $(function () {
 	});
 
 	$(window).on('load resize orientationchange', function () {
-		if (window.matchMedia("(max-width: 1023px)").matches) {
+		if (window.matchMedia("(max-width: 639px)").matches) {
 			$('.info__cards').slick({
 				slidesToShow: 1,
 				dots: true,
