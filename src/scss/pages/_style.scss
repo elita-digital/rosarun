@@ -1131,6 +1131,14 @@ main {
 			width: 100%;
 		}
 
+		@media screen and (max-width: 991px) {
+			padding: 20px 66px;
+		}
+
+		@media screen and (max-width: 639px) {
+			padding: 20px;
+		}
+
 		.card__descr-day,
 		.card__date {
 			font-size: 18px;
@@ -1303,7 +1311,7 @@ main {
 		columns: 2;
 		margin-top: 40px;
 
-		@media screen and (max-width: 1156px) {
+		@media screen and (max-width: 991px) {
 			columns: 1;
 		}
 
@@ -1319,7 +1327,7 @@ main {
 			sans-serif;
 		margin-top: 0;
 
-		@media screen and (max-width: 1156px) {
+		@media screen and (max-width: 991px) {
 			display: block;
 		}
 	}
