@@ -615,6 +615,9 @@ main {
 	position: relative;
 	z-index: 3;
 	flex: 1 1 auto;
+  @media screen and (max-width: 1440px) {
+    padding: 45px 69px;
+  }
 
 	@include media1200 {
 		padding: 28px 44px;
@@ -640,10 +643,10 @@ main {
 
 .mountains {
 	position: absolute;
-	top: -66px;
+	top: -142px;
 	left: 0;
 	right: 0;
-	height: 67px;
+	height: 144px;
 	background-image: url('../img/mountains.svg');
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
@@ -736,7 +739,7 @@ main {
 		margin-top: 32px;
 		letter-spacing: 0.1em;
 
-		@media screen and (max-width: 1199px) {
+		@media screen and (max-width: 1440px) {
 			font-size: 14px;
 			margin-top: 12px;
 		}
@@ -1039,6 +1042,9 @@ main {
 			max-width: 80%;
 			margin: 150px auto 0;
 			display: block;
+      @media screen and (max-width: 1440px) {
+        margin: 0 auto 0;
+      }
 		}
 	}
 
@@ -1058,6 +1064,10 @@ main {
 		flex-direction: column;
 		justify-content: flex-start;
 		transition: all 0.24s;
+    @media screen and (max-width: 1440px) {
+      padding-top: 24px;
+      width: 251px;
+    }
 
 		svg {
 			max-width: unset;
@@ -1120,7 +1130,7 @@ main {
 		}
 
 		@media screen and (max-width: 1440px) {
-			height: 680px;
+			height: 580px;
 		}
 
 		@media screen and (max-width: 1300px) {
@@ -1310,6 +1320,9 @@ main {
 	&__icons {
 		columns: 2;
 		margin-top: 40px;
+    @media screen and (max-width: 1440px) {
+			margin-top: 0;
+		}
 
 		@media screen and (max-width: 991px) {
 			columns: 1;
@@ -1326,6 +1339,10 @@ main {
 			"Roboto Condensed",
 			sans-serif;
 		margin-top: 0;
+    @media screen and (max-width: 1440px) {
+			font: 700 22px/42px LeagueGothic,
+			"Roboto Condensed",
+		}
 
 		@media screen and (max-width: 991px) {
 			display: block;
@@ -1350,7 +1367,7 @@ main {
 			margin-left: 12px;
 		}
 
-		@media screen and (max-width: 1023px) {
+		@media screen and (max-width: 1440px) {
 			font-size: 20px;
 			line-height: 32px;
 		}
@@ -1360,6 +1377,9 @@ main {
 		margin-top: 20px;
 		font-size: 16px;
 		line-height: 1.2;
+    @media screen and (max-width: 1440px) {
+			margin-top: 0;
+		}
 
 		@media screen and (max-width: 1023px) {
 			margin-top: auto;
@@ -1370,6 +1390,9 @@ main {
 		display: block;
 		font-size: 40px;
 		margin-top: 32px;
+    @media screen and (max-width: 1440px) {
+			margin-top: 5px;
+		}
 
 		@media screen and (max-width: 1023px) {
 			margin-top: auto;
@@ -1384,6 +1407,9 @@ main {
 
 		a+a {
 			margin-left: 6px;
+		}
+    @media screen and (max-width: 1440px) {
+			margin-top: 10px;
 		}
 
 		@media screen and (max-width: 1023px) {
@@ -1491,8 +1517,8 @@ main {
 		height: 560px;
 		object-fit: cover;
 
-		@media screen and (max-width: 1199px) {
-			height: 212px;
+		@media screen and (max-width: 1440px) {
+			height: 230px;
 		}
 
 		@media screen and (max-width: 991px) {
@@ -1624,7 +1650,7 @@ main {
 	min-height: 732px;
 	background-blend-mode: multiply;
 
-	@media screen and (max-width: 1199px) {
+	@media screen and (max-width: 1440px) {
 		min-height: 390px;
 		padding: 40px 0;
 	}
@@ -1640,7 +1666,7 @@ main {
 		margin-top: 80px;
 		text-align: left;
 
-		@media screen and (max-width: 1199px) {
+		@media screen and (max-width: 1440px) {
 			margin-top: 0;
 			font-size: 32px;
 			max-width: 260px;
@@ -1651,7 +1677,7 @@ main {
 		margin-top: 64px;
 		max-width: 750px;
 
-		@media screen and (max-width: 1199px) {
+		@media screen and (max-width: 1440px) {
 			margin-top: 40px;
 		}
 	}
@@ -1663,7 +1689,7 @@ main {
 		font-family: Futura, Arial, Helvetica, sans-serif;
 		font-weight: 400;
 
-		@media screen and (max-width: 1199px) {
+		@media screen and (max-width: 1440px) {
 			font-size: 16px;
 		}
 
@@ -2713,7 +2739,7 @@ a:not(.button):active {
 		height: 770px;
 		max-height: 100vh;
 
-		@media screen and (max-width: 1199px) {
+		@media screen and (max-width: 1440px) {
 			height: 400px;
 		}
 
@@ -4319,6 +4345,10 @@ footer a:active {
 	&__title {
 		color: $yellow;
 
+    @media screen and (max-width: 1440px) {
+			font-size: 32px;
+		}
+
 		@media screen and (max-width: 767px) {
 			text-align: center;
 		}
@@ -4334,6 +4364,10 @@ footer a:active {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+
+    @media screen and (max-width: 1440px) {
+			max-height: 450px;
+		}
 
 		@media screen and (max-width: 767px) {
 			width: 100vw;
@@ -4486,16 +4520,28 @@ footer a:active {
 
 // STYLES-SECTION: partners
 .partners {
-	&__title {}
+	&__title {
+    @media screen and (max-width: 1440px) {
+			font-size: 32px;
+		}
+  }
 
 	&__general {
 		margin-top: 50px;
 		padding-bottom: 50px;
 		border-bottom: 1px solid #c4c4c4;
+    @media screen and (max-width: 1440px) {
+			margin-top: 20px;
+      padding-bottom: 40px;
+		}
 	}
 
 	&__link {
 		display: block;
+    @media screen and (max-width: 1440px) {
+			max-width: 200px;
+      width: 100%;
+		}
 	}
 
 	&__block {
@@ -4508,6 +4554,9 @@ footer a:active {
 
 	&__slider {
 		margin: 70px;
+    @media screen and (max-width: 1440px) {
+			margin: 20px 65px;
+		}
 
 		@media screen and (max-width: 991px) {
 			margin: 40px 0;
