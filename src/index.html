@@ -1,105 +1,133 @@
 <!DOCTYPE html>
 <html>
+  @@include('components/page/_1_head.html')
 
-@@include('components/page/_1_head.html')
+  <body>
+    @@include('components/page/_2_header.html')
+    <main>
+      <section
+        class="first-screen"
+        id="fs"
+        style="background-image: url('img/top-bg.jpg')"
+      >
+        <div class="container large-container">
+          <div class="about">
+            <div class="about__wrapper">
+              <article class="about-main-block pattern-bg">
+                <div class="mountains"></div>
+                <div class="about__title">
+                  <h1 class="about__title-text">Rosa run 2021</h1>
+                  <time class="about__title-date" datetime="2021-05-01T4D"
+                    >01-04 мая 2021</time
+                  >
+                </div>
+                <p class="about-text --uppercase">
+                  4-дневный международный фестиваль бега на горном курорте “Роза
+                  Хутор”.
+                </p>
+                <p class="about-text">
+                  В программе: “вертикальный километр”, командный квест,
+                  карнавал, детский забег и уникальный трейл по горнолыжным
+                  трассам. А еще вечеринки каждый день!
+                </p>
+                <p class="about-text --uppercase --wellcome">
+                  <strong>Добро пожаловать на праздник бега!</strong>
+                </p>
+                <div class="about__button-wrap">
+                  <a href="modal-register.html" class="fancybox button"
+                    >Принять участие</a
+                  >
+                </div>
+              </article>
 
-<body>
+              <article class="about-extra">
+                <div class="about-extra__row">
+                  <h4 class="accentFont">Каждому участнику</h4>
+                  <div class="plus-block">
+                    <div>
+                      <i class="icon-tshirt" aria-hidden="true"></i>
+                      футболка
+                    </div>
+                    <div class="plus-block__plus">+</div>
+                    <div>
+                      <i class="icon-medal1" aria-hidden="true"></i>
+                      медаль
+                    </div>
+                  </div>
+                </div>
+                <div class="about-extra__row">
+                  <h4 class="accentFont">Каждый день новая медаль</h4>
+                  <div class="medals-block">
+                    один забег&nbsp;&mdash; одна медаль
+                    <div>
+                      <i class="icon-medal2" aria-hidden="true"></i>
+                      <i class="icon-medal3" aria-hidden="true"></i>
+                      <i class="icon-medal4" aria-hidden="true"></i>
+                      <i class="icon-medal5" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-	@@include('components/page/_2_header.html')
-	<main>
+      <section class="info pattern-bg" id="info">
+        <div class="info__wrapper">
+          <div class="info__path">
+            @@include('svg/include/mount-path.svg')
+            <div class="info__mountain-wrapper">
+              <div class="info__mountain">
+                <p class="info__about-text about-text --uppercase">
+                  <strong class="js-change-date">01.05.2021</strong>
+                </p>
+                <p class="info__about-text about-text --uppercase">
+                  <strong class="js-change-name">rosa peak</strong>
+                </p>
+                @@include('svg/include/mountain.svg')
+              </div>
+            </div>
+          </div>
+          <div class="info__event-links links-header">
+            <a
+              href="#info-cards"
+              class="info__event-link --active"
+              data-slide="0"
+              >rosa peak</a
+            >
+            <a href="#info-cards" class="info__event-link" data-slide="1"
+              >rosa quest</a
+            >
+            <a href="#info-cards" class="info__event-link" data-slide="2"
+              >rosa carnival</a
+            >
+            <a href="#info-cards" class="info__event-link" data-slide="3"
+              >rosa green trail</a
+            >
+            <a href="#info-cards" class="info__event-link" data-slide="4"
+              >rosa red trail</a
+            >
+            <a href="#info-cards" class="info__event-link" data-slide="5"
+              >rosa kids</a
+            >
+          </div>
+          <div class="info__fake-nav">
+            <div class="info__fake-slide"></div>
+            <div class="info__fake-slide"></div>
+            <div class="info__fake-slide"></div>
+            <div class="info__fake-slide"></div>
+            <div class="info__fake-slide"></div>
+            <div class="info__fake-slide"></div>
+          </div>
+          <div class="info__cards" id="info-cards">
+            @@loop('components/bem-blocks/_info-card.html',
+            'components/bem-blocks/info-cards.json')
+          </div>
+        </div>
+      </section>
 
-		<section class="first-screen" id="fs" style="background-image: url('img/top-bg.jpg')">
-			<div class="container large-container">
-				<div class="about">
-
-					<div class="about__wrapper">
-
-						<article class="about-main-block pattern-bg">
-							<div class="mountains"></div>
-							<div class="about__title">
-								<h1 class="about__title-text">Rosa run 2021</h1>
-								<time class="about__title-date" datetime="2021-05-01T4D">01-04 мая 2021</time>
-							</div>
-							<p class="about-text --uppercase">4-дневный международный фестиваль бега на горном курорте “Роза Хутор”.</p>
-							<p class="about-text">В программе: “вертикальный километр”, командный квест, карнавал, детский забег и уникальный трейл по горнолыжным трассам. А еще вечеринки каждый день!</p>
-							<p class="about-text --uppercase --wellcome"><strong>Добро пожаловать на праздник бега!</strong></p>
-							<div class="about__button-wrap">
-								<a href="modal-register.html" class="fancybox button">Принять участие</a>
-							</div>
-						</article>
-
-						<article class="about-extra">
-							<div class="about-extra__row">
-								<h4 class="accentFont">Каждому участнику</h4>
-								<div class="plus-block">
-									<div>
-										<i class="icon-tshirt" aria-hidden="true"></i>
-										футболка
-									</div>
-									<div class="plus-block__plus">+</div>
-									<div>
-										<i class="icon-medal1" aria-hidden="true"></i>
-										медаль
-									</div>
-								</div>
-							</div>
-							<div class="about-extra__row">
-								<h4 class="accentFont">Каждый день новая медаль</h4>
-								<div class="medals-block">
-									один забег&nbsp;&mdash; одна медаль
-									<div>
-										<i class="icon-medal2" aria-hidden="true"></i>
-										<i class="icon-medal3" aria-hidden="true"></i>
-										<i class="icon-medal4" aria-hidden="true"></i>
-										<i class="icon-medal5" aria-hidden="true"></i>
-									</div>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="info pattern-bg" id="info">
-			<div class="info__wrapper">
-				<div class="info__path">
-					@@include('svg/include/mount-path.svg')
-					<div class="info__mountain-wrapper">
-						<div class="info__mountain">
-							<p class="info__about-text about-text --uppercase">
-								<strong class="js-change-date">01.05.2021</strong>
-							</p>
-							<p class="info__about-text about-text --uppercase">
-								<strong class="js-change-name">rosa peak</strong>
-							</p>
-							@@include('svg/include/mountain.svg')
-						</div>
-					</div>
-				</div>
-				<div class="info__event-links links-header">
-					<a href="#info-cards" class="info__event-link --active" data-slide="0">rosa peak</a>
-					<a href="#info-cards" class="info__event-link" data-slide="1">rosa quest</a>
-					<a href="#info-cards" class="info__event-link" data-slide="2">rosa carnival</a>
-					<a href="#info-cards" class="info__event-link" data-slide="3">rosa green trail</a>
-					<a href="#info-cards" class="info__event-link" data-slide="4">rosa red trail</a>
-					<a href="#info-cards" class="info__event-link" data-slide="5">rosa kids</a>
-				</div>
-				<div class="info__fake-nav">
-					<div class="info__fake-slide"></div>
-					<div class="info__fake-slide"></div>
-					<div class="info__fake-slide"></div>
-					<div class="info__fake-slide"></div>
-					<div class="info__fake-slide"></div>
-					<div class="info__fake-slide"></div>
-				</div>
-				<div class="info__cards" id="info-cards">
-					@@loop('components/bem-blocks/_info-card.html', 'components/bem-blocks/info-cards.json')
-				</div>
-			</div>
-		</section>
-
-		<!-- <section class="gray-bg gallery" id="gallery">
+      <!-- <section class="gray-bg gallery" id="gallery">
 			<div class="container">
 				<div class="gallery-header links-header">
 					<div class="gallery-hashtag">
@@ -127,7 +155,7 @@
 				<div class="slide rosaquest" style="background-image: url('img/track.jpg')"></div>
 			</div>
 		</section> -->
-		<!-- <section class="track" id="track">
+      <!-- <section class="track" id="track">
 			<div class="bg" style="background-image: url('img/track.jpg')"></div>
 			<div class="container">
 				<div class="track-header links-header">
@@ -378,818 +406,931 @@
 				</div>
 			</div>
 		</section> -->
-		<section class="yellow-bg">
-			<div class="container large-container">
-				<h2 class="block-title">билет на 4 дня фестиваля</h2>
-				<div class="fulldays flex --just-space --align-str">
-					<div class="fulldays__item">
-						<img src="img/fullday_1.jpg" alt="Спортсмены подпрыгивают" class="fulldays__pic">
-						<ul class="fulldays__list flex --align-center">
-							<li class="fulldays__list-item">rosa peak</li>
-							<li class="fulldays__list-item">rosa quest</li>
-							<li class="fulldays__list-item">rosa carnival</li>
-							<li class="fulldays__list-item --additional">rosa green trail</li>
-						</ul>
-						<div class="fulldays__price accentFont">
-							<span class="fulldays__price-item --old">6 300 ₽</span>
-							<span class="fulldays__price-item">5 050 ₽</span>
-						</div>
-						<a href="#" class="fulldays__button button black-button">принять участие</a>
-					</div>
-					<div class="fulldays__item">
-						<img src="img/fullday_2.jpg" alt="Спортсмены играют с бамбуковыми палками" class="fulldays__pic">
-						<ul class="fulldays__list flex --align-center">
-							<li class="fulldays__list-item">rosa peak</li>
-							<li class="fulldays__list-item">rosa quest</li>
-							<li class="fulldays__list-item">rosa carnival</li>
-							<li class="fulldays__list-item --additional">rosa red trail</li>
-						</ul>
-						<div class="fulldays__price accentFont">
-							<span class="fulldays__price-item --old">7 200 ₽</span>
-							<span class="fulldays__price-item">5 950 ₽</span>
-						</div>
-						<a href="#" class="fulldays__button button black-button">принять участие</a>
-					</div>
-				</div>
-			</div>
-		</section>
+      <section class="yellow-bg">
+        <div class="container large-container">
+          <h2 class="block-title">билет на 4 дня фестиваля</h2>
+          <div class="fulldays flex --just-space --align-str">
+            <div class="fulldays__item">
+              <img
+                src="img/fullday_1.jpg"
+                alt="Спортсмены подпрыгивают"
+                class="fulldays__pic"
+              />
+              <ul class="fulldays__list flex --align-center">
+                <li class="fulldays__list-item">rosa peak</li>
+                <li class="fulldays__list-item">rosa quest</li>
+                <li class="fulldays__list-item">rosa carnival</li>
+                <li class="fulldays__list-item --additional">
+                  rosa green trail
+                </li>
+              </ul>
+              <div class="fulldays__price accentFont">
+                <span class="fulldays__price-item --old">6 300 ₽</span>
+                <span class="fulldays__price-item">5 050 ₽</span>
+              </div>
+              <a href="#" class="fulldays__button button black-button"
+                >принять участие</a
+              >
+            </div>
+            <div class="fulldays__item">
+              <img
+                src="img/fullday_2.jpg"
+                alt="Спортсмены играют с бамбуковыми палками"
+                class="fulldays__pic"
+              />
+              <ul class="fulldays__list flex --align-center">
+                <li class="fulldays__list-item">rosa peak</li>
+                <li class="fulldays__list-item">rosa quest</li>
+                <li class="fulldays__list-item">rosa carnival</li>
+                <li class="fulldays__list-item --additional">rosa red trail</li>
+              </ul>
+              <div class="fulldays__price accentFont">
+                <span class="fulldays__price-item --old">7 200 ₽</span>
+                <span class="fulldays__price-item">5 950 ₽</span>
+              </div>
+              <a href="#" class="fulldays__button button black-button"
+                >принять участие</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<section class="cert">
-			<div class="container large-container">
-				<h2 class="cert__title">подарочный сертификат</h2>
-				<div class="cert__text-wrapper">
-					<p class="cert__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Обеспечивает родного пор первую грустный, использовало подпоясал даже раз своего! Буквенных рукопись составитель правилами вершину свой текст! Бросил, вдали грамматики вопрос свой пор напоивший переулка парадигматическая свою повстречался прямо букв несколько скатился страна! Маленькая текст языком своего ты буквоград?</p>
-				</div>
-				<a href="#" class="cert__link button">подарить сертификат</a>
-			</div>
-		</section>
+      <section class="cert">
+        <div class="container large-container">
+          <h2 class="cert__title">подарочный сертификат</h2>
+          <div class="cert__text-wrapper">
+            <p class="cert__text">
+              Далеко-далеко за словесными горами в стране гласных и согласных
+              живут рыбные тексты. Обеспечивает родного пор первую грустный,
+              использовало подпоясал даже раз своего! Буквенных рукопись
+              составитель правилами вершину свой текст! Бросил, вдали грамматики
+              вопрос свой пор напоивший переулка парадигматическая свою
+              повстречался прямо букв несколько скатился страна! Маленькая текст
+              языком своего ты буквоград?
+            </p>
+          </div>
+          <a href="#" class="cert__link button">подарить сертификат</a>
+        </div>
+      </section>
 
-		<section class="program" id="program">
-			<div class="container large-container">
-				<h2 class="program__title">программа</h2>
-				<div class="program-slider">
+      <section class="program" id="program">
+        <div class="container large-container">
+          <h2 class="program__title">программа</h2>
+          <div class="program-slider">
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
 
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
 
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
 
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
 
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
 
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class=" program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="accentRow program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">
+                      Выдача стартовых пакетов Выдача стартовых пакетов Выдача
+                      стартовых пакетов
+                    </div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="accentRow program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="accentRow program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов Выдача стартовых пакетов Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="accentRow program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
+            <div>
+              <div class="program-block">
+                <div class="program-block-header">
+                  <div class="date">
+                    <span>День 1</span>
+                    <span>03.05.2018</span>
+                  </div>
+                  <h4>Rosa 7/777</h4>
+                </div>
+                <div class="program-schedule">
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">7:00&nbsp;&mdash; 18:00</div>
+                    <div class="name">Выдача стартовых пакетов</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                  <div class="program-event">
+                    <div class="time">10:00</div>
+                    <div class="name">Перерыв</div>
+                    <a href="" class="anchor-link map-link">на карте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="program__btn button black-button js-show-all-program"
+            type="button"
+          >
+            смотреть полностью
+          </button>
+        </div>
+      </section>
 
-					<div>
-						<div class="program-block">
-							<div class="program-block-header">
-								<div class="date">
-									<span>День 1</span>
-									<span>03.05.2018</span>
-								</div>
-								<h4>Rosa 7/777</h4>
-							</div>
-							<div class="program-schedule">
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">7:00&nbsp;&mdash; 18:00</div>
-									<div class="name">Выдача стартовых пакетов</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-								<div class="program-event">
-									<div class="time">10:00</div>
-									<div class="name">Перерыв</div>
-									<a href="" class="anchor-link map-link">на карте</a>
-								</div>
-							</div>
-						</div>
-					</div>
+      <section class="activities gray-bg">
+        <div class="container large-container">
+          <h2 class="activities__title">активности</h2>
+          <div class="activities__slider">
+            <div class="activities__slide">
+              <img
+                src="img/certificate_bg.jpg"
+                alt=""
+                class="activities__slide-pic"
+              />
+              <p class="activities__slide-text">это денс батл, детка</p>
+            </div>
+            <div class="activities__slide">
+              <img src="img/fs.jpg" alt="" class="activities__slide-pic" />
+              <p class="activities__slide-text">А это не денс батл, детка</p>
+            </div>
+            <div class="activities__slide">
+              <img
+                src="img/fullday_1.jpg"
+                alt=""
+                class="activities__slide-pic"
+              />
+              <p class="activities__slide-text">Тут мы прыгаем</p>
+            </div>
+            <div class="activities__slide">
+              <img
+                src="img/certificate_bg.jpg"
+                alt=""
+                class="activities__slide-pic"
+              />
+              <p class="activities__slide-text">Тут мы танцуем</p>
+            </div>
+            <div class="activities__slide">
+              <img
+                src="img/certificate_bg.jpg"
+                alt=""
+                class="activities__slide-pic"
+              />
+              <p class="activities__slide-text">У 409 номерок съехал на бок</p>
+            </div>
+            <div class="activities__slide">
+              <img
+                src="img/fullday_2.jpg"
+                alt=""
+                class="activities__slide-pic"
+              />
+              <p class="activities__slide-text">
+                Мне не хватило фантазии придумать подпись этой фотографии
+                поэтому я написал этот тектс
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				</div>
-				<button class="program__btn button black-button js-show-all-program" type="button">смотреть полностью</button>
-			</div>
-		</section>
+      <section class="map-block bg-map">
+        <div class="container large-container">
+          <h2 class="map-block__title">место старта</h2>
+          <div class="map-block__wrapper">
+            <img src="img/map-new.jpg" alt="" class="map-block__image" />
+            <a
+              href="img/map-new-big.jpg"
+              class="map-block__link --svg__zoom --desktop"
+              data-fancybox="map-block"
+              aria-label="Увеличить карту"
+            ></a>
+            <a
+              href="img/map-new-big.jpg"
+              class="map-block__link --svg__zoom-mob-before --mobile"
+              data-fancybox="map-block-mob"
+              aria-label="Увеличить карту"
+              >Увеличить карту</a
+            >
+          </div>
+        </div>
+      </section>
 
-		<section class="activities gray-bg">
-			<div class="container large-container">
-				<h2 class="activities__title">активности</h2>
-				<div class="activities__slider">
-					<div class="activities__slide">
-						<img src="img/certificate_bg.jpg" alt="" class="activities__slide-pic">
-						<p class="activities__slide-text">это денс батл, детка</p>
-					</div>
-					<div class="activities__slide">
-						<img src="img/fs.jpg" alt="" class="activities__slide-pic">
-						<p class="activities__slide-text">А это не денс батл, детка</p>
-					</div>
-					<div class="activities__slide">
-						<img src="img/fullday_1.jpg" alt="" class="activities__slide-pic">
-						<p class="activities__slide-text">Тут мы прыгаем</p>
-					</div>
-					<div class="activities__slide">
-						<img src="img/certificate_bg.jpg" alt="" class="activities__slide-pic">
-						<p class="activities__slide-text">Тут мы танцуем</p>
-					</div>
-					<div class="activities__slide">
-						<img src="img/certificate_bg.jpg" alt="" class="activities__slide-pic">
-						<p class="activities__slide-text">У 409 номерок съехал на бок</p>
-					</div>
-					<div class="activities__slide">
-						<img src="img/fullday_2.jpg" alt="" class="activities__slide-pic">
-						<p class="activities__slide-text">Мне не хватило фантазии придумать подпись этой фотографии поэтому я написал этот тектс</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="map-block bg-map">
-			<div class="container large-container">
-				<h2 class="map-block__title">место старта</h2>
-				<div class="map-block__wrapper">
-					<img src="img/map-new.jpg" alt="" class="map-block__image">
-					<a href="img/map-new-big.jpg" class="map-block__link --svg__zoom --desktop" data-fancybox="map-block" aria-label="Увеличить карту"></a>
-					<a href="img/map-new-big.jpg" class="map-block__link --svg__zoom-mob-before --mobile" data-fancybox="map-block-mob" aria-label="Увеличить карту">Увеличить карту</a>
-				</div>
-			</div>
-		</section>
-
-		<section class="hostels gray-bg">
-			<div class="container large-container">
-				<h2 class="hostels__title">где жить</h2>
-				<div class="hostels__inner flex --align-str --just-space">
-					<div class="hostels__item flex --just-space">
-						<img src="img/hostels_1.jpg" alt="Вид на мост" class="hostels__pic">
-						<p class="hostels__descr">Пакетное предложение на проживание на «Роза Хутор» для участников и болельщиков фестиваля</p>
-						<span class="hostels__price">от 1 900 ₽/чел.</span>
-						<a href="#" class="hostels__btn button transparent-button">подробнее</a>
-					</div>
-					<div class="hostels__item flex --just-space">
-						<img src="img/hostels_2.jpg" alt="Вид на мост" class="hostels__pic">
-						<p class="hostels__descr">скидки на проживание на «Роза Хутор» для участников и болельщиков фестиваля по промокоду <strong>rosarun2021</strong></p>
-						<span class="hostels__price">от 1 900 ₽/чел.</span>
-						<a href="#" class="hostels__btn button transparent-button">подробнее</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- <section class="about-rosa gray-bg">
+      <section class="hostels gray-bg">
+        <div class="container large-container">
+          <h2 class="hostels__title">где жить</h2>
+          <div class="hostels__inner flex --align-str --just-space">
+            <div class="hostels__item flex --just-space">
+              <img
+                src="img/hostels_1.jpg"
+                alt="Вид на мост"
+                class="hostels__pic"
+              />
+              <p class="hostels__descr">
+                Пакетное предложение на проживание на «Роза Хутор» для
+                участников и болельщиков фестиваля
+              </p>
+              <span class="hostels__price">от 1 900 ₽/чел.</span>
+              <a href="#" class="hostels__btn button secondary-button"
+                >подробнее</a
+              >
+            </div>
+            <div class="hostels__item flex --just-space">
+              <img
+                src="img/hostels_2.jpg"
+                alt="Вид на мост"
+                class="hostels__pic"
+              />
+              <p class="hostels__descr">
+                скидки на проживание на «Роза Хутор» для участников и
+                болельщиков фестиваля по промокоду <strong>rosarun2021</strong>
+              </p>
+              <span class="hostels__price">от 1 900 ₽/чел.</span>
+              <a href="#" class="hostels__btn button secondary-button"
+                >подробнее</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="about-rosa gray-bg">
 			<div class="bg" style="background-image: url('img/infrastructure-gray.jpg')"></div>
 			<div class="container">
 				<div class="section-header">
@@ -1227,7 +1368,7 @@
 				</div>
 			</div>
 		</section> -->
-		<!-- <section class="road pattern-bg" id="road">
+      <!-- <section class="road pattern-bg" id="road">
 			<div class="container">
 				<div class="road-header links-header">
 					<a href="#" class="active"><span>Как добраться</span></a>
@@ -1326,7 +1467,7 @@
 								
 			</div>
 		</section> -->
-		<!-- <section id="hotel" class="hotel" style="background-image: url('img/infrastructure.jpg')">
+      <!-- <section id="hotel" class="hotel" style="background-image: url('img/infrastructure.jpg')">
 			<div class="container">
 				<div class="section-header">
 					<h2>Инфра&shy;структура курорта</h2>
@@ -1383,7 +1524,7 @@
 				</div>
 			</div>
 		</section> -->
-		<!-- <section class="food pattern-bg" id="food">
+      <!-- <section class="food pattern-bg" id="food">
 			<div class="container">
 				<article class="section-header ">
 					<h2>welcome rosarun</h2>
@@ -1606,7 +1747,7 @@
 				</div>
 			</div>
 		</section> -->
-		<!-- <section class="members gray-bg" id="members" style="background-image: url('img/members.jpg')">
+      <!-- <section class="members gray-bg" id="members" style="background-image: url('img/members.jpg')">
 			<div class="container">
 				<div class="mount-wrap"></div>
 				<div class="section-header">
@@ -1762,7 +1903,7 @@
 				</div>
 			</div>
 		</section> -->
-		<!-- <section class="contact" id="contact">
+      <!-- <section class="contact" id="contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-sm-7 col-xs-12">
@@ -2003,98 +2144,134 @@
 				</div>
 			</div>
 		</section> -->
-		<section class="yellow-bg socials">
-			<div class="container">
-				<h5>
-					Подписывайтесь на наши соцсети, чтобы узнавать новости про маршруты, скидки, изменение цен и про конкурсы отнаших партнёров первыми!
-				</h5>
-				<div class="socials-list">
-					<a href="#" class="social-link">
-						<span>
-							<i class="icon-fb"></i>
-							facebook.com/rosarunfest
-						</span>
-					</a>
-					<a href="#" class="social-link">
-						<span>
-							<i class="icon-vk"></i>
-							vk.com/rosarunfest
-						</span>
-					</a>
-					<a href="#" class="social-link">
-						<span>
-							<i class="icon-insta"></i>
-							instagram.com/rosa.run
-						</span>
-					</a>
-					<a href="#" class="social-link">
-						<span>
-							<i class="icon-tg"></i>
-							t.me/rosarunfwst
-						</span>
-					</a>
-				</div>
-			</div>
-		</section>
+      <section class="yellow-bg socials">
+        <div class="container">
+          <h5>
+            Подписывайтесь на наши соцсети, чтобы узнавать новости про маршруты,
+            скидки, изменение цен и про конкурсы отнаших партнёров первыми!
+          </h5>
+          <div class="socials-list">
+            <a href="#" class="social-link">
+              <span>
+                <i class="icon-fb"></i>
+                facebook.com/rosarunfest
+              </span>
+            </a>
+            <a href="#" class="social-link">
+              <span>
+                <i class="icon-vk"></i>
+                vk.com/rosarunfest
+              </span>
+            </a>
+            <a href="#" class="social-link">
+              <span>
+                <i class="icon-insta"></i>
+                instagram.com/rosa.run
+              </span>
+            </a>
+            <a href="#" class="social-link">
+              <span>
+                <i class="icon-tg"></i>
+                t.me/rosarunfwst
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-		<section class="partners">
-			<div class="container large-container">
-				<div class="section-header">
-					<h2 class="partners__title">При поддержке</h2>
-				</div>
-				<div class="partners__general">
-					<a href="#" class="partners__link --general">
-						<img src="img/rh.jpg" alt="Logo Rosa Hutor" />
-					</a>
-				</div>
-				<article class="partners__block">
-					<h3 class="partners__subtitle">партнеры</h3>
-					<div class="partners__slider">
-						<div class="partners__slide">
-							<img src="img/partners/ingard.svg" alt="Ingard" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/vsk.svg" alt="VSK" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/hoka.svg" alt="Hoka" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/erdinger.svg" alt="Erdinger" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/is.svg" alt="Iron Star" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/sis.svg" alt="Science in sport" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/ilss.svg" alt="I love supersport" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/reinfo.svg" alt="Reinfo" class="partners__logo">
-						</div>
-						<div class="partners__slide">
-							<img src="img/partners/sl.svg" alt="SL" class="partners__logo">
-						</div>
-					</div>
-				</article>
-
-			</div>
-		</section>
-		<footer id="footer" class="footer --padding yellow-bg">
-			<div class="container large-container">
-				<h2 class="footer__title">Юридический/фактический адрес:</h2>
-				<address class="footer__inner">
-					<p class="footer__text">129164, г. Москва, Ракетный бульвар, д. 16, этаж 4, офис 401</p>
-					<p class="footer__text">ОГРН: 1167746111191</p>
-					<p class="footer__text">ИНН: 9717014483</p>
-				</address>
-			</div>
-		</footer>
-
-	</main>
-	@@include('components/page/_4_scripts.html')
-</body>
-
+      <section class="partners">
+        <div class="container large-container">
+          <div class="section-header">
+            <h2 class="partners__title">При поддержке</h2>
+          </div>
+          <div class="partners__general">
+            <a href="#" class="partners__link --general">
+              <img src="img/rh.jpg" alt="Logo Rosa Hutor" />
+            </a>
+          </div>
+          <article class="partners__block">
+            <h3 class="partners__subtitle">партнеры</h3>
+            <div class="partners__slider">
+              <div class="partners__slide">
+                <img
+                  src="img/partners/ingard.svg"
+                  alt="Ingard"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/vsk.svg"
+                  alt="VSK"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/hoka.svg"
+                  alt="Hoka"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/erdinger.svg"
+                  alt="Erdinger"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/is.svg"
+                  alt="Iron Star"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/sis.svg"
+                  alt="Science in sport"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/ilss.svg"
+                  alt="I love supersport"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/reinfo.svg"
+                  alt="Reinfo"
+                  class="partners__logo"
+                />
+              </div>
+              <div class="partners__slide">
+                <img
+                  src="img/partners/sl.svg"
+                  alt="SL"
+                  class="partners__logo"
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <footer id="footer" class="footer --padding yellow-bg">
+        <div class="container large-container">
+          <h2 class="footer__title">Юридический/фактический адрес:</h2>
+          <address class="footer__inner">
+            <span class="footer__text">
+              129164, г. Москва, Ракетный бульвар, д. 16, <br />этаж 4, офис 401
+            </span>
+            <span class="footer__text">ОГРН: 1167746111191</span>
+            <span class="footer__text">ИНН: 9717014483</span>
+          </address>
+        </div>
+      </footer>
+    </main>
+    @@include('components/page/_4_scripts.html')
+  </body>
 </html>

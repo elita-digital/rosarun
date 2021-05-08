@@ -2,75 +2,69 @@ $white: #ffffff;
 $black: #010101;
 $yellow: #ffcf03;
 $yellow-2: #ffcc07;
-$red: #FF4C3B;
+$red: #ff4c3b;
 $green: #4cbfb3;
 $light-gray: #ececec;
 $gray: #383838;
 $gray-2: #c8c8c8;
 
-$mainFont: 'GothamPro',
-'Open Sans',
-sans-serif;
-$accentFont: 'LeagueGothic',
-'Roboto Condensed',
-sans-serif;
+$mainFont: "Futura", "GothamPro", "Open Sans", sans-serif;
+$accentFont: "LeagueGothic", "Roboto Condensed", sans-serif;
 
-$trans: cubic-bezier(.36, .73, .73, .46);
-
-
+$trans: cubic-bezier(0.36, 0.73, 0.73, 0.46);
 
 //mixin-width
 @mixin media480 {
-	@media (max-width: 480px) {
-		@content;
-	}
+  @media (max-width: 480px) {
+    @content;
+  }
 }
 
 @mixin media600 {
-	@media (max-width: 600px) {
-		@content;
-	}
+  @media (max-width: 600px) {
+    @content;
+  }
 }
 
 @mixin media900 {
-	@media (max-width: 900px) {
-		@content;
-	}
+  @media (max-width: 900px) {
+    @content;
+  }
 }
 
 @mixin media1200 {
-	@media (max-width: 1200px) {
-		@content;
-	}
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin media-container {
-	@media (max-width: 1360px) {
-		@content;
-	}
+  @media (max-width: 1360px) {
+    @content;
+  }
 }
 
 @mixin media1801 {
-	@media (min-width: 1801px) {
-		@content;
-	}
+  @media (min-width: 1801px) {
+    @content;
+  }
 }
 
 //mixin-height
 @mixin height800 {
-	@media (max-height: 800px) {
-		@content;
-	}
+  @media (max-height: 800px) {
+    @content;
+  }
 }
 
 @mixin height600 {
-	@media (max-height: 600px) {
-		@content;
-	}
+  @media (max-height: 600px) {
+    @content;
+  }
 }
 
 @mixin height300 {
-	@media (max-height: 300px) {
-		@content;
-	}
+  @media (max-height: 300px) {
+    @content;
+  }
 }

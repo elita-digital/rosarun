@@ -1,5 +1,6 @@
 .header {
-  padding: 20px 24px 32px;
+  padding: 24px 29px 33px 24px;
+  height: 115px;
   background-color: #fff;
   display: flex;
   align-items: flex-end;
@@ -7,12 +8,21 @@
   position: relative;
   z-index: 15;
 
+  @media screen and (max-width: 1500px) {
+    padding: 20px;
+    padding-right: 35px;
+    height: 100px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 1023px) {
     align-items: center;
     padding: 16px 24px;
     position: fixed;
     top: 0;
     width: 100%;
+    height: auto;
   }
 
   @media screen and (max-width: 639px) {
@@ -20,7 +30,7 @@
   }
 
   &__logo {
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 
     @media screen and (max-width: 1023px) {
       margin: 0;
@@ -36,8 +46,8 @@
   &__nav {
     margin-left: 80px;
 
-    @media screen and (max-width: 1199px) {
-      margin: 0 auto 0 32px;
+    @media screen and (max-width: 1500px) {
+      margin: 0 auto 0 15px;
     }
 
     @media screen and (max-width: 1023px) {
@@ -104,15 +114,15 @@
       }
     }
 
-    &+& {
+    & + & {
       margin-left: 46px;
 
       @media screen and (max-width: 1699px) {
         margin-left: 24px;
       }
 
-      @media screen and (max-width: 1023px) {
-        margin-left: 0;
+      @media screen and (max-width: 1500px) {
+        margin-left: 10px;
       }
     }
   }
@@ -126,34 +136,12 @@
     transition: all 0.24s;
     font-weight: 500;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      bottom: -3px;
-      left: 0;
-    }
-
-    &::before {
-      width: 100%;
-      background-color: #000;
-      z-index: 0;
-    }
-
-    &::after {
-      width: 0;
-      background-color: $yellow;
-      z-index: 1;
-      transition: all 0.4s;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-
     @media screen and (max-width: 1599px) {
       font-size: 14px;
+    }
+
+    @media screen and (max-width: 1500px) {
+      font-size: 12px;
     }
 
     @media screen and (max-width: 1023px) {
@@ -172,7 +160,11 @@
   &__social {
     margin-left: auto;
 
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1500px) {
+      margin: 0 auto 20px;
+    }
+
+    @media screen and (max-width: 1023px) {
       display: none;
       margin: 0 auto;
 
@@ -197,7 +189,7 @@
   }
 
   &__social-item {
-    &+& {
+    & + & {
       margin-left: 8px;
     }
   }
@@ -211,8 +203,14 @@
     font-size: 24px;
     color: $black;
     transition: all 0.24s;
-    background-color: #fff;
+    background-color: $yellow;
     border: 1px solid #f8f8f8;
+
+    @media screen and (max-width: 1500px) {
+      height: 24px;
+      width: 24px;
+      font-size: 16px;
+    }
 
     @media screen and (max-width: 1023px) {
       height: 35px;
@@ -224,11 +222,13 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: $black;
+      color: inherit;
+      transition: all 0.24s;
     }
 
     &:hover {
-      background-color: $yellow;
+      background-color: $black;
+      color: $yellow;
     }
   }
 
@@ -252,8 +252,13 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1500px) {
       margin-left: auto;
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 0;
     }
   }
 
@@ -265,7 +270,7 @@
     }
   }
 
-  &__iser-id {
+  &__user-id {
     display: block;
     font-size: 20px;
     line-height: 1.16;
@@ -273,10 +278,6 @@
 
     @media screen and (max-width: 1599px) {
       font-size: 14px;
-    }
-
-    @media screen and (max-width: 1199px) {
-      font-size: 12px;
     }
   }
 
@@ -292,14 +293,18 @@
       max-width: 240px;
     }
 
-    @media screen and (max-width: 1199px) {
-      max-width: 112px;
+    @media screen and (max-width: 1500px) {
+      max-width: 174px;
       font-size: 12px;
     }
   }
 
   &__user-btn {
     margin-left: 16px;
+
+    @media screen and (max-width: 1500px) {
+      margin-left: 8px;
+    }
 
     @media screen and (max-width: 1023px) {
       height: 32px;
@@ -403,18 +408,19 @@
     display: block;
 
     svg {
+      @media screen and (max-width: 1500px) {
+        display: block;
+      }
 
-      //MEDIA: 379
       @media screen and (max-width: 379px) {
         max-height: 40px;
       }
-
-      //!MEDIA: 379
     }
   }
 }
 
-.langs {}
+.langs {
+}
 
 .main {
   overflow: visible;
@@ -513,9 +519,9 @@
       width: 80%;
       background-color: $black;
     }
-    &:hover::before{
+    &:hover::before {
       background-color: $yellow;
-      transition: .3s cubic-bezier(.36,.73,.73,.46);
+      transition: 0.3s cubic-bezier(0.36, 0.73, 0.73, 0.46);
     }
   }
 
@@ -560,13 +566,12 @@
       width: 100%;
       background-color: $black;
     }
-    &:hover::before{
+    &:hover::before {
       background-color: $yellow;
-      transition: .3s cubic-bezier(.36,.73,.73,.46);
+      transition: 0.3s cubic-bezier(0.36, 0.73, 0.73, 0.46);
     }
 
-
-    &+& {
+    & + & {
       margin-top: 12px;
     }
   }
@@ -681,7 +686,7 @@
     font-weight: 600;
 
     &::before {
-      content: '';
+      content: "";
       background-image: url(../img/icons/attention.svg);
       background-repeat: no-repeat;
       background-size: 100%;
@@ -747,7 +752,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 0;
@@ -783,7 +788,6 @@
         }
       }
     }
-
 
     .card__date {
       margin-left: 0;
@@ -837,10 +841,10 @@
     }
   }
   &__down-icon {
-      top: 1px;
-      right: 1px;
-      bottom: 1px;
-      z-index: 1;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    z-index: 1;
   }
 
   table {
@@ -864,7 +868,7 @@
 
   &__table-title {
     background-color: $yellow-2;
-    font-family: 'LeagueGothic';
+    font-family: "LeagueGothic";
     font-size: 20px;
     text-transform: uppercase;
   }
@@ -951,10 +955,10 @@
   background: #fff;
   max-width: 380px;
   width: 100%;
-  font-family: 'LeagueGothic';
+  font-family: "LeagueGothic";
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 
-  &+& {
+  & + & {
     margin-top: 0;
   }
 
@@ -976,7 +980,7 @@
     font-size: 18px;
     color: $black;
     font-weight: 700;
-    font-family: 'GothamPro';
+    font-family: "GothamPro";
 
     @media screen and (max-width: 639px) {
       font-size: 11px;
@@ -994,7 +998,7 @@
   &__title {
     color: $yellow-2;
     font-size: 42px;
-    font-family: 'GothamPro';
+    font-family: "GothamPro";
     margin-bottom: 0;
 
     @media screen and (max-width: 639px) {
@@ -1006,7 +1010,7 @@
     width: 100%;
     border: 3px solid transparent;
 
-    &+& {
+    & + & {
       margin-top: 20px;
       margin-left: 0;
     }
@@ -1039,12 +1043,16 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 2px;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 43.74%, #fff 82.57%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 43.74%,
+        #fff 82.57%
+      );
     }
   }
 
@@ -1058,10 +1066,6 @@
     padding: 0 28px 28px;
     position: relative;
     margin-top: -100px;
-  }
-
-  &__price {
-    font-size: 40px;
   }
 }
 
@@ -1134,7 +1138,6 @@
     @media screen and (max-width: 1023px) {
       max-width: unset;
     }
-
   }
 
   &__links {
@@ -1163,7 +1166,7 @@
       color: $yellow-2;
     }
 
-    &+& {
+    & + & {
       margin-left: 10px;
     }
 
@@ -1180,7 +1183,6 @@
   &__icon {
     color: $yellow-2;
     font-size: 22px;
-    
   }
 
   &__icon.icon-next {
@@ -1353,19 +1355,19 @@
       text-transform: uppercase;
     }
 
-    &__social-item+.card__social-item {
+    &__social-item + .card__social-item {
       margin-left: 15px;
     }
 
     &__rules-link {
       font-size: 13px;
       margin: 0 auto;
-      font-family: 'GothamPro';
+      font-family: "GothamPro";
       text-decoration: underline;
     }
 
     &__icon {
-      font: 700 16px/18px LeagueGothic,"Roboto Condensed",sans-serif;
+      font: 700 16px/18px LeagueGothic, "Roboto Condensed", sans-serif;
     }
 
     &__icon.icon-running::before {
@@ -1437,7 +1439,7 @@
   }
 
   &__nav-item {
-    &+& {
+    & + & {
       margin-left: 10px;
     }
   }
@@ -1456,7 +1458,6 @@
     @media screen and (max-width: 469px) {
       font-size: 13px;
     }
-
   }
 
   &__slick-btn.--slick-prev {

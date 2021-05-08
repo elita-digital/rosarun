@@ -1,62 +1,62 @@
 html {
-	min-height: 100%;
-	position: relative;
-	-webkit-overflow-scrolling: touch;
-	overflow-scrolling: touch;
+  min-height: 100%;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
 * {
-	font-family: inherit;
-	-webkit-font-smoothing: antialiased;
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
 }
 
 .slick-slide,
 a,
 img,
 button {
-	outline: none !important;
-	border: 0;
+  outline: none !important;
+  border: 0;
 }
 
 img,
 svg,
 canvas,
 object {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-	text-decoration: none;
-	transition: all .3s $trans;
+  text-decoration: none;
+  transition: all 0.3s $trans;
 }
 
 a:focus,
 a:hover {
-	text-decoration: none;
-	color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 p:first-child {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-p+p {
-	margin-top: 7px;
+p + p {
+  margin-top: 7px;
 }
 
 ::-moz-selection {
-	background: $yellow;
-	color: $black;
+  background: $yellow;
+  color: $black;
 }
 
 ::selection {
-	background: $yellow;
-	color: $black;
+  background: $yellow;
+  color: $black;
 }
 
 /*
@@ -69,322 +69,288 @@ p+p {
 */
 html,
 body {
-	font: 400 13px/1.5 $mainFont;
+  font: 400 13px/1.5 $mainFont;
 }
 
 body {
-	color: $black;
-	min-height: 100%;
-	padding: 0;
-	min-width: 300px;
-	background-color: white;
-	position: relative;
+  color: $black;
+  min-height: 100%;
+  padding: 0;
+  min-width: 300px;
+  background-color: white;
+  position: relative;
 }
 
 .bg-map {
-	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)), repeat fixed url(../img/pattern.png);
-	background-attachment: fixed;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.5)
+    ),
+    repeat fixed url(../img/pattern.png);
+  background-attachment: fixed;
 }
 
 .button {
-	display: inline-block;
-	position: relative;
-	height: 50px;
-	padding: 0 15px;
-	line-height: 50px;
-	background-color: $yellow;
-	border: none;
-	border-radius: 0;
-	transition: all .3s $trans;
-	text-decoration: none;
-	text-align: center;
-	outline: none;
-	color: $black;
-	text-transform: uppercase;
-	font: 700 24px/50px $accentFont;
-	white-space: nowrap;
-	vertical-align: middle;
-	min-width: 240px;
-	letter-spacing: .05em;
+  display: inline-block;
+  position: relative;
+  height: 48px;
+  padding: 0 15px;
+  background-color: $yellow;
+  border: 3px solid transparent;
+  border-radius: 0;
+  transition: all 0.3s $trans;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  color: $black;
+  text-transform: uppercase;
+  font: 700 24px/42px $accentFont;
+  white-space: nowrap;
+  vertical-align: middle;
+  min-width: 240px;
+  letter-spacing: 0.05em;
 
-	&[disabled="disabled"],
-	&.disabled {
-		background: #7c7c7c;
-		pointer-events: none;
-	}
+  &.small-button {
+    font-size: 16px;
+    min-width: 170px;
+    height: 40px;
+    line-height: 34px;
+  }
 
-	&.small-button {
-		font-size: 16px;
-		min-width: 180px;
-		height: 40px;
-		line-height: 40px;
-	}
+  &.secondary-button {
+    border-color: $yellow;
+    background-color: transparent;
+  }
 
-	&.white-button {
-		background: $white;
-	}
+  &.black-button {
+    background-color: $black;
+    color: $yellow;
+  }
 
-	&.black-button {
-		background-color: $black;
-		color: $yellow;
-		border: 2px solid $black;
-	}
+  &[disabled="disabled"],
+  &.disabled {
+    background: #7c7c7c;
+    pointer-events: none;
+  }
 
-	&.transparent-button {
-		background-color: transparent;
-		color: $yellow;
-		border: solid 2px $yellow;
-	}
+  @media screen and (max-width: 1500px) {
+    font-size: 16px;
+    min-width: 170px;
+    height: 40px;
+    line-height: 34px;
+  }
 
-	&.white-button-border {
-		border: solid 2px #c8c8c8;
-		line-height: 46px;
-	}
+  @include media900 {
+    min-width: 200px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+  }
 
-	&.--border {
-		border: solid 2px $yellow;
-		line-height: 46px;
+  @include media600 {
+    border-width: 1px;
+  }
 
-		&:hover {
-			background-color: #fff;
-		}
-	}
-
-	@include media1200 {
-		font-size: 22px;
-	}
-
-	@include media900 {
-		min-width: 200px;
-		height: 42px;
-		line-height: 42px;
-		font-size: 20px;
-
-		&.white-button-border {
-			line-height: 38px;
-		}
-	}
-
-	@include media600 {
-		&.white-button-border {
-			border-width: 1px;
-		}
-	}
-
-	@include media480 {
-		min-width: 150px;
-	}
+  @include media480 {
+    min-width: 150px;
+  }
 }
 
 .no-touchevents .button:hover,
 .button:focus,
 .button:active {
-	background: $black;
-	color: $yellow;
+  background: $black;
+  color: $yellow;
 
-	&.white-button-border {
-		border-color: $black;
-	}
+  &.secondary-button {
+    background-color: $yellow;
+    color: $black;
+  }
 
-	&.black-button,
-	&.transparent-button {
-		background-color: $yellow;
-		color: $black;
-	}
-
-	&.black-button {
-		border: 2px solid $black;
-	}
-
+  &.black-button {
+    background-color: $yellow;
+    color: $black;
+  }
 }
 
 .popup,
 header,
 section {
+  ul,
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-	ul,
-	ol,
-	li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select,
+  .chosen-container {
+    font-family: inherit;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 6px 24px;
+    font-weight: 400;
+    color: $black;
+    font-size: 13px;
+    height: 42px;
+    line-height: 1;
+    outline: none;
+    box-shadow: none !important;
+    position: relative;
+    -webkit-appearance: none;
+    min-width: 1px;
+    box-sizing: border-box;
+    transition: all 0.3s $trans;
+    background: transparent;
+    border: 1px solid #c5c4c4;
 
-	input[type="text"],
-	input[type="password"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="email"],
-	input[type="number"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	textarea,
-	select,
-	.chosen-container {
-		font-family: inherit;
-		border-radius: 0;
-		display: block;
-		margin: 0;
-		text-overflow: ellipsis;
-		width: 100%;
-		padding: 6px 24px;
-		font-weight: 400;
-		color: $black;
-		font-size: 13px;
-		height: 42px;
-		line-height: 1;
-		outline: none;
-		box-shadow: none !important;
-		position: relative;
-		-webkit-appearance: none;
-		min-width: 1px;
-		box-sizing: border-box;
-		transition: all .3s $trans;
-		background: transparent;
-		border: 1px solid #c5c4c4;
+    &:focus {
+      border-color: $black;
+    }
 
-		&:focus {
-			border-color: $black;
-		}
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
 
-		&.disabled {
-			pointer-events: none;
-			opacity: .4;
-		}
+    &.error {
+      border-color: $red;
+    }
+  }
 
-		&.error {
-			border-color: $red;
-		}
-	}
+  label {
+    line-height: 1;
+    color: $black;
+    font-size: 1rem;
+    font-weight: 500;
 
+    z-index: 10;
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    //	background: #ffffff;
+    padding: 0 3px;
+    display: inline-block;
 
-	label {
-		line-height: 1;
-		color: $black;
-		font-size: 1rem;
-		font-weight: 500;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: $white;
+    }
+  }
 
-		z-index: 10;
-		position: absolute;
-		top: -7px;
-		left: 20px;
-		//	background: #ffffff;
-		padding: 0 3px;
-		display: inline-block;
+  textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.5;
+    padding: 23px;
+  }
 
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: -1;
-			background: $white;
-		}
-	}
+  select {
+    -webkit-appearance: listbox;
+  }
 
+  label.radio,
+  label.checkbox {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 0 0 20px;
+  }
 
-	textarea {
-		min-height: 180px;
-		resize: vertical;
-		line-height: 1.5;
-		padding: 23px;
-	}
-
-
-	select {
-		-webkit-appearance: listbox;
-	}
-
-
-	label.radio,
-	label.checkbox {
-		position: relative;
-		top: 0;
-		left: 0;
-		padding: 0 0 0 20px;
-	}
-
-	label.no-padding {
-		padding: 0;
-	}
+  label.no-padding {
+    padding: 0;
+  }
 }
 
 .form-group {
-	margin-bottom: 27px;
-	position: relative;
+  margin-bottom: 27px;
+  position: relative;
 }
-
 
 .radio,
 .checkbox {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  font: 400 1rem/1.15 $mainFont;
+  transition: opacity 0.3s $trans;
+  outline: none;
+  color: #7b7b7b;
+  background: transparent;
 
-	display: inline-block;
-	width: 100%;
-	cursor: pointer;
-	font: 400 1rem/1.15 $mainFont;
-	transition: opacity .3s $trans;
-	outline: none;
-	color: #7b7b7b;
-	background: transparent;
+  input[type="radio"],
+  input[type="checkbox"] {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
 
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
 
-	input[type="radio"],
-	input[type="checkbox"] {
-		opacity: 0;
-		width: 1px;
-		height: 1px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -2;
-	}
+  a {
+    color: #7b7b7b;
+    text-decoration: underline;
+    position: relative;
+    z-index: 10;
+  }
 
-	&.disabled {
-		opacity: .6;
-		pointer-events: none;
-	}
+  & + .checkbox,
+  & + .radio {
+    margin-top: 10px;
+  }
 
-	a {
-		color: #7b7b7b;
-		text-decoration: underline;
-		position: relative;
-		z-index: 10;
-	}
+  .check {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c5c4c4;
+    transition: border 0.3s $trans;
 
-	&+.checkbox,
-	&+.radio {
-		margin-top: 10px;
-	}
+    &:before {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      transition: all 0.3s $trans;
+    }
+  }
 
+  input:checked + .check:before {
+    opacity: 1;
+  }
 
-	.check {
-		position: absolute;
-		top: 1px;
-		left: 0;
-		width: 10px;
-		height: 10px;
-		border: 1px solid #c5c4c4;
-		transition: border .3s $trans;
-
-		&:before {
-			opacity: 0;
-			content: '';
-			position: absolute;
-			transition: all .3s $trans;
-		}
-	}
-
-	input:checked+.check:before {
-		opacity: 1;
-	}
-
-	&.error .check {
-		border-color: $red;
-	}
+  &.error .check {
+    border-color: $red;
+  }
 }
 
 .no-touchevents .radio a:hover,
@@ -393,352 +359,349 @@ section {
 .checkbox a:focus,
 .radio a:active,
 .checkbox a:active {
-	color: $black;
+  color: $black;
 }
 
 .checkbox {
-
-	.check:before {
-		top: -4px;
-		left: 3px;
-		width: 6px;
-		height: 10px;
-		border-right: 1px solid $black;
-		border-bottom: 1px solid $black;
-		transform: rotate(45deg);
-	}
+  .check:before {
+    top: -4px;
+    left: 3px;
+    width: 6px;
+    height: 10px;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+    transform: rotate(45deg);
+  }
 }
 
 .radio {
-	.check {
-		border-radius: 50%;
-	}
+  .check {
+    border-radius: 50%;
+  }
 
-	.check:before {
-		left: 1px;
-		top: 1px;
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
-		background: $black;
-	}
+  .check:before {
+    left: 1px;
+    top: 1px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $black;
+  }
 }
 
 .dropdown-toggle {
-	width: 100%;
-	padding: 6px 66px 6px 21px;
-	font-weight: 400;
-	color: #010101;
-	font-size: 13px;
-	height: 42px;
-	line-height: 35px;
-	position: relative;
-	transition: all .3s $trans;
-	background: transparent;
-	border: 1px solid #c5c4c4;
+  width: 100%;
+  padding: 6px 66px 6px 21px;
+  font-weight: 400;
+  color: #010101;
+  font-size: 13px;
+  height: 42px;
+  line-height: 35px;
+  position: relative;
+  transition: all 0.3s $trans;
+  background: transparent;
+  border: 1px solid #c5c4c4;
 
-	.text {
-		white-space: nowrap;
-		max-width: 100%;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		display: inline-block;
-		width: 100%;
-		text-align: left;
-	}
+  .text {
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .down-icon {
-	width: 42px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: $yellow;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $yellow;
 
-	&:before,
-	&:after {
-		content: "";
-		width: 10px;
-		height: 2px;
-		position: absolute;
-		background: $black;
-		top: 50%;
-		transition: all .2s $trans
-	}
+  &:before,
+  &:after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    background: $black;
+    top: 50%;
+    transition: all 0.2s $trans;
+  }
 
-	&:before {
-		transform: translateY(-50%) rotate(45deg);
-		left: 13px;
-	}
+  &:before {
+    transform: translateY(-50%) rotate(45deg);
+    left: 13px;
+  }
 
-	&:after {
-		transform: translateY(-50%) rotate(135deg);
-		right: 13px;
-	}
+  &:after {
+    transform: translateY(-50%) rotate(135deg);
+    right: 13px;
+  }
 }
 
 .open .down-icon {
-	&:before {
-		transform: translateY(-50%) rotate(135deg);
-	}
+  &:before {
+    transform: translateY(-50%) rotate(135deg);
+  }
 
-	&:after {
-		transform: translateY(-50%) rotate(45deg);
-	}
+  &:after {
+    transform: translateY(-50%) rotate(45deg);
+  }
 }
 
-
 .dropdown-menu {
-	display: inline-block;
-	width: 100%;
-	box-shadow: none;
-	border-radius: 0;
-	border: none;
-	padding: 0;
-	margin: 0;
-	top: 41px;
-	max-height: 0;
-	overflow: hidden;
-	height: auto;
-	transition: max-height .3s $trans .2s;
-	background: $white;
+  display: inline-block;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  top: 41px;
+  max-height: 0;
+  overflow: hidden;
+  height: auto;
+  transition: max-height 0.3s $trans 0.2s;
+  background: $white;
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		z-index: 0;
-		border: 1px solid #c5c4c4;
-	}
-
-
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    border: 1px solid #c5c4c4;
+  }
 }
 
 .open .dropdown-menu {
-	max-height: 250px;
-	transition-delay: 0s;
+  max-height: 250px;
+  transition-delay: 0s;
 }
 
 .dropdown-wrap {
-	margin: 20px 0;
-	padding: 0 26px;
-	max-height: 210px;
-	overflow-y: auto;
+  margin: 20px 0;
+  padding: 0 26px;
+  max-height: 210px;
+  overflow-y: auto;
 
-	&::-webkit-scrollbar {
-		width: 4px;
-		background-color: #f5f5f5;
-	}
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #f5f5f5;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		background-color: #c5c4c4;
-	}
+  &::-webkit-scrollbar-thumb {
+    background-color: #c5c4c4;
+  }
 
-	label {
-		position: relative;
-		top: 0;
-		left: 0;
-		padding: 0 0 0 20px;
-		color: $black;
+  label {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 0 0 20px;
+    color: $black;
 
-		&+label {
-			margin-top: 5px;
-		}
-	}
+    & + label {
+      margin-top: 5px;
+    }
+  }
 }
 
-
 ::-ms-clear {
-	display: none;
+  display: none;
 }
 
 ::-webkit-input-placeholder {
-	color: #c4c4c4;
-	text-transform: uppercase;
-	transition: opacity .2s ease;
+  color: #c4c4c4;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 ::-moz-placeholder {
-	color: #c4c4c4;
-	text-transform: uppercase;
-	transition: opacity .2s ease;
+  color: #c4c4c4;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 :-moz-placeholder {
-	color: #c4c4c4;
-	text-transform: uppercase;
-	transition: opacity .2s ease;
+  color: #c4c4c4;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 :-ms-input-placeholder {
-	color: #c4c4c4;
-	text-transform: uppercase;
-	transition: opacity .2s ease;
+  color: #c4c4c4;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 :focus::-webkit-input-placeholder {
-	color: transparent;
+  color: transparent;
 }
 
 :focus::-moz-placeholder {
-	color: transparent;
+  color: transparent;
 }
 
 :focus:-moz-placeholder {
-	color: transparent;
+  color: transparent;
 }
 
 :focus:-ms-input-placeholder {
-	color: transparent;
+  color: transparent;
 }
 
-
 .button-menu-wrap {
-	position: absolute;
-	left: 0;
-	height: 100%;
-	width: 40px;
-	top: 0;
-	display: none;
-	z-index: 920;
-	background: $white;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  display: none;
+  z-index: 920;
+  background: $white;
 
-	@include media600 {
-		display: block;
-	}
+  @include media600 {
+    display: block;
+  }
 }
 
 .no-touchevents .button-menu-wrap:hover,
 .button-menu-wrap:active,
 .button-menu-wrap:focus {
-	background: $white;
+  background: $white;
 }
 
 .button-menu {
-	border: 0;
-	line-height: 1;
-	position: absolute;
-	top: 50%;
-	margin-top: -1px;
-	background: $black;
-	cursor: pointer;
-	vertical-align: middle;
-	display: inline-block;
-	right: 10px;
-	left: 10px;
-	height: 2px;
-	transition: all .3s $trans;
+  border: 0;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  background: $black;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  right: 10px;
+  left: 10px;
+  height: 2px;
+  transition: all 0.3s $trans;
 
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background: $black;
-		display: inline-block;
-		transition: all .3s $trans;
-	}
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $black;
+    display: inline-block;
+    transition: all 0.3s $trans;
+  }
 
-	&:before {
-		top: -8px;
-	}
+  &:before {
+    top: -8px;
+  }
 
-	&:after {
-		bottom: -8px;
-	}
+  &:after {
+    bottom: -8px;
+  }
 }
 
 .menu-opened {
-	.button-menu-wrap span {
-		background: transparent;
+  .button-menu-wrap span {
+    background: transparent;
 
-		&:before {
-			top: 0;
-			transform: rotate(-45deg);
-		}
+    &:before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
 
-		&:after {
-			top: 0;
-			transform: rotate(45deg);
-		}
-	}
+    &:after {
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .container {
-	z-index: 10;
-	position: relative;
-	width: 100% !important;
-	display: block;
-	max-width: 1260px;
-	padding: 0 40px 0 60px;
+  z-index: 10;
+  position: relative;
+  width: 100% !important;
+  display: block;
+  max-width: 1260px;
+  padding: 0 50px;
 
-	@media screen and (max-width: 1023px) {
-		padding: 0 66px;
-	}
+  @media screen and (max-width: 1500px) {
+    max-width: 950px;
+  }
 
-	@include media600 {
-		padding: 0 20px;
-	}
+  @include media600 {
+    padding: 0 20px;
+  }
 }
 
 .large-container {
-	max-width: 1800px;
+  max-width: 1700px;
+
+  @media screen and (max-width: 1500px) {
+    max-width: 950px;
+  }
 }
 
 footer,
 section {
-	padding: 60px 0;
-	background-color: #ffffff;
-	background-position: 50% 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow: hidden;
+  padding: 60px 0;
+  background-color: #ffffff;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 
-	@include media1200 {
-		padding: 70px 0;
-	}
+  @include media1200 {
+    padding: 70px 0;
+  }
 
-	@include media600 {
-		padding: 50px 0;
-	}
+  @include media600 {
+    padding: 50px 0;
+  }
 }
 
 main {
-	// overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .center {
-	text-align: center;
+  text-align: center;
 }
 
+@media (min-width: 481px) {
+  .hidden-xxs {
+    display: block !important;
+  }
 
-@media(min-width: 481px) {
-	.hidden-xxs {
-		display: block !important;
-	}
-
-	.visible-xxs {
-		display: none !important;
-	}
+  .visible-xxs {
+    display: none !important;
+  }
 }
 
-@media(max-width: 480px) {
-	.col-xxs-12 {
-		width: 100%;
-	}
+@media (max-width: 480px) {
+  .col-xxs-12 {
+    width: 100%;
+  }
 
-	.hidden-inline-xxs,
-	.hidden-xxs {
-		display: none !important;
-	}
+  .hidden-inline-xxs,
+  .hidden-xxs {
+    display: none !important;
+  }
 
-	.visible-xxs {
-		display: inline-block !important;
-	}
+  .visible-xxs {
+    display: inline-block !important;
+  }
 }
