@@ -1,12 +1,16 @@
 html {
-  min-height: 100%;
   position: relative;
+
   -webkit-overflow-scrolling: touch;
+
+  min-height: 100%;
+
   overflow-scrolling: touch;
 }
 
 * {
   font-family: inherit;
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -14,8 +18,8 @@ html {
 a,
 img,
 button {
-  outline: none !important;
   border: 0;
+  outline: none !important;
 }
 
 img,
@@ -27,13 +31,14 @@ object {
 }
 
 a {
-  text-decoration: none;
   transition: all 0.3s $trans;
+  text-decoration: none;
 }
 
 a:focus,
 a:hover {
   text-decoration: none;
+
   color: #000000;
 }
 
@@ -50,13 +55,13 @@ p + p {
 }
 
 ::-moz-selection {
-  background: $yellow;
   color: $black;
+  background: $yellow;
 }
 
 ::selection {
-  background: $yellow;
   color: $black;
+  background: $yellow;
 }
 
 /*
@@ -73,12 +78,14 @@ body {
 }
 
 body {
-  color: $black;
+  position: relative;
+
+  min-width: 300px;
   min-height: 100%;
   padding: 0;
-  min-width: 300px;
+
+  color: $black;
   background-color: white;
-  position: relative;
 }
 
 .bg-map {
@@ -91,29 +98,49 @@ body {
 }
 
 .button {
-  display: inline-block;
   position: relative;
+
+  display: inline-block;
+
+  min-width: 240px;
   height: 48px;
   padding: 0 15px;
-  background-color: $yellow;
+
+  transition: all 0.3s $trans;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: $black;
   border: 3px solid transparent;
   border-radius: 0;
-  transition: all 0.3s $trans;
-  text-decoration: none;
-  text-align: center;
   outline: none;
-  color: $black;
-  text-transform: uppercase;
+  background-color: $yellow;
+
   font: 700 24px/42px $accentFont;
-  white-space: nowrap;
-  vertical-align: middle;
-  min-width: 240px;
-  letter-spacing: 0.05em;
+
+  @include media900 {
+    min-width: 200px;
+    height: 42px;
+
+    font-size: 20px;
+    line-height: 42px;
+  }
+  @include media600 {
+    border-width: 1px;
+  }
+  @include media480 {
+    min-width: 150px;
+  }
 
   &.small-button {
-    font-size: 16px;
     min-width: 170px;
     height: 40px;
+
+    font-size: 16px;
     line-height: 34px;
   }
 
@@ -123,53 +150,40 @@ body {
   }
 
   &.black-button {
-    background-color: $black;
     color: $yellow;
+    background-color: $black;
   }
 
   &[disabled="disabled"],
   &.disabled {
-    background: #7c7c7c;
     pointer-events: none;
+
+    background: #7c7c7c;
   }
 
   @media screen and (max-width: 1500px) {
-    font-size: 16px;
     min-width: 170px;
     height: 40px;
+
+    font-size: 16px;
     line-height: 34px;
-  }
-
-  @include media900 {
-    min-width: 200px;
-    height: 42px;
-    line-height: 42px;
-    font-size: 20px;
-  }
-
-  @include media600 {
-    border-width: 1px;
-  }
-
-  @include media480 {
-    min-width: 150px;
   }
 }
 
 .no-touchevents .button:hover,
 .button:focus,
 .button:active {
-  background: $black;
   color: $yellow;
+  background: $black;
 
   &.secondary-button {
-    background-color: $yellow;
     color: $black;
+    background-color: $yellow;
   }
 
   &.black-button {
-    background-color: $yellow;
     color: $black;
+    background-color: $yellow;
   }
 }
 
@@ -179,9 +193,10 @@ section {
   ul,
   ol,
   li {
-    list-style: none;
     margin: 0;
     padding: 0;
+
+    list-style: none;
   }
 
   input[type="text"],
@@ -197,27 +212,33 @@ section {
   textarea,
   select,
   .chosen-container {
-    font-family: inherit;
-    border-radius: 0;
-    display: block;
-    margin: 0;
-    text-overflow: ellipsis;
-    width: 100%;
-    padding: 6px 24px;
-    font-weight: 400;
-    color: $black;
-    font-size: 13px;
-    height: 42px;
-    line-height: 1;
-    outline: none;
-    box-shadow: none !important;
     position: relative;
-    -webkit-appearance: none;
-    min-width: 1px;
+
+    display: block;
+
     box-sizing: border-box;
+    width: 100%;
+    min-width: 1px;
+    height: 42px;
+    margin: 0;
+    padding: 6px 24px;
+
     transition: all 0.3s $trans;
-    background: transparent;
+    text-overflow: ellipsis;
+
+    color: $black;
     border: 1px solid #c5c4c4;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    box-shadow: none !important;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+
+    -webkit-appearance: none;
 
     &:focus {
       border-color: $black;
@@ -225,6 +246,7 @@ section {
 
     &.disabled {
       pointer-events: none;
+
       opacity: 0.4;
     }
 
@@ -234,36 +256,43 @@ section {
   }
 
   label {
-    line-height: 1;
-    color: $black;
-    font-size: 1rem;
-    font-weight: 500;
-
-    z-index: 10;
     position: absolute;
+    z-index: 10;
     top: -7px;
     left: 20px;
-    //	background: #ffffff;
-    padding: 0 3px;
+
     display: inline-block;
+    //	background: #ffffff;
+
+    padding: 0 3px;
+
+    color: $black;
+
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
 
     &:after {
-      content: "";
       position: absolute;
+      z-index: -1;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
-      z-index: -1;
+      left: 0;
+
+      content: "";
+
       background: $white;
     }
   }
 
   textarea {
     min-height: 180px;
-    resize: vertical;
-    line-height: 1.5;
     padding: 23px;
+
+    resize: vertical;
+
+    line-height: 1.5;
   }
 
   select {
@@ -275,6 +304,7 @@ section {
     position: relative;
     top: 0;
     left: 0;
+
     padding: 0 0 0 20px;
   }
 
@@ -284,42 +314,52 @@ section {
 }
 
 .form-group {
-  margin-bottom: 27px;
   position: relative;
+
+  margin-bottom: 27px;
 }
 
 .radio,
 .checkbox {
   display: inline-block;
+
   width: 100%;
+
   cursor: pointer;
-  font: 400 1rem/1.15 $mainFont;
   transition: opacity 0.3s $trans;
-  outline: none;
+
   color: #7b7b7b;
+  outline: none;
   background: transparent;
+
+  font: 400 1rem/1.15 $mainFont;
 
   input[type="radio"],
   input[type="checkbox"] {
-    opacity: 0;
-    width: 1px;
-    height: 1px;
     position: absolute;
+    z-index: -2;
     top: 0;
     left: 0;
-    z-index: -2;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
   }
 
   &.disabled {
-    opacity: 0.6;
     pointer-events: none;
+
+    opacity: 0.6;
   }
 
   a {
-    color: #7b7b7b;
-    text-decoration: underline;
     position: relative;
     z-index: 10;
+
+    text-decoration: underline;
+
+    color: #7b7b7b;
   }
 
   & + .checkbox,
@@ -331,16 +371,21 @@ section {
     position: absolute;
     top: 1px;
     left: 0;
+
     width: 10px;
     height: 10px;
-    border: 1px solid #c5c4c4;
+
     transition: border 0.3s $trans;
 
+    border: 1px solid #c5c4c4;
+
     &:before {
-      opacity: 0;
-      content: "";
       position: absolute;
+
+      content: "";
       transition: all 0.3s $trans;
+
+      opacity: 0;
     }
   }
 
@@ -366,11 +411,14 @@ section {
   .check:before {
     top: -4px;
     left: 3px;
+
     width: 6px;
     height: 10px;
+
+    transform: rotate(45deg);
+
     border-right: 1px solid $black;
     border-bottom: 1px solid $black;
-    transform: rotate(45deg);
   }
 }
 
@@ -380,66 +428,81 @@ section {
   }
 
   .check:before {
-    left: 1px;
     top: 1px;
+    left: 1px;
+
     width: 6px;
     height: 6px;
+
     border-radius: 50%;
     background: $black;
   }
 }
 
 .dropdown-toggle {
-  width: 100%;
-  padding: 6px 66px 6px 21px;
-  font-weight: 400;
-  color: #010101;
-  font-size: 13px;
-  height: 42px;
-  line-height: 35px;
   position: relative;
+
+  width: 100%;
+  height: 42px;
+  padding: 6px 66px 6px 21px;
+
   transition: all 0.3s $trans;
-  background: transparent;
+
+  color: #010101;
   border: 1px solid #c5c4c4;
+  background: transparent;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 35px;
 
   .text {
-    white-space: nowrap;
-    max-width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
     display: inline-block;
+    overflow: hidden;
+
     width: 100%;
+    max-width: 100%;
+
     text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
 .down-icon {
-  width: 42px;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
+
+  width: 42px;
+
   background: $yellow;
 
   &:before,
   &:after {
-    content: "";
+    position: absolute;
+    top: 50%;
+
     width: 10px;
     height: 2px;
-    position: absolute;
-    background: $black;
-    top: 50%;
+
+    content: "";
     transition: all 0.2s $trans;
+
+    background: $black;
   }
 
   &:before {
-    transform: translateY(-50%) rotate(45deg);
     left: 13px;
+
+    transform: translateY(-50%) rotate(45deg);
   }
 
   &:after {
-    transform: translateY(-50%) rotate(135deg);
     right: 13px;
+
+    transform: translateY(-50%) rotate(135deg);
   }
 }
 
@@ -454,45 +517,55 @@ section {
 }
 
 .dropdown-menu {
-  display: inline-block;
-  width: 100%;
-  box-shadow: none;
-  border-radius: 0;
-  border: none;
-  padding: 0;
-  margin: 0;
   top: 41px;
-  max-height: 0;
+
+  display: inline-block;
   overflow: hidden;
+
+  width: 100%;
   height: auto;
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+
   transition: max-height 0.3s $trans 0.2s;
+
+  border: none;
+  border-radius: 0;
   background: $white;
+  box-shadow: none;
 
   &:before {
-    content: "";
     position: absolute;
+    z-index: 0;
     top: 0;
     bottom: 0;
     left: 0;
+
     width: 100%;
-    z-index: 0;
+
+    content: "";
+
     border: 1px solid #c5c4c4;
   }
 }
 
 .open .dropdown-menu {
   max-height: 250px;
+
   transition-delay: 0s;
 }
 
 .dropdown-wrap {
+  overflow-y: auto;
+
+  max-height: 210px;
   margin: 20px 0;
   padding: 0 26px;
-  max-height: 210px;
-  overflow-y: auto;
 
   &::-webkit-scrollbar {
     width: 4px;
+
     background-color: #f5f5f5;
   }
 
@@ -504,7 +577,9 @@ section {
     position: relative;
     top: 0;
     left: 0;
+
     padding: 0 0 0 20px;
+
     color: $black;
 
     & + label {
@@ -518,27 +593,31 @@ section {
 }
 
 ::-webkit-input-placeholder {
-  color: #c4c4c4;
-  text-transform: uppercase;
   transition: opacity 0.2s ease;
+  text-transform: uppercase;
+
+  color: #c4c4c4;
 }
 
 ::-moz-placeholder {
-  color: #c4c4c4;
-  text-transform: uppercase;
   transition: opacity 0.2s ease;
+  text-transform: uppercase;
+
+  color: #c4c4c4;
 }
 
 :-moz-placeholder {
-  color: #c4c4c4;
-  text-transform: uppercase;
   transition: opacity 0.2s ease;
+  text-transform: uppercase;
+
+  color: #c4c4c4;
 }
 
 :-ms-input-placeholder {
-  color: #c4c4c4;
-  text-transform: uppercase;
   transition: opacity 0.2s ease;
+  text-transform: uppercase;
+
+  color: #c4c4c4;
 }
 
 :focus::-webkit-input-placeholder {
@@ -559,12 +638,15 @@ section {
 
 .button-menu-wrap {
   position: absolute;
-  left: 0;
-  height: 100%;
-  width: 40px;
-  top: 0;
-  display: none;
   z-index: 920;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 40px;
+  height: 100%;
+
   background: $white;
 
   @include media600 {
@@ -579,30 +661,39 @@ section {
 }
 
 .button-menu {
-  border: 0;
-  line-height: 1;
   position: absolute;
   top: 50%;
-  margin-top: -1px;
-  background: $black;
-  cursor: pointer;
-  vertical-align: middle;
-  display: inline-block;
   right: 10px;
   left: 10px;
+
+  display: inline-block;
+
   height: 2px;
+  margin-top: -1px;
+
+  cursor: pointer;
   transition: all 0.3s $trans;
+  vertical-align: middle;
+
+  border: 0;
+  background: $black;
+
+  line-height: 1;
 
   &:before,
   &:after {
-    content: "";
     position: absolute;
     left: 0;
+
+    display: inline-block;
+
     width: 100%;
     height: 2px;
-    background: $black;
-    display: inline-block;
+
+    content: "";
     transition: all 0.3s $trans;
+
+    background: $black;
   }
 
   &:before {
@@ -620,30 +711,38 @@ section {
 
     &:before {
       top: 0;
+
       transform: rotate(-45deg);
     }
 
     &:after {
       top: 0;
+
       transform: rotate(45deg);
     }
   }
 }
 
 .container {
-  z-index: 10;
   position: relative;
-  width: 100% !important;
+  z-index: 10;
+
   display: block;
+
+  width: 100% !important;
   max-width: 1260px;
   padding: 0 50px;
 
-  @media screen and (max-width: 1500px) {
-    max-width: 950px;
-  }
-
   @include media600 {
     padding: 0 20px;
+  }
+
+  @media screen and (max-width: 1500px) {
+    max-width: 1200px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    max-width: 950px;
   }
 }
 
@@ -651,23 +750,28 @@ section {
   max-width: 1700px;
 
   @media screen and (max-width: 1500px) {
+    max-width: 1300px;
+  }
+
+  @media screen and (max-width: 1200px) {
     max-width: 950px;
   }
 }
 
 footer,
 section {
+  overflow: hidden;
+
   padding: 60px 0;
+
   background-color: #ffffff;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
 
   @include media1200 {
     padding: 70px 0;
   }
-
   @include media600 {
     padding: 50px 0;
   }

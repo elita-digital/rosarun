@@ -271,8 +271,13 @@ main {
   svg,
   img {
     width: 100%;
-    max-height: 49px;
-    max-width: 46px;
+    max-height: 60px;
+    max-width: 57px;
+
+    @media (max-width: 1200px) {
+      max-height: 49px;
+      max-width: 46px;
+    }
   }
 }
 
@@ -295,8 +300,12 @@ main {
     color: $black;
     text-transform: uppercase;
     display: inline-block;
-    padding: 5px 2px;
+    padding: 5px 4px;
     vertical-align: bottom;
+
+    @media screen and (max-width: 1200px) {
+      padding: 5px 2px;
+    }
 
     @include media600 {
       font-size: 11px;
@@ -563,6 +572,10 @@ main {
 
   @media screen and (max-width: 1500px) {
     margin: 0 auto;
+    padding: 135px 0 80px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 95px 0 60px;
   }
 
@@ -603,6 +616,10 @@ main {
   flex: 1 1 auto;
 
   @media screen and (max-width: 1500px) {
+    padding: 33px 65px 35px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 30px 20px 30px 44px;
   }
 
@@ -666,6 +683,10 @@ main {
   margin-bottom: 0;
 
   @media screen and (max-width: 1500px) {
+    font-size: 48px;
+  }
+
+  @media screen and (max-width: 1200px) {
     font-size: 36px;
   }
 
@@ -689,11 +710,18 @@ main {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.65;
+  letter-spacing: 0.1em;
 
   @media screen and (max-width: 1500px) {
     font-size: 18px;
-    margin-left: 35px;
+    margin-left: 50px;
+    margin-bottom: 9px;
     line-height: 1.4;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 35px;
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 1023px) {
@@ -728,21 +756,29 @@ main {
     letter-spacing: 0.1em;
 
     @media screen and (max-width: 1500px) {
+      margin-top: 28px;
+    }
+
+    @media screen and (max-width: 1200px) {
       margin-top: 10px;
     }
   }
 
   &.--wellcome {
-    @media screen and (max-width: 1199px) {
-      margin-top: 12px;
+    @media screen and (max-width: 1500px) {
+      margin: 30px 0 24px;
     }
   }
 
   @media screen and (max-width: 1500px) {
-    font-size: 14px;
-    margin: 10px 0;
+    font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin: 10px 0;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 14px;
   }
 
   @media screen and (max-width: 991px) {
@@ -780,12 +816,18 @@ main {
   );
   flex: 0 0 396px;
   margin-left: 48px;
+  box-sizing: border-box;
 
   @media screen and (max-width: 1500px) {
+    padding: 52px 30px 52px 35px;
+    flex: 0 0 302px;
+    margin-left: 22px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 43px 27px;
     flex: 0 0 212px;
     margin-left: 26px;
-    box-sizing: border-box;
   }
 
   @media screen and (max-width: 1023px) {
@@ -802,6 +844,12 @@ main {
 
   &__row {
     @media screen and (max-width: 1500px) {
+      & + & {
+        margin-top: 30px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
       & + & {
         margin-top: 23px;
       }
@@ -825,6 +873,10 @@ main {
       margin-left: 20px;
 
       @media screen and (max-width: 1500px) {
+        margin-left: 37px;
+      }
+
+      @media screen and (max-width: 1200px) {
         margin-left: 8px;
       }
     }
@@ -849,8 +901,12 @@ main {
     letter-spacing: 0.04em;
 
     @media screen and (max-width: 1500px) {
-      font-size: 16px;
+      font-size: 24px;
       margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 16px;
     }
 
     @include media600 {
@@ -864,6 +920,11 @@ main {
 
     @media screen and (max-width: 1500px) {
       text-align: center;
+      font-size: 48px;
+      margin-bottom: 4px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 29px;
       margin-bottom: 0;
     }
@@ -903,7 +964,13 @@ main {
     font-size: 32px;
 
     @media screen and (max-width: 1500px) {
+      font-size: 36px;
+      margin-top: 16px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 28px;
+      margin-top: 0;
     }
   }
 
@@ -1019,6 +1086,10 @@ main {
   overflow: initial;
 
   @media screen and (max-width: 1500px) {
+    padding: 84px 0 80px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 45px 0 58px;
   }
 
@@ -1030,6 +1101,10 @@ main {
     z-index: 1;
 
     @media screen and (max-width: 1500px) {
+      margin: 0 122px 0 26px;
+    }
+
+    @media screen and (max-width: 1200px) {
       max-width: 1024px;
       margin: 0 auto;
     }
@@ -1046,6 +1121,10 @@ main {
     position: relative;
 
     @media screen and (max-width: 1500px) {
+      flex: 0 0 228px;
+    }
+
+    @media screen and (max-width: 1200px) {
       flex: 0 0 152px;
     }
 
@@ -1059,7 +1138,11 @@ main {
       display: block;
 
       @media screen and (max-width: 1500px) {
-        margin: 12px auto 0;
+        margin: 0 auto;
+      }
+
+      @media screen and (max-width: 1200px) {
+        margin-top: 12px;
       }
     }
   }
@@ -1073,7 +1156,13 @@ main {
     width: 1px;
 
     @media screen and (max-width: 1500px) {
+      padding-top: 80px;
+      left: 40px;
+    }
+
+    @media screen and (max-width: 1200px) {
       padding-top: 55px;
+      left: 0;
     }
   }
 
@@ -1131,6 +1220,10 @@ main {
 
     @media screen and (max-width: 1500px) {
       padding: 0;
+      padding-left: 70px;
+    }
+
+    @media screen and (max-width: 1200px) {
       padding-left: 65px;
     }
 
@@ -1164,8 +1257,13 @@ main {
     }
 
     @media screen and (max-width: 1500px) {
-      height: 360px;
+      height: 570px;
       padding: 0;
+      padding-bottom: 44px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      height: 360px;
       padding-bottom: 20px;
     }
 
@@ -1205,9 +1303,29 @@ main {
       margin-top: 0px;
 
       @media screen and (max-width: 1500px) {
-        font-size: 32px;
+        font-size: 48px;
         line-height: 1;
         margin-top: 5px;
+
+        .card__title-desktop {
+          display: none;
+        }
+
+        .card__title-mobile {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 32px;
+
+        .card__title-desktop {
+          display: block;
+        }
+
+        .card__title-mobile {
+          display: none;
+        }
       }
 
       @media screen and (max-width: 639px) {
@@ -1312,6 +1430,10 @@ main {
     }
 
     @media screen and (max-width: 1500px) {
+      padding: 54px 40px;
+    }
+
+    @media screen and (max-width: 1200px) {
       padding: 30px 40px;
     }
 
@@ -1421,6 +1543,11 @@ main {
     background-repeat: no-repeat;
 
     @media screen and (max-width: 1500px) {
+      width: 32px;
+      background-position: center center;
+    }
+
+    @media screen and (max-width: 1200px) {
       width: 18px;
     }
   }
@@ -1435,6 +1562,11 @@ main {
     }
 
     @media screen and (max-width: 1500px) {
+      font-size: 18px;
+      line-height: 40px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 15px;
       line-height: 18px;
     }
@@ -1446,6 +1578,12 @@ main {
     line-height: 1.33;
 
     @media screen and (max-width: 1500px) {
+      font-size: 14px;
+      margin-top: 20px;
+      line-height: 20px;
+    }
+
+    @media screen and (max-width: 1200px) {
       margin-top: 5px;
       font-size: 11px;
       line-height: 14px;
@@ -1461,7 +1599,7 @@ main {
     font-size: 40px;
     margin-top: 24px;
 
-    @media screen and (max-width: 1500px) {
+    @media screen and (max-width: 1200px) {
       margin-top: 5px;
       font-size: 24px;
       line-height: 1;
@@ -1566,7 +1704,7 @@ main {
 .hostels {
   margin-top: 40px;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1200px) {
     margin-top: 30px;
   }
 
@@ -1580,6 +1718,10 @@ main {
 
     & + & {
       margin-left: 107px;
+
+      @media screen and (max-width: 1500px) {
+        margin-left: 80px;
+      }
 
       @media screen and (max-width: 1199px) {
         margin-left: 32px;
@@ -1608,6 +1750,12 @@ main {
     text-transform: uppercase;
 
     @media screen and (max-width: 1500px) {
+      font-size: 24px;
+      margin-top: 35px;
+      line-height: 35px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 16px;
       margin-top: 30px;
       line-height: 20px;
@@ -1662,6 +1810,11 @@ main {
     margin-top: 50px;
 
     @media screen and (max-width: 1500px) {
+      font-size: 36px;
+      margin-top: 25px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 24px;
       margin-top: 20px;
     }
@@ -1714,6 +1867,11 @@ main {
   padding-top: 0;
 
   @media screen and (max-width: 1500px) {
+    min-height: 550px;
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 1200px) {
     min-height: 390px;
     padding: 40px 0;
   }
@@ -1731,6 +1889,11 @@ main {
 
     @media screen and (max-width: 1500px) {
       margin-top: 0;
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 34px;
       line-height: 42px;
       max-width: 260px;
@@ -1741,7 +1904,11 @@ main {
     margin-top: 64px;
     max-width: 750px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1500px) {
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 1200px) {
       margin-top: 40px;
     }
   }
@@ -2740,6 +2907,10 @@ a:not(.button):active {
   padding: 85px 0 95px;
 
   @media screen and (max-width: 1500px) {
+    padding: 60px 0 65px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 48px 0 65px;
   }
 
@@ -2790,7 +2961,11 @@ a:not(.button):active {
     height: 770px;
     max-height: 100vh;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1500px) {
+      height: 550px;
+    }
+
+    @media screen and (max-width: 1200px) {
       height: 400px;
     }
 
@@ -4353,15 +4528,15 @@ footer a:active {
   padding-top: 85px;
 
   @media screen and (max-width: 1500px) {
+    padding: 70px 0;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 40px 0 25px;
   }
 
   &__title {
     color: $yellow;
-
-    @media screen and (max-width: 1440px) {
-      font-size: 32px;
-    }
 
     @media screen and (max-width: 767px) {
       text-align: center;
@@ -4373,6 +4548,10 @@ footer a:active {
     position: relative;
 
     @media screen and (max-width: 1500px) {
+      margin-top: 35px;
+    }
+
+    @media screen and (max-width: 1200px) {
       margin-top: 15px;
     }
   }
@@ -4382,7 +4561,11 @@ footer a:active {
     width: 100%;
     object-fit: cover;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1500px) {
+      max-height: 560px;
+    }
+
+    @media screen and (max-width: 1200px) {
       max-height: 450px;
     }
 
@@ -4467,6 +4650,10 @@ footer a:active {
   padding-top: 85px;
 
   @media screen and (max-width: 1500px) {
+    padding-top: 65px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding-top: 45px;
   }
 
@@ -4499,7 +4686,12 @@ footer a:active {
     line-height: 1.1;
     font-family: "Futura", Arial, Helvetica, sans-serif;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1500px) {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 12px;
       margin-top: 16px;
     }
@@ -4508,7 +4700,7 @@ footer a:active {
       font-weight: 700;
       font-size: 24px;
 
-      @media screen and (max-width: 1199px) {
+      @media screen and (max-width: 1200px) {
         font-size: 12px;
       }
     }
@@ -4522,6 +4714,12 @@ footer a:active {
     font-family: LeagueGothic, "Roboto Condensed", sans-serif;
 
     @media screen and (max-width: 1500px) {
+      font-size: 36px;
+      line-height: 1;
+      margin-top: 10px;
+    }
+
+    @media screen and (max-width: 1200px) {
       font-size: 24px;
       line-height: 1;
     }
@@ -4531,9 +4729,8 @@ footer a:active {
     margin-top: 36px;
     color: $yellow;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1500px) {
       margin-top: 20px;
-      font-size: 16px;
     }
   }
 }
@@ -4545,11 +4742,15 @@ footer a:active {
   padding-top: 80px;
 
   @media screen and (max-width: 1500px) {
+    padding-top: 130px;
+  }
+
+  @media screen and (max-width: 1200px) {
     padding: 40px 0 25px;
   }
 
   &__title {
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1200px) {
       font-size: 32px;
     }
   }
@@ -4559,16 +4760,20 @@ footer a:active {
     padding-bottom: 60px;
     border-bottom: 1px solid #c4c4c4;
 
-    @media screen and (max-width: 1440px) {
-      margin-top: 20px;
+    @media screen and (max-width: 1500px) {
+      margin-top: 0px;
       padding-bottom: 40px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin-top: 20px;
     }
   }
 
   &__link {
     display: block;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1200px) {
       max-width: 200px;
       width: 100%;
     }
@@ -4653,6 +4858,10 @@ footer a:active {
     line-height: 1.2;
 
     @media screen and (max-width: 1500px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 1200px) {
       padding: 32px 0;
       font-size: 11px;
       line-height: 1.35;

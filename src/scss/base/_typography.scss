@@ -294,6 +294,10 @@ h2,
   line-height: 1;
 
   @media screen and (max-width: 1500px) {
+    font-size: 48px;
+  }
+
+  @media screen and (max-width: 1200px) {
     font-size: 32px;
   }
 
